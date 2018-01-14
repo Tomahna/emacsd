@@ -3,9 +3,11 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+        evil-jump-forward
         ))
 
 (setq mc/cmds-to-run-once
       '(
+        evil-force-normal-state
         evil-normal-state
         ))

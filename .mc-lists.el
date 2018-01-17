@@ -4,10 +4,13 @@
 (setq mc/cmds-to-run-for-all
       '(
         evil-jump-forward
+        evil-next-line
+        evil-previous-line
         ))
 
 (setq mc/cmds-to-run-once
       '(
         evil-force-normal-state
+        evil-mouse-drag-region
         evil-normal-state
         ))

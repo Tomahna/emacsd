@@ -70,6 +70,7 @@
 ;; Language Settings
 (load "scala")
 (load "yaml")
+(load "markdown")
 
 ;; Keybindings
 (load "keybind")

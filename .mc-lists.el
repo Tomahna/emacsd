@@ -11,6 +11,12 @@
 
 (setq mc/cmds-to-run-once
       '(
+        evil-ex
         evil-force-normal-state
+        evil-insert
+        evil-mouse-drag-region
         evil-normal-state
+        evil-record-macro
+        ivy-switch-buffer
+        yaml-electric-backspace
         ))

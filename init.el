@@ -48,7 +48,7 @@
  '(initial-frame-alist (quote ((fullscreen . maximized))))
  '(package-selected-packages
    (quote
-    (markdown-mode evil-smartparens smartparens smartparens-config highlight-indent-guides multiple-cursors ansible projectile airline-themes powerline hlinum solaire-mode yaml-mode neotree evil ensime use-package))))
+    (nix-mode markdown-mode evil-smartparens smartparens smartparens-config highlight-indent-guides multiple-cursors ansible projectile airline-themes powerline hlinum solaire-mode yaml-mode neotree evil ensime use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -68,9 +68,10 @@
 (load "udf")
 
 ;; Language Settings
+(load "markdown")
+(load "nix")
 (load "scala")
 (load "yaml")
-(load "markdown")
 
 ;; Keybindings
 (load "keybind")

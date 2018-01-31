@@ -5,7 +5,7 @@
 (tool-bar-mode 0)
 
 ;; Developper Font
-(set-default-font "DejaVu Sans Mono-12")
+(set-default-font "DejaVu Sans Mono Books-11")
 
 ;; Doom Theme
 (use-package doom-themes)

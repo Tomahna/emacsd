@@ -8,6 +8,7 @@
 (use-package projectile
   :demand)
 (projectile-mode)
+(setq projectile-mode-line '(:eval (format " Project[%s]" (projectile-project-name))))
 
 ;; Add directory tree
 (use-package neotree)

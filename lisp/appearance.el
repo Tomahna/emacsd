@@ -39,13 +39,14 @@
 ;; Powerline
 (use-package powerline)
 (require 'powerline)
-(powerline-default-theme)
+(powerline-center-evil-theme)
 
 (use-package airline-themes)
 (require 'airline-themes)
 (load-theme 'airline-doom-one)
 (setq powerline-utf-8-separator-left        #xe0b0
       powerline-utf-8-separator-right       #xe0b2
+      airline-display-directory             'airline-directory-disabled
       airline-utf-glyph-separator-left      #xe0b0
       airline-utf-glyph-separator-right     #xe0b2
       airline-utf-glyph-subseparator-left   #xe0b1
@@ -53,6 +54,7 @@
       airline-utf-glyph-branch              #xe0a0
       airline-utf-glyph-readonly            #xe0a2
       airline-utf-glyph-linenumber          #xe0a1)
+
 
 (use-package highlight-indent-guides)
 (setq highlight-indent-guides-method 'character)

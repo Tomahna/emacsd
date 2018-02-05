@@ -16,3 +16,6 @@
 (add-hook 'prog-mode-hook #'smartparens-mode)
 (add-hook 'yaml-mode-hook #'smartparens-mode)
 (add-hook 'smartparens-enabled-hook #'evil-smartparens-mode)
+
+(use-package magit)
+(use-package evil-magit)

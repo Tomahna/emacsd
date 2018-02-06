@@ -48,7 +48,7 @@
  '(initial-frame-alist (quote ((fullscreen . maximized))))
  '(package-selected-packages
    (quote
-    (evil-magit magit flycheck flycheck-cask nix-mode markdown-mode evil-smartparens smartparens smartparens-config highlight-indent-guides multiple-cursors ansible projectile airline-themes powerline hlinum solaire-mode yaml-mode neotree evil ensime use-package))))
+    (python-mode elpy evil-magit magit flycheck flycheck-cask nix-mode markdown-mode evil-smartparens smartparens smartparens-config highlight-indent-guides multiple-cursors ansible projectile airline-themes powerline hlinum solaire-mode yaml-mode neotree evil ensime use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -70,6 +70,7 @@
 ;; Language Settings
 (load "markdown")
 (load "nix")
+(load "lang_python")
 (load "scala")
 (load "yaml")
 

@@ -71,7 +71,7 @@
 (load "markdown")
 (load "nix")
 (load "lang_python")
-(load "scala")
+(load "lang_scala")
 (load "yaml")
 
 ;; Keybindings

@@ -7,3 +7,6 @@
 )
 (use-package sbt-mode)
 (use-package scala-mode)
+(add-hook 'scala-mode-hook
+  (lambda ()
+    (ensime)))

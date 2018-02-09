@@ -5,7 +5,7 @@
 (tool-bar-mode 0)
 
 ;; Developper Font
-(set-default-font "DejaVu Sans Mono-10")
+(set-default-font "DejaVu Sans Mono-11")
 
 ;; Doom Theme
 (use-package doom-themes)
@@ -47,6 +47,7 @@
   :init
   (setq powerline-utf-8-separator-left        #xe0b0)
   (setq powerline-utf-8-separator-right       #xe0b2)
+  (setq airline-display-directory             'airline-display-directory-disabled)
   (setq airline-utf-glyph-separator-left      #xe0b0)
   (setq airline-utf-glyph-separator-right     #xe0b2)
   (setq airline-utf-glyph-subseparator-left   #xe0b1)

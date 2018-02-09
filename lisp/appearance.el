@@ -5,7 +5,7 @@
 (tool-bar-mode 0)
 
 ;; Developper Font
-(set-default-font "DejaVu Sans Mono-11")
+(set-default-font "DejaVu Sans Mono-10")
 
 ;; Doom Theme
 (use-package doom-themes)
@@ -40,6 +40,7 @@
 (use-package powerline)
 (require 'powerline)
 (powerline-center-evil-theme)
+(defpowerline powerline-minor-modes nil) ;;Disable minor modes in ModeLine
 
 (use-package airline-themes)
 (require 'airline-themes)
@@ -60,5 +61,3 @@
 (setq highlight-indent-guides-method 'character)
 (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
 (add-hook 'yaml-mode-hook 'highlight-indent-guides-mode)
-
-(neotree-show)

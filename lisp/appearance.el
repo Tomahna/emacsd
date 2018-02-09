@@ -40,7 +40,8 @@
 (use-package powerline
   :init
   (defpowerline powerline-minor-modes nil)
-  (setq powerline-display-buffer-size nil))
+  (setq powerline-display-buffer-size nil)
+  (setq powerline-display-mule-info nil))
 
 (use-package airline-themes
   :init

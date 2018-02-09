@@ -37,25 +37,23 @@
 (global-linum-mode 1)
 
 ;; Powerline
-(use-package powerline)
-(require 'powerline)
-(powerline-center-evil-theme)
-(defpowerline powerline-minor-modes nil) ;;Disable minor modes in ModeLine
+(use-package powerline
+  :init
+  (defpowerline powerline-minor-modes nil)
+  (setq powerline-display-buffer-size nil))
 
-(use-package airline-themes)
-(require 'airline-themes)
+(use-package airline-themes
+  :init
+  (setq powerline-utf-8-separator-left        #xe0b0)
+  (setq powerline-utf-8-separator-right       #xe0b2)
+  (setq airline-utf-glyph-separator-left      #xe0b0)
+  (setq airline-utf-glyph-separator-right     #xe0b2)
+  (setq airline-utf-glyph-subseparator-left   #xe0b1)
+  (setq airline-utf-glyph-subseparator-right  #xe0b3)
+  (setq airline-utf-glyph-branch              #xe0a0)
+  (setq airline-utf-glyph-readonly            #xe0a2)
+  (setq airline-utf-glyph-linenumber          #xe0a1))
 (load-theme 'airline-doom-one)
-(setq powerline-utf-8-separator-left        #xe0b0
-      powerline-utf-8-separator-right       #xe0b2
-      airline-display-directory             'airline-directory-disabled
-      airline-utf-glyph-separator-left      #xe0b0
-      airline-utf-glyph-separator-right     #xe0b2
-      airline-utf-glyph-subseparator-left   #xe0b1
-      airline-utf-glyph-subseparator-right  #xe0b3
-      airline-utf-glyph-branch              #xe0a0
-      airline-utf-glyph-readonly            #xe0a2
-      airline-utf-glyph-linenumber          #xe0a1)
-
 
 (use-package highlight-indent-guides)
 (setq highlight-indent-guides-method 'character)

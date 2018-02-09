@@ -13,9 +13,10 @@
 ;; Add directory tree
 (use-package neotree)
 (require 'neotree)
-(setq neo-smart-open t)
-(setq projectile-switch-project-action 'neotree-projectile-action)
 (setq neo-autorefresh t)
+(setq neo-smart-open t)
+(setq neo-window-width 30)
+(setq projectile-switch-project-action 'neotree-projectile-action)
 
 ;; Add Ivy (completion)
 (use-package ivy

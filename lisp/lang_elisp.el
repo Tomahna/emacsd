@@ -4,7 +4,9 @@
   :diminish company-mode)
 (use-package eldoc
   :commands eldoc-mode
-  :diminish eldoc-mode)
+  :diminish eldoc-mode
+  :init
+  (setq eldoc-idle-delay 0.1))
 (use-package evil-smartparens
   :commands evil-smartparens-mode
   :diminish evil-smartparens-mode)
@@ -14,10 +16,14 @@
 (use-package hlinum
   :commands hlinum-activate)
 (use-package highlight-indent-guides
-  :commands highligh-indent-guides-mode)
+  :commands highligh-indent-guides-mode
+  :init
+  (setq highlight-indent-guides-method 'character))
 (use-package linum
   :commands linum-mode
-  :diminish linum-mode)
+  :diminish linum-mode
+  :init
+  (setq linum-format "%d "))
 (use-package rainbow-delimiters
   :commands rainbow-delimiters-mode
   :diminish rainbow-delimiters-mode)
@@ -36,12 +42,7 @@
   :diminish yas-minor-mode)
 (add-hook 'emacs-lisp-mode-hook
           (lambda ()
-            (defvar show-paren-delay)
             (setq flycheck-disabled-checkers '(emacs-lisp-checkdoc))
-            (setq highlight-indent-guides-method 'character)
-            (setq linum-format "%d ")
-            (setq show-trailing-whitespace t)
-            (setq show-paren-delay 0)
 
             (company-mode                 t)
             (eldoc-mode                   t)

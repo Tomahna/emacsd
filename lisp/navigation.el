@@ -21,7 +21,6 @@
 (setq treemacs-change-root-without-asking t)
 (setq treemacs-collapse-dirs              10)
 (setq treemacs-follow-after-init          t)
-(setq treemacs-header-function            #'treemacs-projectile-create-header)
 (setq treemacs-is-never-other-window      t) ;;todo
 (setq treemacs-never-persist              t)
 (setq treemacs-recenter-after-file-follow t)

@@ -6,7 +6,6 @@
  column-number-mode t
  scroll-error-top-bottom t
  show-paren-delay 0.5
- use-package-always-ensure t
  sentence-end-double-space nil)
 
 ;; confirm before exiting emacs (todo remove when bad habits are gone)
@@ -48,7 +47,7 @@
  '(initial-frame-alist (quote ((fullscreen . maximized))))
  '(package-selected-packages
    (quote
-    (sidebar python-mode elpy evil-magit magit flycheck flycheck-cask nix-mode markdown-mode evil-smartparens smartparens smartparens-config highlight-indent-guides multiple-cursors ansible projectile airline-themes powerline hlinum solaire-mode yaml-mode evil ensime use-package))))
+    (rainbow-delimiters diminish rainbow-mode sidebar python-mode elpy evil-magit magit flycheck flycheck-cask nix-mode markdown-mode evil-smartparens smartparens smartparens-config highlight-indent-guides multiple-cursors ansible projectile airline-themes powerline hlinum solaire-mode yaml-mode evil ensime use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -70,6 +69,7 @@
 ;; Language Settings
 (load "markdown")
 (load "nix")
+(load "lang_elisp.el")
 (load "lang_python")
 (load "lang_scala")
 (load "yaml")

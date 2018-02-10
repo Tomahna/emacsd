@@ -1,18 +1,24 @@
 ;; Add vim shortcuts
-(use-package evil)
-(evil-mode 1)
+(use-package evil
+  :config
+  (evil-mode 1))
 
 ;; Add Ivy (completion)
-(use-package ivy)
-(setq ivy-use-virtual-buffers t)
-(setq ivy-count-format "%d/%d ")
-(ivy-mode 1)
+(use-package ivy
+  :diminish ivy-mode
+  :init
+  (setq ivy-use-virtual-buffers t)
+  (setq ivy-count-format "%d/%d ")
+  :config
+  (ivy-mode 1))
 
 ;; Add projectile (project mode)
-(use-package projectile)
-(projectile-mode)
-(setq projectile-completion-system 'ivy)
-(setq projectile-mode-line '(:eval (format " Project[%s]" (projectile-project-name))))
+(use-package projectile
+  :init
+  (setq projectile-completion-system 'ivy)
+  (setq projectile-mode-line '(:eval (format " Project[%s]" (projectile-project-name))))
+  :config
+  (projectile-mode))
 
 ;; Add directory tree
 (use-package treemacs)

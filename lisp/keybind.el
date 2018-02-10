@@ -15,16 +15,6 @@
 (evil-ex-define-cmd "pg" 'projectile-grep)
 (evil-ex-define-cmd "psp" 'projectile-switch-project)
 
-;; Neotree bindings
-(global-set-key [f8] 'neotree-toggle)
-(evil-define-key 'normal neotree-mode-map (kbd "<S-tab>") 'neotree-select-up-node)
-(evil-define-key 'normal neotree-mode-map (kbd "TAB") 'neotree-enter)
-(evil-define-key 'normal neotree-mode-map (kbd "SPC") 'neotree-quick-look)
-(evil-define-key 'normal neotree-mode-map (kbd "y") 'neotree-copy-node)
-(evil-define-key 'normal neotree-mode-map (kbd "c") 'neotree-create-node)
-(evil-define-key 'normal neotree-mode-map (kbd "r") 'neotree-rename-node)
-(evil-define-key 'normal neotree-mode-map (kbd "d") 'neotree-delete-node)
-
 ;; Company bindings
 (define-key evil-insert-state-map (kbd "S-SPC") 'company-complete-common)
 

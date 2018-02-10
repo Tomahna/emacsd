@@ -3,9 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "highlight-indent-guides" "highlight-indent-guides.el"
-;;;;;;  (23089 39332 431805 20000))
-;;; Generated autoloads from highlight-indent-guides.el
+;;;### (autoloads nil "highlight-indent-guides" "../../../../../../.emacs.d/elpa/highlight-indent-guides-20170516.1355/highlight-indent-guides.el"
+;;;;;;  "5a3943b6292c7a8875d368b84fdfa021")
+;;; Generated autoloads from ../../../../../../.emacs.d/elpa/highlight-indent-guides-20170516.1355/highlight-indent-guides.el
 
 (autoload 'highlight-indent-guides-auto-set-faces "highlight-indent-guides" "\
 Automatically calculate indent guide faces.
@@ -19,6 +19,12 @@ This runs whenever a theme is loaded, but it can also be run interactively.
 Display indent guides in a buffer.
 
 \(fn &optional ARG)" t nil)
+
+;;;***
+
+;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/highlight-indent-guides-20170516.1355/highlight-indent-guides-autoloads.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/highlight-indent-guides-20170516.1355/highlight-indent-guides.el")
+;;;;;;  (23166 51002 260303 705000))
 
 ;;;***
 

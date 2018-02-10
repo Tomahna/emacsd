@@ -3,8 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "ghub" "ghub.el" (23160 47887 213889 500000))
-;;; Generated autoloads from ghub.el
+;;;### (autoloads nil "ghub" "../../../../../../.emacs.d/elpa/ghub-20180201.414/ghub.el"
+;;;;;;  "75e04d50fdad0c10a4e0d3c0575c0aac")
+;;; Generated autoloads from ../../../../../../.emacs.d/elpa/ghub-20180201.414/ghub.el
 
 (autoload 'ghub-create-token "ghub" "\
 Create, store and return a new token.
@@ -25,7 +26,10 @@ has to provide several values including their password.
 
 ;;;***
 
-;;;### (autoloads nil nil ("ghub-pkg.el") (23160 47887 277222 189000))
+;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/ghub-20180201.414/ghub-autoloads.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/ghub-20180201.414/ghub-pkg.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/ghub-20180201.414/ghub.el")
+;;;;;;  (23166 50985 633809 526000))
 
 ;;;***
 

@@ -3,9 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "solaire-mode" "solaire-mode.el" (23088 12502
-;;;;;;  680400 946000))
-;;; Generated autoloads from solaire-mode.el
+;;;### (autoloads nil "solaire-mode" "../../../../../../.emacs.d/elpa/solaire-mode-20171209.1350/solaire-mode.el"
+;;;;;;  "80518858f899acb96627ce29a808d918")
+;;; Generated autoloads from ../../../../../../.emacs.d/elpa/solaire-mode-20171209.1350/solaire-mode.el
 
 (autoload 'solaire-mode "solaire-mode" "\
 Make source buffers grossly incandescent by remapping common faces (see
@@ -50,6 +50,12 @@ This is necessary for themes in the doom-themes package.
 Restore `solaire-mode' in buffers when `persp-mode' loads a session.
 
 \(fn &rest _)" nil nil)
+
+;;;***
+
+;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/solaire-mode-20171209.1350/solaire-mode-autoloads.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/solaire-mode-20171209.1350/solaire-mode.el")
+;;;;;;  (23166 50997 90357 352000))
 
 ;;;***
 

@@ -3,8 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "pyvenv" "pyvenv.el" (23162 1665 183435 162000))
-;;; Generated autoloads from pyvenv.el
+;;;### (autoloads nil "pyvenv" "../../../../../../.emacs.d/elpa/pyvenv-20180126.303/pyvenv.el"
+;;;;;;  "48467b9462418e6f3001612b41eda459")
+;;; Generated autoloads from ../../../../../../.emacs.d/elpa/pyvenv-20180126.303/pyvenv.el
 
 (autoload 'pyvenv-activate "pyvenv" "\
 Activate the virtual environment in DIRECTORY.
@@ -62,6 +63,12 @@ buffer-local `pyvenv-workon' or `pyvenv-activate' variable.
 Restart Python inferior processes.
 
 \(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/pyvenv-20180126.303/pyvenv-autoloads.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/pyvenv-20180126.303/pyvenv.el")
+;;;;;;  (23166 51006 410260 634000))
 
 ;;;***
 

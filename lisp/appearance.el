@@ -14,7 +14,6 @@
     doom-themes-enable-italic t)        ;; if nil, italics is universally disabled
 (load-theme 'doom-one t)        
 (unless (file-directory-p "~/.local/share/fonts") (all-the-icons-install-fonts)) ;; Install icon fonts if not present
-(doom-themes-neotree-config)                                                     ;; all-the-icons fonts must be installed!
 ;(doom-themes-visual-bell-config)                                                ;; Enable flashing mode-line on errors
 ;(doom-themes-org-config)                                                        ;; Corrects (and improves) org-mode's native fontification.
 
@@ -34,7 +33,6 @@
 (require 'hlinum)
 (setq linum-format "%d ")
 (hlinum-activate)
-(global-linum-mode 1)
 
 ;; Powerline
 (use-package powerline

@@ -3,9 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "scala-mode" "scala-mode.el" (23076 13197 333845
-;;;;;;  956000))
-;;; Generated autoloads from scala-mode.el
+;;;### (autoloads nil "scala-mode" "../../../../../../.emacs.d/elpa/scala-mode-20170802.432/scala-mode.el"
+;;;;;;  "8685b8fadf5f3bc6c94f078230dda468")
+;;; Generated autoloads from ../../../../../../.emacs.d/elpa/scala-mode-20170802.432/scala-mode.el
 
 (autoload 'scala-mode:set-scala-syntax-mode "scala-mode" "\
 Sets the syntax-table and other related variables for the current buffer to those of scala-mode. Can be used to make some other major mode (such as sbt-mode) use scala syntax-table.
@@ -32,11 +32,19 @@ When started, runs `scala-mode-hook'.
 
 ;;;***
 
-;;;### (autoloads nil nil ("ob-scala.el" "scala-mode-fontlock.el"
-;;;;;;  "scala-mode-imenu.el" "scala-mode-indent.el" "scala-mode-lib.el"
-;;;;;;  "scala-mode-map.el" "scala-mode-paragraph.el" "scala-mode-pkg.el"
-;;;;;;  "scala-mode-prettify-symbols.el" "scala-mode-syntax.el")
-;;;;;;  (23076 13197 523843 860000))
+;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/scala-mode-20170802.432/ob-scala.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/scala-mode-20170802.432/scala-mode-autoloads.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/scala-mode-20170802.432/scala-mode-fontlock.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/scala-mode-20170802.432/scala-mode-imenu.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/scala-mode-20170802.432/scala-mode-indent.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/scala-mode-20170802.432/scala-mode-lib.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/scala-mode-20170802.432/scala-mode-map.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/scala-mode-20170802.432/scala-mode-paragraph.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/scala-mode-20170802.432/scala-mode-pkg.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/scala-mode-20170802.432/scala-mode-prettify-symbols.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/scala-mode-20170802.432/scala-mode-syntax.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/scala-mode-20170802.432/scala-mode.el")
+;;;;;;  (23166 51018 623467 166000))
 
 ;;;***
 

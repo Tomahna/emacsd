@@ -3,9 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "ansible" "ansible.el" (23077 40376 993044
-;;;;;;  585000))
-;;; Generated autoloads from ansible.el
+;;;### (autoloads nil "ansible" "../../../../../../.emacs.d/elpa/ansible-20170926.1951/ansible.el"
+;;;;;;  "fd050a368b0aa7ee06de573d2b34b676")
+;;; Generated autoloads from ../../../../../../.emacs.d/elpa/ansible-20170926.1951/ansible.el
 
 (defvar ansible::key-map (make-sparse-keymap) "\
 Keymap for Ansible.")
@@ -29,8 +29,10 @@ Initialize Ansible auto-complete.
 
 ;;;***
 
-;;;### (autoloads nil nil ("ansible-pkg.el") (23077 40376 959711
-;;;;;;  582000))
+;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/ansible-20170926.1951/ansible-autoloads.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/ansible-20170926.1951/ansible-pkg.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/ansible-20170926.1951/ansible.el")
+;;;;;;  (23166 51032 856652 647000))
 
 ;;;***
 

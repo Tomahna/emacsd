@@ -1,27 +1,48 @@
 ;; Add vim shortcuts
-(use-package evil
-  :demand)
-(require 'evil)
+(use-package evil)
 (evil-mode 1)
 
-;; Add projectile (project mode)
-(use-package projectile
-  :demand)
-(projectile-mode)
-(setq projectile-mode-line '(:eval (format " Project[%s]" (projectile-project-name))))
-
-;; Add directory tree
-(use-package neotree)
-(require 'neotree)
-(setq neo-autorefresh t)
-(setq neo-smart-open t)
-(setq neo-window-width 30)
-(setq projectile-switch-project-action 'neotree-projectile-action)
-
 ;; Add Ivy (completion)
-(use-package ivy
-  :demand)
+(use-package ivy)
 (setq ivy-use-virtual-buffers t)
 (setq ivy-count-format "%d/%d ")
 (ivy-mode 1)
+
+;; Add projectile (project mode)
+(use-package projectile)
+(projectile-mode)
 (setq projectile-completion-system 'ivy)
+(setq projectile-mode-line '(:eval (format " Project[%s]" (projectile-project-name))))
+
+;; Add directory tree
+(use-package treemacs)
+(use-package treemacs-evil)
+(use-package treemacs-projectile)
+(setq treemacs-change-root-without-asking t)
+(setq treemacs-collapse-dirs              10)
+(setq treemacs-file-event-delay           5000)
+(setq treemacs-follow-after-init          t)
+(setq treemacs-follow-recenter-distance   0.1)
+(setq treemacs-goto-tag-strategy          'refetch-index)
+(setq treemacs-header-function            #'treemacs-projectile-create-header)
+(setq treemacs-indentation                2)
+(setq treemacs-indentation-string         " ")
+(setq treemacs-is-never-other-window      nil)
+(setq treemacs-never-persist              t)
+(setq treemacs-recenter-after-file-follow t)
+(setq treemacs-recenter-after-tag-follow  nil)
+(setq treemacs-show-hidden-files          t)
+(setq treemacs-silent-filewatch           nil)
+(setq treemacs-silent-refresh             nil)
+(setq treemacs-sorting                    'alphabetic-desc)
+(setq treemacs-tag-follow-cleanup         t)
+(setq treemacs-tag-follow-delay           1.5)
+(setq treemacs-width                      30)
+(treemacs-follow-mode t)
+(treemacs-filewatch-mode t)
+(if (not (null (executable-find "python3"))) (treemacs-git-mode 'extended) (treemacs-git-mode 'simple))
+
+(global-set-key [f8] 'treemacs-toggle)
+
+(add-hook 'projectile-after-switch-project-hook #'treemacs-projectile)
+(add-hook 'projectile-find-file-hook #'treemacs-projectile)

@@ -3,9 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "evil-magit" "evil-magit.el" (23160 48623 286322
-;;;;;;  886000))
-;;; Generated autoloads from evil-magit.el
+;;;### (autoloads nil "evil-magit" "../../../../../../.emacs.d/elpa/evil-magit-20171213.1019/evil-magit.el"
+;;;;;;  "f7bfd4294fd433cfe32608cf5616df7c")
+;;; Generated autoloads from ../../../../../../.emacs.d/elpa/evil-magit-20171213.1019/evil-magit.el
 
 (autoload 'evil-magit-init "evil-magit" "\
 This function completes the setup of evil-magit. It is called
@@ -19,6 +19,12 @@ go back to evil-magit behavior.
 Revert changes by evil-magit that affect default evil+magit behavior.
 
 \(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/evil-magit-20171213.1019/evil-magit-autoloads.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/evil-magit-20171213.1019/evil-magit.el")
+;;;;;;  (23166 50989 633768 40000))
 
 ;;;***
 

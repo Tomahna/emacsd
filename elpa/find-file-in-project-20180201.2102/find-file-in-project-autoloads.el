@@ -3,9 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "find-file-in-project" "find-file-in-project.el"
-;;;;;;  (23162 1666 806751 306000))
-;;; Generated autoloads from find-file-in-project.el
+;;;### (autoloads nil "find-file-in-project" "../../../../../../.emacs.d/elpa/find-file-in-project-20180201.2102/find-file-in-project.el"
+;;;;;;  "3a31dfa19300990b668c033dd56e714d")
+;;; Generated autoloads from ../../../../../../.emacs.d/elpa/find-file-in-project-20180201.2102/find-file-in-project.el
 
 (autoload 'ffip-git-diff-current-file "find-file-in-project" "\
 Run 'git diff version:current-file current-file'.
@@ -235,6 +235,12 @@ Please read documenation of `diff-apply-hunk' to get more details.
 If REVERSE is t, appied patch is reverted.
 
 \(fn &optional REVERSE)" t nil)
+
+;;;***
+
+;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/find-file-in-project-20180201.2102/find-file-in-project-autoloads.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/find-file-in-project-20180201.2102/find-file-in-project.el")
+;;;;;;  (23166 51007 536915 605000))
 
 ;;;***
 

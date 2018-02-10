@@ -3,8 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "hlinum" "hlinum.el" (23076 13138 977823 362000))
-;;; Generated autoloads from hlinum.el
+;;;### (autoloads nil "hlinum" "../../../../../../.emacs.d/elpa/hlinum-20170507.2227/hlinum.el"
+;;;;;;  "d8b5daf8e86b19e51ad63f6140b233f3")
+;;; Generated autoloads from ../../../../../../.emacs.d/elpa/hlinum-20170507.2227/hlinum.el
 
 (autoload 'hlinum-activate "hlinum" "\
 Enable highlighting current line number.
@@ -15,6 +16,12 @@ Enable highlighting current line number.
 Disable highlighting current line number.
 
 \(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/hlinum-20170507.2227/hlinum-autoloads.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/hlinum-20170507.2227/hlinum.el")
+;;;;;;  (23166 50997 550352 579000))
 
 ;;;***
 

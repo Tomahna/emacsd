@@ -33,6 +33,8 @@
 (setq treemacs-tag-follow-cleanup         t)
 (setq treemacs-tag-follow-delay           1.5)
 (setq treemacs-width                      30)
+(treemacs-define-custom-icon (all-the-icons-icon-for-file "name.sbt") "sbt")
+(treemacs-define-custom-icon (all-the-icons-icon-for-file "name.scala") "scala")
 (treemacs-follow-mode t)
 (treemacs-filewatch-mode t)
 (if (not (null (executable-find "python3"))) (treemacs-git-mode 'extended) (treemacs-git-mode 'simple))

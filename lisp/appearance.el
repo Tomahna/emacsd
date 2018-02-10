@@ -76,7 +76,7 @@
 (treemacs-filewatch-mode t)
 (if (not (null (executable-find "python3"))) (treemacs-git-mode 'extended) (treemacs-git-mode 'simple))
 
-(global-set-key [f8] 'treemacs-toggle)
+(global-set-key [f8] 'treemacs-select-window)
 
 (add-hook 'projectile-after-switch-project-hook #'treemacs-projectile)
 (add-hook 'projectile-find-file-hook #'treemacs-projectile)

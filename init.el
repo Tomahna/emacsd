@@ -1,15 +1,5 @@
-;; global variables
-(setq
- inhibit-startup-screen t
- create-lockfiles nil
- make-backup-files nil
- column-number-mode t
- scroll-error-top-bottom t
- show-paren-delay 0.5
- sentence-end-double-space nil)
 
-;; confirm before exiting emacs (todo remove when bad habits are gone)
-(setq confirm-kill-emacs #'y-or-n-p)
+
 
 ;; buffer local variables
 (setq-default
@@ -59,9 +49,9 @@
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
+(load "global")
 (load "appearance")
 (load "navigation")
-(load "edition")
 
 ;; User defined functions
 (load "udf")

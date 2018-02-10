@@ -60,9 +60,9 @@
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
+(load "appearance")
 (load "navigation")
 (load "edition")
-(load "appearance")
 
 ;; User defined functions
 (load "udf")

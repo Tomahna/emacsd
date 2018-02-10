@@ -1,18 +1,3 @@
-
-
-
-;; buffer local variables
-(setq-default
- indent-tabs-mode nil
- tab-width 4
- c-basic-offset 4)
-
-;; modes
-(electric-indent-mode 0)
-
-;; global keybindings
-(global-unset-key (kbd "C-z"))
-
 ;; the package manager
 (require 'package)
 (package-initialize)
@@ -44,8 +29,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
-(setq use-package-always-ensure t)       ;; Always install package if not present
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 

@@ -65,7 +65,8 @@
 (use-package projectile            ;;Project Mode
   :init
   (setq projectile-completion-system 'ivy)
-  (setq projectile-mode-line '(:eval (format " [%s]" (projectile-project-name)))))
+  (setq projectile-mode-line         '(:eval (format " [%s]" (projectile-project-name))))
+  (setq projectile-use-git-grep      t))
 
 (evil-mode               t)
 (ivy-mode                t)

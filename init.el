@@ -67,21 +67,12 @@
 
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
-
-
-;; Theme
-(load "appearance")
-
-;; User defined functions
-(load "udf")
-
-;; Language Settings
-(load "markdown")
-(load "nix")
+(load "appearance")    ;; Theme
+(load "udf")           ;; User defined functions
 (load "lang_elisp.el")
+(load "lang_markdown")
+(load "lang_nix")
 (load "lang_python")
 (load "lang_scala")
 (load "yaml")
-
-;; Keybindings
-(load "keybind")
+(load "keybind")       ;; Keybindings

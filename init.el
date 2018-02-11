@@ -37,6 +37,11 @@
 (use-package diff-hl)
 (use-package evil)                 ;;VimLike Emacs Interface
 (use-package evil-magit)
+(use-package highlight-symbol
+  :commands highlight-symbol highlight-symbol-mode
+  :diminish highlight-symbol-mode
+  :init
+  (setq highlight-symbol-idle-delay 0.2))
 (use-package ivy                   ;;Completion framework
   :commands ivy-mode
   :diminish ivy-mode

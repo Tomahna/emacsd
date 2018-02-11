@@ -70,11 +70,6 @@
 
 (global-set-key [f8] 'treemacs-select-window)
 
-(add-hook 'projectile-after-switch-project-hook #'treemacs-projectile)
-(add-hook 'projectile-find-file-hook #'treemacs-projectile)
-
-
-
 ;; Emacs configuration
 (menu-bar-mode  0)                     ;;Disable Menubar
 (set-frame-font "DejaVu Sans Mono-11") ;;Font

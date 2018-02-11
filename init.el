@@ -47,6 +47,10 @@
   :init
   (setq ivy-use-virtual-buffers t)
   (setq ivy-count-format "%d/%d "))
+(use-package persistent-scratch
+  :config
+  (setq persistent-scratch-save-file "~/.cache/emacs/scratch")
+  (persistent-scratch-setup-default))
 (use-package projectile            ;;Project Mode
   :init
   (setq projectile-completion-system 'ivy)

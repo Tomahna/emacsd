@@ -37,6 +37,8 @@
 (use-package diff-hl)
 (use-package evil)                 ;;VimLike Emacs Interface
 (use-package evil-magit)
+(use-package expand-region
+  :commands 'er/expand-region)
 (use-package highlight-symbol
   :commands highlight-symbol highlight-symbol-mode
   :diminish highlight-symbol-mode

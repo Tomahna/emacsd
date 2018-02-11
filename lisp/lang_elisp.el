@@ -43,8 +43,10 @@
 (add-hook 'emacs-lisp-mode-hook
           (lambda ()
             (setq flycheck-disabled-checkers '(emacs-lisp-checkdoc))
-
+            
             (company-mode                 t)
+            (diff-hl-mode                 t)
+            (diff-hl-flydiff-mode         t)
             (eldoc-mode                   t)
             (evil-smartparens-mode        t)
             (flycheck-mode                t)

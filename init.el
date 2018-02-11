@@ -34,7 +34,6 @@
 
 (load "global")
 (load "appearance")
-(load "navigation")
 
 ;; User defined functions
 (load "udf")

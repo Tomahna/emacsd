@@ -37,16 +37,22 @@
 (use-package diff-hl)
 (use-package evil)                 ;;VimLike Emacs Interface
 (use-package evil-magit)
-(use-package magit                 ;;Git Interface
-  :config
-  (magit-auto-revert-mode -1)      ;; Workaround https://github.com/dgutov/diff-hl/issues/65
-  (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh))
 (use-package ivy                   ;;Completion framework
   :commands ivy-mode
   :diminish ivy-mode
   :init
   (setq ivy-use-virtual-buffers t)
   (setq ivy-count-format "%d/%d "))
+(use-package linum-relative
+  :commands linum-relative-mode linum-relative-toggle
+  :diminish linum-relative-mode
+  :init
+  (setq linum-relative-current-symbol "1")
+  (setq linum-relative-plusp-offset   1))
+(use-package magit                 ;;Git Interface
+  :config
+  (magit-auto-revert-mode -1)      ;; Workaround https://github.com/dgutov/diff-hl/issues/65
+  (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh))
 (use-package persistent-scratch
   :config
   (setq persistent-scratch-save-file "~/.cache/emacs/scratch")

@@ -65,5 +65,5 @@
 (load "lang_nix")
 (load "lang_python")
 (load "lang_scala")
-(load "yaml")
+(load "lang_yaml")
 (load "keybind")       ;; Keybindings

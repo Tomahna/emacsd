@@ -1,12 +1,4 @@
 ;;;;;;;;;;;;;;;;;;;;;;;; Appearance Settings ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;; Remove Emacs Toolbar and Menubar
-(menu-bar-mode 0)
-(tool-bar-mode 0)
-
-;; Developper Font
-(set-frame-font "DejaVu Sans Mono-11")
-
 ;; Doom Theme
 (use-package doom-themes
   :init
@@ -80,3 +72,11 @@
 
 (add-hook 'projectile-after-switch-project-hook #'treemacs-projectile)
 (add-hook 'projectile-find-file-hook #'treemacs-projectile)
+
+
+
+;; Emacs configuration
+(menu-bar-mode  0)                     ;;Disable Menubar
+(set-frame-font "DejaVu Sans Mono-11") ;;Font
+(toggle-frame-maximized)               ;;Maximise Emacs
+(tool-bar-mode  0)                     ;;Disable Toolbar

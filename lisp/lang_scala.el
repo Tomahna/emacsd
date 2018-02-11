@@ -18,7 +18,6 @@
             (highlight-symbol-mode        t)
             (show-paren-mode              t)
             (smartparens-mode             t)
-            (smartparens-strict-mode      t)
             (yas-minor-mode               t)
 
             (ensime)

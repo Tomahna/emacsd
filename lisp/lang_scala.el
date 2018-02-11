@@ -1,6 +1,6 @@
 ;; Scala
 (use-package ensime
-  :command ensime
+  :commands ensime
   :init
   (defvar ensime-startup-snapshot-notification)
   (setq ensime-startup-notification nil)

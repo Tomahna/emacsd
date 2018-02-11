@@ -35,36 +35,27 @@
   (package-install 'use-package))
 (require 'use-package)
 
-;; Add vim shortcuts
-(use-package evil
-  :config
-  (evil-mode 1))
-
-(use-package magit)
+(use-package evil)                 ;;VimLike Emacs Interface
 (use-package evil-magit)
-
-;; Add Ivy (completion)
-(use-package ivy
+(use-package magit)                ;;Git Interface
+(use-package ivy                   ;;Completion framework
+  :commands ivy-mode
   :diminish ivy-mode
   :init
   (setq ivy-use-virtual-buffers t)
-  (setq ivy-count-format "%d/%d ")
-  :config
-  (ivy-mode 1))
-
-;; Add projectile (project mode)
-(use-package projectile
+  (setq ivy-count-format "%d/%d "))
+(use-package projectile            ;;Project Mode
   :init
   (setq projectile-completion-system 'ivy)
-  (setq projectile-mode-line '(:eval (format " Project[%s]" (projectile-project-name))))
-  :config
-  (projectile-mode))
+  (setq projectile-mode-line '(:eval (format " [%s]" (projectile-project-name)))))
 
-(global-auto-revert-mode 1)
+(evil-mode               t)
+(ivy-mode                t)
+(projectile-mode         t)
+(global-auto-revert-mode t)
 
 ;; global keybindings
 (global-unset-key (kbd "C-z"))
-
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (load "appearance")    ;; Theme

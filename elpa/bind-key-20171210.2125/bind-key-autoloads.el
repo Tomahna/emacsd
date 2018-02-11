@@ -73,7 +73,7 @@ Display all the personal keybindings defined by `bind-key'.
 
 ;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/bind-key-20171210.2125/bind-key-autoloads.el"
 ;;;;;;  "../../../../../../.emacs.d/elpa/bind-key-20171210.2125/bind-key.el")
-;;;;;;  (23166 50952 934148 407000))
+;;;;;;  (23168 1875 623630 894000))
 
 ;;;***
 

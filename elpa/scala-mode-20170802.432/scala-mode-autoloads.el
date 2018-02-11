@@ -44,7 +44,7 @@ When started, runs `scala-mode-hook'.
 ;;;;;;  "../../../../../../.emacs.d/elpa/scala-mode-20170802.432/scala-mode-prettify-symbols.el"
 ;;;;;;  "../../../../../../.emacs.d/elpa/scala-mode-20170802.432/scala-mode-syntax.el"
 ;;;;;;  "../../../../../../.emacs.d/elpa/scala-mode-20170802.432/scala-mode.el")
-;;;;;;  (23166 51018 623467 166000))
+;;;;;;  (23168 1943 982897 284000))
 
 ;;;***
 

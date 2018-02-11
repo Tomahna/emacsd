@@ -3,8 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil nil ("treemacs-evil.el") (23166 50969 620642
-;;;;;;  203000))
+;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/treemacs-evil-20180203.416/treemacs-evil-autoloads.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/treemacs-evil-20180203.416/treemacs-evil.el")
+;;;;;;  (23168 1917 649846 329000))
 
 ;;;***
 

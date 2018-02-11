@@ -119,7 +119,7 @@ ATTRIBUTE attribute name in nixpkgs to use.
 ;;;;;;  "../../../../../../.emacs.d/elpa/nix-mode-20180126.1935/nix-repl.el"
 ;;;;;;  "../../../../../../.emacs.d/elpa/nix-mode-20180126.1935/nix-shebang.el"
 ;;;;;;  "../../../../../../.emacs.d/elpa/nix-mode-20180126.1935/nix-shell.el")
-;;;;;;  (23166 51004 546946 640000))
+;;;;;;  (23168 1920 529815 433000))
 
 ;;;***
 

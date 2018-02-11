@@ -232,7 +232,7 @@ Use this together with the `option', `option-list' and
 ;;;;;;  "../../../../../../.emacs.d/elpa/flycheck-20180204.1346/flycheck-ert.el"
 ;;;;;;  "../../../../../../.emacs.d/elpa/flycheck-20180204.1346/flycheck-pkg.el"
 ;;;;;;  "../../../../../../.emacs.d/elpa/flycheck-20180204.1346/flycheck.el")
-;;;;;;  (23166 51014 556842 727000))
+;;;;;;  (23168 1929 823049 92000))
 
 ;;;***
 

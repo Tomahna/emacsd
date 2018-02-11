@@ -3,9 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "treemacs" "treemacs.el" (23166 50966 304009
-;;;;;;  906000))
-;;; Generated autoloads from treemacs.el
+;;;### (autoloads nil "treemacs" "../../../../../../.emacs.d/elpa/treemacs-20180207.2220/treemacs.el"
+;;;;;;  "d0dec413c711fa5402a7a4e77ad03f25")
+;;; Generated autoloads from ../../../../../../.emacs.d/elpa/treemacs-20180207.2220/treemacs.el
 
 (autoload 'treemacs-toggle "treemacs" "\
 If a treemacs buffer exists and is visible hide it.
@@ -68,9 +68,9 @@ Call `treemacs-toggle' if it is not.
 
 ;;;***
 
-;;;### (autoloads nil "treemacs-mode" "treemacs-mode.el" (23166 50966
-;;;;;;  254010 424000))
-;;; Generated autoloads from treemacs-mode.el
+;;;### (autoloads nil "treemacs-mode" "../../../../../../.emacs.d/elpa/treemacs-20180207.2220/treemacs-mode.el"
+;;;;;;  "4666a58e7f82025e3340baae2b9aa76c")
+;;; Generated autoloads from ../../../../../../.emacs.d/elpa/treemacs-20180207.2220/treemacs-mode.el
 
 (autoload 'treemacs-mode "treemacs-mode" "\
 A major mode for displaying the file system in a tree layout.
@@ -79,9 +79,9 @@ A major mode for displaying the file system in a tree layout.
 
 ;;;***
 
-;;;### (autoloads nil "treemacs-mouse-interface" "treemacs-mouse-interface.el"
-;;;;;;  (23166 50967 503997 471000))
-;;; Generated autoloads from treemacs-mouse-interface.el
+;;;### (autoloads nil "treemacs-mouse-interface" "../../../../../../.emacs.d/elpa/treemacs-20180207.2220/treemacs-mouse-interface.el"
+;;;;;;  "565cc465e6b534888c70a9de346f2a28")
+;;; Generated autoloads from ../../../../../../.emacs.d/elpa/treemacs-20180207.2220/treemacs-mouse-interface.el
 
 (autoload 'treemacs-node-buffer-and-position "treemacs-mouse-interface" "\
 Return source buffer or list of buffer and position for the current node.
@@ -92,9 +92,9 @@ ignore any prefix argument.
 
 ;;;***
 
-;;;### (autoloads nil "treemacs-persist" "treemacs-persist.el" (23166
-;;;;;;  50966 280676 814000))
-;;; Generated autoloads from treemacs-persist.el
+;;;### (autoloads nil "treemacs-persist" "../../../../../../.emacs.d/elpa/treemacs-20180207.2220/treemacs-persist.el"
+;;;;;;  "93bb301001dd313a292c93fb618102fa")
+;;; Generated autoloads from ../../../../../../.emacs.d/elpa/treemacs-20180207.2220/treemacs-persist.el
 
 (autoload 'treemacs--restore "treemacs-persist" "\
 Restore the entire treemacs state saved by `treeemacs--persist'.
@@ -103,12 +103,27 @@ Restore the entire treemacs state saved by `treeemacs--persist'.
 
 ;;;***
 
-;;;### (autoloads nil nil ("treemacs-async.el" "treemacs-branch-creation.el"
-;;;;;;  "treemacs-compatibility.el" "treemacs-customization.el" "treemacs-faces.el"
-;;;;;;  "treemacs-filewatch-mode.el" "treemacs-follow-mode.el" "treemacs-impl.el"
-;;;;;;  "treemacs-interface.el" "treemacs-macros.el" "treemacs-pkg.el"
-;;;;;;  "treemacs-structure.el" "treemacs-tag-follow-mode.el" "treemacs-tags.el"
-;;;;;;  "treemacs-visuals.el") (23166 50967 637329 423000))
+;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/treemacs-20180207.2220/treemacs-async.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/treemacs-20180207.2220/treemacs-autoloads.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/treemacs-20180207.2220/treemacs-branch-creation.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/treemacs-20180207.2220/treemacs-compatibility.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/treemacs-20180207.2220/treemacs-customization.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/treemacs-20180207.2220/treemacs-faces.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/treemacs-20180207.2220/treemacs-filewatch-mode.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/treemacs-20180207.2220/treemacs-follow-mode.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/treemacs-20180207.2220/treemacs-impl.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/treemacs-20180207.2220/treemacs-interface.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/treemacs-20180207.2220/treemacs-macros.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/treemacs-20180207.2220/treemacs-mode.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/treemacs-20180207.2220/treemacs-mouse-interface.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/treemacs-20180207.2220/treemacs-persist.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/treemacs-20180207.2220/treemacs-pkg.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/treemacs-20180207.2220/treemacs-structure.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/treemacs-20180207.2220/treemacs-tag-follow-mode.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/treemacs-20180207.2220/treemacs-tags.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/treemacs-20180207.2220/treemacs-visuals.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/treemacs-20180207.2220/treemacs.el")
+;;;;;;  (23168 1915 729866 929000))
 
 ;;;***
 

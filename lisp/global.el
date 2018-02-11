@@ -1,15 +1,18 @@
 ;; global variables
 (defvar show-paren-delay)
+(defvar use-package-always-ensure)
 
 (setq backup-by-copying         t)
 (setq backup-directory-alist    `(("." . "~/.cache/emacs/backup")))
 (setq confirm-kill-emacs        #'y-or-n-p) ;; confirm before exiting emacs (todo remove when bad habits are gone)
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (setq create-lockfiles          nil)
 (setq inhibit-startup-screen    t)
 (setq scroll-error-top-bottom   t)
 (setq sentence-end-double-space nil)
 (setq show-trailing-whitespace  t)
 (setq show-paren-delay          0)
+(setq use-package-always-ensure t)
 
 ;; buffer local variables
 (setq-default c-basic-offset   4)

@@ -6,7 +6,7 @@
 ;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/magit-popup-20180119.111/magit-popup-autoloads.el"
 ;;;;;;  "../../../../../../.emacs.d/elpa/magit-popup-20180119.111/magit-popup-pkg.el"
 ;;;;;;  "../../../../../../.emacs.d/elpa/magit-popup-20180119.111/magit-popup.el")
-;;;;;;  (23166 50981 223855 256000))
+;;;;;;  (23168 1885 330193 278000))
 
 ;;;***
 

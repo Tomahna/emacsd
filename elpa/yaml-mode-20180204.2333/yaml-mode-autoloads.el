@@ -3,9 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "yaml-mode" "yaml-mode.el" (23166 51023 586748
-;;;;;;  951000))
-;;; Generated autoloads from yaml-mode.el
+;;;### (autoloads nil "yaml-mode" "../../../../../../.emacs.d/elpa/yaml-mode-20180204.2333/yaml-mode.el"
+;;;;;;  "46036043b195a45173ac76208e018b2a")
+;;; Generated autoloads from ../../../../../../.emacs.d/elpa/yaml-mode-20180204.2333/yaml-mode.el
 
 (let ((loads (get 'yaml 'custom-loads))) (if (member '"yaml-mode" loads) nil (put 'yaml 'custom-loads (cons '"yaml-mode" loads))))
 
@@ -17,6 +17,12 @@ Simple mode to edit YAML.
 \(fn)" t nil)
 
 (add-to-list 'auto-mode-alist '("\\.\\(e?ya?\\|ra\\)ml\\'" . yaml-mode))
+
+;;;***
+
+;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/yaml-mode-20180204.2333/yaml-mode-autoloads.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/yaml-mode-20180204.2333/yaml-mode.el")
+;;;;;;  (23168 1949 232841 18000))
 
 ;;;***
 

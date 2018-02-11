@@ -16,7 +16,7 @@ Toggle evil-smartparens.
 
 ;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/evil-smartparens-20171210.713/evil-smartparens-autoloads.el"
 ;;;;;;  "../../../../../../.emacs.d/elpa/evil-smartparens-20171210.713/evil-smartparens.el")
-;;;;;;  (23166 50978 560549 536000))
+;;;;;;  (23168 1928 763060 459000))
 
 ;;;***
 

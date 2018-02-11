@@ -3,9 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "rainbow-delimiters" "rainbow-delimiters.el"
-;;;;;;  (23167 10197 915393 576000))
-;;; Generated autoloads from rainbow-delimiters.el
+;;;### (autoloads nil "rainbow-delimiters" "../../../../../../.emacs.d/elpa/rainbow-delimiters-20170929.432/rainbow-delimiters.el"
+;;;;;;  "42f0dfdc8abb7b59ad663ae438e01c76")
+;;; Generated autoloads from ../../../../../../.emacs.d/elpa/rainbow-delimiters-20170929.432/rainbow-delimiters.el
 
 (autoload 'rainbow-delimiters-mode "rainbow-delimiters" "\
 Highlight nested parentheses, brackets, and braces according to their depth.
@@ -21,6 +21,12 @@ Enable `rainbow-delimiters-mode'.
 Disable `rainbow-delimiters-mode'.
 
 \(fn)" nil nil)
+
+;;;***
+
+;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/rainbow-delimiters-20170929.432/rainbow-delimiters-autoloads.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/rainbow-delimiters-20170929.432/rainbow-delimiters.el")
+;;;;;;  (23168 1931 576363 624000))
 
 ;;;***
 

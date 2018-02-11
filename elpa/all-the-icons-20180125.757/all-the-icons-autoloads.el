@@ -50,7 +50,7 @@ When FAMILY is non-nil, limit the candidates to the icon set matching it.
 ;;;;;;  "../../../../../../.emacs.d/elpa/all-the-icons-20180125.757/all-the-icons-faces.el"
 ;;;;;;  "../../../../../../.emacs.d/elpa/all-the-icons-20180125.757/all-the-icons-pkg.el"
 ;;;;;;  "../../../../../../.emacs.d/elpa/all-the-icons-20180125.757/all-the-icons.el")
-;;;;;;  (23166 50991 390416 485000))
+;;;;;;  (23168 1896 303408 767000))
 
 ;;;***
 

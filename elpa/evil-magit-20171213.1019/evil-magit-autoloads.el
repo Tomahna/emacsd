@@ -24,7 +24,7 @@ Revert changes by evil-magit that affect default evil+magit behavior.
 
 ;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/evil-magit-20171213.1019/evil-magit-autoloads.el"
 ;;;;;;  "../../../../../../.emacs.d/elpa/evil-magit-20171213.1019/evil-magit.el")
-;;;;;;  (23166 50989 633768 40000))
+;;;;;;  (23168 1891 170130 555000))
 
 ;;;***
 

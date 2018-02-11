@@ -3,9 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "smartparens" "smartparens.el" (23166 50976
-;;;;;;  480571 99000))
-;;; Generated autoloads from smartparens.el
+;;;### (autoloads nil "smartparens" "../../../../../../.emacs.d/elpa/smartparens-20180204.844/smartparens.el"
+;;;;;;  "b5066551b959afeccfa71eff9b9a713a")
+;;; Generated autoloads from ../../../../../../.emacs.d/elpa/smartparens-20180204.844/smartparens.el
 
 (autoload 'sp-cheat-sheet "smartparens" "\
 Generate a cheat sheet of all the smartparens interactive functions.
@@ -183,14 +183,28 @@ Turn off `show-smartparens-mode'.
 
 ;;;***
 
-;;;### (autoloads nil nil ("smartparens-clojure.el" "smartparens-config.el"
-;;;;;;  "smartparens-elixir.el" "smartparens-ess.el" "smartparens-haskell.el"
-;;;;;;  "smartparens-html.el" "smartparens-javascript.el" "smartparens-latex.el"
-;;;;;;  "smartparens-lua.el" "smartparens-markdown.el" "smartparens-ml.el"
-;;;;;;  "smartparens-org.el" "smartparens-pkg.el" "smartparens-python.el"
-;;;;;;  "smartparens-racket.el" "smartparens-ruby.el" "smartparens-rust.el"
-;;;;;;  "smartparens-scala.el" "smartparens-text.el") (23166 50976
-;;;;;;  657235 934000))
+;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/smartparens-20180204.844/smartparens-autoloads.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/smartparens-20180204.844/smartparens-clojure.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/smartparens-20180204.844/smartparens-config.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/smartparens-20180204.844/smartparens-elixir.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/smartparens-20180204.844/smartparens-ess.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/smartparens-20180204.844/smartparens-haskell.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/smartparens-20180204.844/smartparens-html.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/smartparens-20180204.844/smartparens-javascript.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/smartparens-20180204.844/smartparens-latex.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/smartparens-20180204.844/smartparens-lua.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/smartparens-20180204.844/smartparens-markdown.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/smartparens-20180204.844/smartparens-ml.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/smartparens-20180204.844/smartparens-org.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/smartparens-20180204.844/smartparens-pkg.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/smartparens-20180204.844/smartparens-python.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/smartparens-20180204.844/smartparens-racket.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/smartparens-20180204.844/smartparens-ruby.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/smartparens-20180204.844/smartparens-rust.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/smartparens-20180204.844/smartparens-scala.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/smartparens-20180204.844/smartparens-text.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/smartparens-20180204.844/smartparens.el")
+;;;;;;  (23168 1926 266420 569000))
 
 ;;;***
 

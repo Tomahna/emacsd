@@ -3,9 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "doom-themes" "doom-themes.el" (23166 50992
-;;;;;;  643736 817000))
-;;; Generated autoloads from doom-themes.el
+;;;### (autoloads nil "doom-themes" "../../../../../../.emacs.d/elpa/doom-themes-20180205.1204/doom-themes.el"
+;;;;;;  "8efd1a554077481c9687245b77390aff")
+;;; Generated autoloads from ../../../../../../.emacs.d/elpa/doom-themes-20180205.1204/doom-themes.el
 
 (autoload 'doom-color "doom-themes" "\
 Retrieve a specific color named NAME (a symbol) from the current theme.
@@ -50,12 +50,22 @@ Blink the mode-line red briefly. Set `ring-bell-function' to this to use it.
 
 ;;;***
 
-;;;### (autoloads nil nil ("doom-molokai-theme.el" "doom-nova-theme.el"
-;;;;;;  "doom-one-light-theme.el" "doom-one-theme.el" "doom-peacock-theme.el"
-;;;;;;  "doom-solarized-light-theme.el" "doom-spacegrey-theme.el"
-;;;;;;  "doom-themes-common.el" "doom-themes-neotree.el" "doom-themes-org.el"
-;;;;;;  "doom-themes-pkg.el" "doom-tomorrow-night-theme.el" "doom-vibrant-theme.el")
-;;;;;;  (23166 50992 953733 602000))
+;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/doom-themes-20180205.1204/doom-molokai-theme.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/doom-themes-20180205.1204/doom-nova-theme.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/doom-themes-20180205.1204/doom-one-light-theme.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/doom-themes-20180205.1204/doom-one-theme.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/doom-themes-20180205.1204/doom-peacock-theme.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/doom-themes-20180205.1204/doom-solarized-light-theme.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/doom-themes-20180205.1204/doom-spacegrey-theme.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/doom-themes-20180205.1204/doom-themes-autoloads.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/doom-themes-20180205.1204/doom-themes-common.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/doom-themes-20180205.1204/doom-themes-neotree.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/doom-themes-20180205.1204/doom-themes-org.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/doom-themes-20180205.1204/doom-themes-pkg.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/doom-themes-20180205.1204/doom-themes.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/doom-themes-20180205.1204/doom-tomorrow-night-theme.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/doom-themes-20180205.1204/doom-vibrant-theme.el")
+;;;;;;  (23168 1897 656727 570000))
 
 ;;;***
 

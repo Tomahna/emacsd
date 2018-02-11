@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "elpy" "elpy.el" (23166 51008 560238 316000))
+;;;### (autoloads nil "elpy" "elpy.el" (23168 1936 106315 53000))
 ;;; Generated autoloads from elpy.el
 
 (autoload 'elpy-enable "elpy" "\
@@ -39,7 +39,7 @@ Display the version of Elpy.
 ;;;***
 
 ;;;### (autoloads nil nil ("elpy-django.el" "elpy-pkg.el" "elpy-profile.el"
-;;;;;;  "elpy-refactor.el" "elpy-shell.el") (23166 51012 386865 258000))
+;;;;;;  "elpy-refactor.el" "elpy-shell.el") (23168 1939 956273 779000))
 
 ;;;***
 

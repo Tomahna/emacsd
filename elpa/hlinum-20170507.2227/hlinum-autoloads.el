@@ -21,7 +21,7 @@ Disable highlighting current line number.
 
 ;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/hlinum-20170507.2227/hlinum-autoloads.el"
 ;;;;;;  "../../../../../../.emacs.d/elpa/hlinum-20170507.2227/hlinum.el")
-;;;;;;  (23166 50997 550352 579000))
+;;;;;;  (23168 1931 156368 128000))
 
 ;;;***
 

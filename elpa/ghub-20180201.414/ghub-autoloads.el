@@ -29,7 +29,7 @@ has to provide several values including their password.
 ;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/ghub-20180201.414/ghub-autoloads.el"
 ;;;;;;  "../../../../../../.emacs.d/elpa/ghub-20180201.414/ghub-pkg.el"
 ;;;;;;  "../../../../../../.emacs.d/elpa/ghub-20180201.414/ghub.el")
-;;;;;;  (23166 50985 633809 526000))
+;;;;;;  (23168 1887 333505 93000))
 
 ;;;***
 

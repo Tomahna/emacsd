@@ -169,7 +169,9 @@ These will be checked in turn. The first directory found is used."
                      elpy-project-find-svn-root))
   :group 'elpy)
 
-(make-obsolete-variable 'elpy-company-hide-modeline 'elpy-remove-modeline-lighter)
+(make-obsolete-variable 'elpy-company-hide-modeline
+                        'elpy-remove-modeline-lighter
+                        "1.10.0")
 (defcustom elpy-remove-modeline-lighter t
   "Non-nil if Elpy should remove most mode line display.
 
@@ -948,6 +950,11 @@ item in another window.\n\n")
       (insert "\n\n"))
 
     ))
+
+(defun elpy-config--package-available-p (package)
+  "Check if PACKAGE is installed in the rpc."
+  (equal 0 (call-process elpy-rpc-python-command nil nil nil "-c"
+                         (format "import %s" package))))
 
 (defun elpy-config--get-config ()
   "Return the configuration from `elpy-rpc-python-command'.
@@ -1744,7 +1751,10 @@ indentation levels."
   (setq elpy-nav-expand--initial-position (point))
   (let ((indentation (current-indentation)))
     (if (= indentation 0)
-        (mark-whole-buffer)
+        (progn
+          (push-mark (point))
+          (push-mark (point-max) nil t)
+          (goto-char (point-min)))
       (while (<= indentation (current-indentation))
         (forward-line -1))
       (forward-line 1)
@@ -2124,8 +2134,8 @@ prefix argument is given, prompt for a symbol from the user."
 (defun elpy-importmagic-fixup ()
   (interactive))
 
-(make-obsolete 'elpy-importmagic-add-import "support for importmagic has been dropped.")
-(make-obsolete 'elpy-importmagic-fixup "support for importmagic has been dropped.")
+(make-obsolete 'elpy-importmagic-add-import "support for importmagic has been dropped." "1.17.0")
+(make-obsolete 'elpy-importmagic-fixup "support for importmagic has been dropped." "1.17.0")
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;;; Code reformatting
@@ -2134,9 +2144,9 @@ prefix argument is given, prompt for a symbol from the user."
   "Format code using the available formatter."
   (interactive)
   (cond
-   ((executable-find "yapf")
+   ((elpy-config--package-available-p "yapf")
     (elpy-yapf-fix-code))
-   ((executable-find "autopep8")
+   ((elpy-config--package-available-p "autopep8")
     (elpy-autopep8-fix-code))
    (t
     (message "Install yapf/autopep8 to format code."))))
@@ -3142,7 +3152,8 @@ Try to find the identifier assignement if it is in the current buffer.
     "Goto the identifier ID in the current buffer.
 This is needed to get information on the identifier with jedi
 \(that work only on the symbol at point\)"
-    (goto-line (elpy-xref--identifier-line id))
+    (goto-char (point-min))
+    (forward-line (1- (elpy-xref--identifier-line id)))
     (search-forward (elpy-xref--identifier-name id))
     (goto-char (match-beginning 0)))
 

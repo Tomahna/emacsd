@@ -37,7 +37,7 @@ provide such a commit message.
 
 ;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/git-commit-20180202.321/git-commit-autoloads.el"
 ;;;;;;  "../../../../../../.emacs.d/elpa/git-commit-20180202.321/git-commit.el")
-;;;;;;  (23166 50984 730485 560000))
+;;;;;;  (23168 1886 550180 174000))
 
 ;;;***
 

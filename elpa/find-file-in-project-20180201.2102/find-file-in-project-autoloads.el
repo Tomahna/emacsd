@@ -240,7 +240,7 @@ If REVERSE is t, appied patch is reverted.
 
 ;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/find-file-in-project-20180201.2102/find-file-in-project-autoloads.el"
 ;;;;;;  "../../../../../../.emacs.d/elpa/find-file-in-project-20180201.2102/find-file-in-project.el")
-;;;;;;  (23166 51007 536915 605000))
+;;;;;;  (23168 1935 132992 155000))
 
 ;;;***
 

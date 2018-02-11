@@ -100,7 +100,7 @@ Recursively grep for definition of ID in scala files in the directory tree roote
 ;;;;;;  "../../../../../../.emacs.d/elpa/sbt-mode-20171111.1558/sbt-mode-rgrep.el"
 ;;;;;;  "../../../../../../.emacs.d/elpa/sbt-mode-20171111.1558/sbt-mode-vars.el"
 ;;;;;;  "../../../../../../.emacs.d/elpa/sbt-mode-20171111.1558/sbt-mode.el")
-;;;;;;  (23166 51016 876818 638000))
+;;;;;;  (23168 1942 542912 719000))
 
 ;;;***
 

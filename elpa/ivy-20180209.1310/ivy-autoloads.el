@@ -3,8 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "ivy" "ivy.el" (23166 50970 570632 357000))
-;;; Generated autoloads from ivy.el
+;;;### (autoloads nil "ivy" "../../../../../../.emacs.d/elpa/ivy-20180209.1310/ivy.el"
+;;;;;;  "b03cd315698f3554bd506edc51ab76fa")
+;;; Generated autoloads from ../../../../../../.emacs.d/elpa/ivy-20180209.1310/ivy.el
 
 (autoload 'ivy-resume "ivy" "\
 Resume the last completion session.
@@ -122,8 +123,12 @@ Switch to another buffer in another window.
 
 ;;;***
 
-;;;### (autoloads nil nil ("colir.el" "ivy-overlay.el" "ivy-pkg.el")
-;;;;;;  (23166 50970 493966 485000))
+;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/ivy-20180209.1310/colir.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/ivy-20180209.1310/ivy-autoloads.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/ivy-20180209.1310/ivy-overlay.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/ivy-20180209.1310/ivy-pkg.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/ivy-20180209.1310/ivy.el")
+;;;;;;  (23168 1892 280118 636000))
 
 ;;;***
 

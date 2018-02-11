@@ -44,7 +44,7 @@ See `goto-last-change' for use of prefix argument.
 
 ;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/goto-chg-20180105.1033/goto-chg-autoloads.el"
 ;;;;;;  "../../../../../../.emacs.d/elpa/goto-chg-20180105.1033/goto-chg.el")
-;;;;;;  (23166 50954 724129 868000))
+;;;;;;  (23168 1877 623609 404000))
 
 ;;;***
 

@@ -43,6 +43,7 @@
 (add-hook 'emacs-lisp-mode-hook
           (lambda ()
             (setq flycheck-disabled-checkers '(emacs-lisp-checkdoc))
+            (setq show-trailing-whitespace  t)
             
             (company-mode                 t)
             (diff-hl-mode                 t)

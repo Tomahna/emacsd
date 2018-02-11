@@ -10,7 +10,6 @@
 (setq inhibit-startup-screen    t)
 (setq scroll-error-top-bottom   t)
 (setq sentence-end-double-space nil)
-(setq show-trailing-whitespace  t)
 (setq show-paren-delay          0)
 (setq use-package-always-ensure t)
 
@@ -38,10 +37,10 @@
 (use-package diff-hl)
 (use-package evil)                 ;;VimLike Emacs Interface
 (use-package evil-magit)
-(use-package magit                 ;;Git Interface 
+(use-package magit                 ;;Git Interface
   :config
   (magit-auto-revert-mode -1)      ;; Workaround https://github.com/dgutov/diff-hl/issues/65
-  (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh))                
+  (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh))
 (use-package ivy                   ;;Completion framework
   :commands ivy-mode
   :diminish ivy-mode

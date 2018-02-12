@@ -50,6 +50,8 @@
   :init
   (setq ivy-use-virtual-buffers t)
   (setq ivy-count-format "%d/%d "))
+(use-package goto-chg
+  :commands goto-last-change)
 (use-package linum-relative
   :commands linum-relative-mode linum-relative-toggle
   :diminish linum-relative-mode
@@ -113,3 +115,9 @@
 (define-key evil-normal-state-map (kbd "C-è") 'winum-select-window-7)
 (define-key evil-normal-state-map (kbd "C-_") 'winum-select-window-8)
 (define-key evil-normal-state-map (kbd "C-ç") 'winum-select-window-9)
+
+(define-key evil-normal-state-map (kbd "C-;") 'goto-last-change)
+(define-key evil-normal-state-map (kbd "C-.") 'goto-last-change-reverse)
+
+;; expand region
+(define-key evil-normal-state-map (kbd "C-=") 'er/expand-region)

@@ -68,8 +68,6 @@
 (treemacs-filewatch-mode t)
 (if (not (null (executable-find "python3"))) (treemacs-git-mode 'extended) (treemacs-git-mode 'simple))
 
-(global-set-key [f8] 'treemacs-select-window)
-
 ;; Emacs configuration
 (menu-bar-mode  0)                     ;;Disable Menubar
 (set-frame-font "DejaVu Sans Mono-11") ;;Font

@@ -92,7 +92,7 @@
 (load "keybind")       ;; Keybindings
 
 ;; Buffer navigation
-(define-key treemacs-mode-map (kbd "C-à") 'winum-select-window-0-or-10)
+(define-key treemacs-mode-map (kbd "C-à") 'treemacs-select-window)
 (define-key treemacs-mode-map (kbd "C-&") 'winum-select-window-1)
 (define-key treemacs-mode-map (kbd "C-é") 'winum-select-window-2)
 (define-key treemacs-mode-map (kbd "C-\"") 'winum-select-window-3)
@@ -103,7 +103,7 @@
 (define-key treemacs-mode-map (kbd "C-_") 'winum-select-window-8)
 (define-key treemacs-mode-map (kbd "C-ç") 'winum-select-window-9)
 (define-key evil-normal-state-map (kbd "<backtab>") 'switch-to-buffer)
-(define-key evil-normal-state-map (kbd "C-à") 'winum-select-window-0-or-10)
+(define-key evil-normal-state-map (kbd "C-à") 'treemacs-select-window)
 (define-key evil-normal-state-map (kbd "C-&") 'winum-select-window-1)
 (define-key evil-normal-state-map (kbd "C-é") 'winum-select-window-2)
 (define-key evil-normal-state-map (kbd "C-\"") 'winum-select-window-3)

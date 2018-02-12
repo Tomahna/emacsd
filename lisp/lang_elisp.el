@@ -58,7 +58,6 @@
             (rainbow-delimiters-mode      t)
             (show-paren-mode              t)
             (smartparens-mode             t)
-            (smartparens-strict-mode      t)
             (undo-tree-mode               t)
             (yas-minor-mode               t)
 

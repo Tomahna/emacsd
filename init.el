@@ -69,12 +69,14 @@
   (setq projectile-completion-system 'ivy)
   (setq projectile-mode-line         '(:eval (format " [%s]" (projectile-project-name))))
   (setq projectile-use-git-grep      t))
+(use-package winum)
+
 
 (evil-mode               t)
 (ivy-mode                t)
 (projectile-mode         t)
 (global-auto-revert-mode t)
-
+(winum-mode)
 ;; global keybindings
 (global-unset-key (kbd "C-z"))
 
@@ -88,3 +90,26 @@
 (load "lang_scala")
 (load "lang_yaml")
 (load "keybind")       ;; Keybindings
+
+;; Buffer navigation
+(define-key treemacs-mode-map (kbd "C-à") 'winum-select-window-0-or-10)
+(define-key treemacs-mode-map (kbd "C-&") 'winum-select-window-1)
+(define-key treemacs-mode-map (kbd "C-é") 'winum-select-window-2)
+(define-key treemacs-mode-map (kbd "C-\"") 'winum-select-window-3)
+(define-key treemacs-mode-map (kbd "C-'") 'winum-select-window-4)
+(define-key treemacs-mode-map (kbd "C-(") 'winum-select-window-5)
+(define-key treemacs-mode-map (kbd "C--") 'winum-select-window-6)
+(define-key treemacs-mode-map (kbd "C-è") 'winum-select-window-7)
+(define-key treemacs-mode-map (kbd "C-_") 'winum-select-window-8)
+(define-key treemacs-mode-map (kbd "C-ç") 'winum-select-window-9)
+(define-key evil-normal-state-map (kbd "<backtab>") 'switch-to-buffer)
+(define-key evil-normal-state-map (kbd "C-à") 'winum-select-window-0-or-10)
+(define-key evil-normal-state-map (kbd "C-&") 'winum-select-window-1)
+(define-key evil-normal-state-map (kbd "C-é") 'winum-select-window-2)
+(define-key evil-normal-state-map (kbd "C-\"") 'winum-select-window-3)
+(define-key evil-normal-state-map (kbd "C-'") 'winum-select-window-4)
+(define-key evil-normal-state-map (kbd "C-(") 'winum-select-window-5)
+(define-key evil-normal-state-map (kbd "C--") 'winum-select-window-6)
+(define-key evil-normal-state-map (kbd "C-è") 'winum-select-window-7)
+(define-key evil-normal-state-map (kbd "C-_") 'winum-select-window-8)
+(define-key evil-normal-state-map (kbd "C-ç") 'winum-select-window-9)

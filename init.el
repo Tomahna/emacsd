@@ -79,8 +79,6 @@
 (projectile-mode         t)
 (global-auto-revert-mode t)
 (winum-mode)
-;; global keybindings
-(global-unset-key (kbd "C-z"))
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (load "appearance")    ;; Theme
@@ -92,6 +90,13 @@
 (load "lang_scala")
 (load "lang_yaml")
 (load "keybind")       ;; Keybindings
+
+;; global keybindings
+(global-unset-key (kbd "C-z"))
+(global-unset-key (kbd "<left>"))
+(global-unset-key (kbd "<right>"))
+(global-unset-key (kbd "<up>"))
+(global-unset-key (kbd "<down>"))
 
 ;; Buffer navigation
 (define-key treemacs-mode-map (kbd "C-à") 'treemacs-select-window)

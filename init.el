@@ -50,6 +50,8 @@
   :init
   (setq ivy-use-virtual-buffers t)
   (setq ivy-count-format "%d/%d "))
+(use-package git-timemachine
+  :commands git-timemachine)
 (use-package goto-chg
   :commands goto-last-change)
 (use-package linum-relative
@@ -93,10 +95,10 @@
 
 ;; global keybindings
 (global-unset-key (kbd "C-z"))
-(global-unset-key (kbd "<left>"))
-(global-unset-key (kbd "<right>"))
-(global-unset-key (kbd "<up>"))
-(global-unset-key (kbd "<down>"))
+;;(global-unset-key (kbd "<left>"))
+;;(global-unset-key (kbd "<right>"))
+;;(global-unset-key (kbd "<up>"))
+;;(global-unset-key (kbd "<down>"))
 
 ;; Buffer navigation
 (define-key treemacs-mode-map (kbd "C-à") 'treemacs-select-window)
@@ -109,7 +111,7 @@
 (define-key treemacs-mode-map (kbd "C-è") 'winum-select-window-7)
 (define-key treemacs-mode-map (kbd "C-_") 'winum-select-window-8)
 (define-key treemacs-mode-map (kbd "C-ç") 'winum-select-window-9)
-(define-key evil-normal-state-map (kbd "<backtab>") 'switch-to-buffer)
+(define-key evil-normal-state-map (kbd "C-<tab>") 'switch-to-buffer)
 (define-key evil-normal-state-map (kbd "C-à") 'treemacs-select-window)
 (define-key evil-normal-state-map (kbd "C-&") 'winum-select-window-1)
 (define-key evil-normal-state-map (kbd "C-é") 'winum-select-window-2)

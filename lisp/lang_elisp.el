@@ -52,7 +52,6 @@
             (evil-smartparens-mode        t)
             (flycheck-mode                t)
             (highlight-indent-guides-mode t)
-            (highlight-symbol-mode        t)
             (linum-mode                   t)
             (rainbow-mode                 t)
             (rainbow-delimiters-mode      t)

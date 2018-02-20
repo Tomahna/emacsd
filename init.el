@@ -47,7 +47,6 @@
   (add-hook 'evil-insert-state-entry-hook (lambda () (highlight-symbol-mode t)))
   (add-hook 'evil-normal-state-entry-hook (lambda () (highlight-symbol-mode t)))
   (add-hook 'evil-visual-state-entry-hook (lambda () (highlight-symbol-mode -1))))
-
 (use-package ivy                   ;;Completion framework
   :commands ivy-mode
   :diminish ivy-mode

@@ -42,8 +42,10 @@
   :diminish yas-minor-mode)
 (add-hook 'emacs-lisp-mode-hook
           (lambda ()
+            (defvar highlight-symbol-enabled)
+            (setq highlight-symbol-enabled   t)
             (setq flycheck-disabled-checkers '(emacs-lisp-checkdoc))
-            (setq show-trailing-whitespace  t)
+            (setq show-trailing-whitespace   t)
 
             (company-mode                 t)
             (diff-hl-mode                 t)

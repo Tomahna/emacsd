@@ -44,9 +44,11 @@
   :diminish highlight-symbol-mode
   :init
   (setq highlight-symbol-idle-delay 0.2)
-  (add-hook 'evil-insert-state-entry-hook (lambda () (highlight-symbol-mode t)))
-  (add-hook 'evil-normal-state-entry-hook (lambda () (highlight-symbol-mode t)))
-  (add-hook 'evil-visual-state-entry-hook (lambda () (highlight-symbol-mode -1))))
+  (defvar-local highlight-symbol-enabled nil)
+  (add-hook 'highlight-symbol-mode-hook   (lambda () (if highlight-symbol-mode    (setq highlight-symbol-enabled t))))
+  (add-hook 'evil-insert-state-entry-hook (lambda () (if highlight-symbol-enabled (highlight-symbol-mode t))))
+  (add-hook 'evil-normal-state-entry-hook (lambda () (if highlight-symbol-enabled (highlight-symbol-mode t))))
+  (add-hook 'evil-visual-state-entry-hook (lambda () (if highlight-symbol-enabled (highlight-symbol-mode -1)))))
 (use-package ivy                   ;;Completion framework
   :commands ivy-mode
   :diminish ivy-mode

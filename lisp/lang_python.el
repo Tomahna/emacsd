@@ -4,12 +4,15 @@
 (use-package flycheck)
 (add-hook 'python-mode-hook
           (lambda ()
+            (defvar highlight-symbol-enabled)
+            (setq highlight-symbol-enabled t)
             (setq show-trailing-whitespace t)
+
             (diff-hl-mode                 t)
             (diff-hl-flydiff-mode         t)
-            (elpy-mode)
+            (elpy-mode                    t)
             (evil-smartparens-mode        t)
-            (flycheck-mode)
+            (flycheck-mode                t)
             (highlight-indent-guides-mode t)
             (linum-mode                   t)
             (rainbow-mode                 t)

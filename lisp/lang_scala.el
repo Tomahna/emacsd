@@ -11,6 +11,8 @@
 
 (add-hook 'scala-mode-hook
           (lambda ()
+            (defvar highlight-symbol-enabled)
+            (setq highlight-symbol-enabled  t)
             (setq projectile-mode-line      "")
             (setq show-trailing-whitespace  t)
 

@@ -51,7 +51,7 @@ what diminished modes would be on the mode-line if they were still minor.
 
 ;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/diminish-20170419.1036/diminish-autoloads.el"
 ;;;;;;  "../../../../../../.emacs.d/elpa/diminish-20170419.1036/diminish.el")
-;;;;;;  (23168 1921 433139 77000))
+;;;;;;  (23198 50053 970435 766000))
 
 ;;;***
 

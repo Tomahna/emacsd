@@ -40,7 +40,7 @@ Toggle native previewing on save for a specific markdown file.
 
 ;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/markdown-mode-20180124.138/markdown-mode-autoloads.el"
 ;;;;;;  "../../../../../../.emacs.d/elpa/markdown-mode-20180124.138/markdown-mode.el")
-;;;;;;  (23168 1919 143163 642000))
+;;;;;;  (23198 50060 86484 441000))
 
 ;;;***
 

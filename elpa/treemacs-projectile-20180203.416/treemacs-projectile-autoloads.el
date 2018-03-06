@@ -26,7 +26,7 @@ If no treemacs buffer exists call `treemacs-projectile'.
 
 ;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/treemacs-projectile-20180203.416/treemacs-projectile-autoloads.el"
 ;;;;;;  "../../../../../../.emacs.d/elpa/treemacs-projectile-20180203.416/treemacs-projectile.el")
-;;;;;;  (23168 1918 166507 453000))
+;;;;;;  (23198 50053 699433 610000))
 
 ;;;***
 

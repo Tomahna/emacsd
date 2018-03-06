@@ -3,8 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "diff-hl" "diff-hl.el" (23168 5710 965552 255000))
-;;; Generated autoloads from diff-hl.el
+;;;### (autoloads nil "diff-hl" "../../../../../../.emacs.d/elpa/diff-hl-20180201.355/diff-hl.el"
+;;;;;;  "e389a702c6e1bcc416c021ca12fbc475")
+;;; Generated autoloads from ../../../../../../.emacs.d/elpa/diff-hl-20180201.355/diff-hl.el
 
 (autoload 'diff-hl-mode "diff-hl" "\
 Toggle VC diff highlighting.
@@ -40,9 +41,9 @@ See `diff-hl-mode' for more information on Diff-Hl mode.
 
 ;;;***
 
-;;;### (autoloads nil "diff-hl-amend" "diff-hl-amend.el" (23168 5710
-;;;;;;  988885 333000))
-;;; Generated autoloads from diff-hl-amend.el
+;;;### (autoloads nil "diff-hl-amend" "../../../../../../.emacs.d/elpa/diff-hl-20180201.355/diff-hl-amend.el"
+;;;;;;  "1d6e113a9bd0373b5859246f916f9f93")
+;;; Generated autoloads from ../../../../../../.emacs.d/elpa/diff-hl-20180201.355/diff-hl-amend.el
 
 (autoload 'diff-hl-amend-mode "diff-hl-amend" "\
 Show changes against the second-last revision in `diff-hl-mode'.
@@ -76,9 +77,9 @@ See `diff-hl-amend-mode' for more information on Diff-Hl-Amend mode.
 
 ;;;***
 
-;;;### (autoloads nil "diff-hl-dired" "diff-hl-dired.el" (23168 5711
-;;;;;;  38884 787000))
-;;; Generated autoloads from diff-hl-dired.el
+;;;### (autoloads nil "diff-hl-dired" "../../../../../../.emacs.d/elpa/diff-hl-20180201.355/diff-hl-dired.el"
+;;;;;;  "a5f517561fc9162cbb044308275549f8")
+;;; Generated autoloads from ../../../../../../.emacs.d/elpa/diff-hl-20180201.355/diff-hl-dired.el
 
 (autoload 'diff-hl-dired-mode "diff-hl-dired" "\
 Toggle VC diff highlighting on the side of a Dired window.
@@ -92,9 +93,9 @@ Toggle VC diff highlighting on the side of a Dired window.
 
 ;;;***
 
-;;;### (autoloads nil "diff-hl-flydiff" "diff-hl-flydiff.el" (23168
-;;;;;;  5710 938885 880000))
-;;; Generated autoloads from diff-hl-flydiff.el
+;;;### (autoloads nil "diff-hl-flydiff" "../../../../../../.emacs.d/elpa/diff-hl-20180201.355/diff-hl-flydiff.el"
+;;;;;;  "9bbadd1dd1a7cf2ebbc176d5b4298e74")
+;;; Generated autoloads from ../../../../../../.emacs.d/elpa/diff-hl-20180201.355/diff-hl-flydiff.el
 
 (defvar diff-hl-flydiff-mode nil "\
 Non-nil if Diff-Hl-Flydiff mode is enabled.
@@ -114,9 +115,9 @@ This is a global minor mode.  It alters how `diff-hl-mode' works.
 
 ;;;***
 
-;;;### (autoloads nil "diff-hl-margin" "diff-hl-margin.el" (23168
-;;;;;;  5710 912219 505000))
-;;; Generated autoloads from diff-hl-margin.el
+;;;### (autoloads nil "diff-hl-margin" "../../../../../../.emacs.d/elpa/diff-hl-20180201.355/diff-hl-margin.el"
+;;;;;;  "5eeebde69878ea3a0efa7a748da419da")
+;;; Generated autoloads from ../../../../../../.emacs.d/elpa/diff-hl-20180201.355/diff-hl-margin.el
 
 (defvar diff-hl-margin-mode nil "\
 Non-nil if Diff-Hl-Margin mode is enabled.
@@ -135,7 +136,14 @@ Toggle displaying `diff-hl-mode' highlights on the margin.
 
 ;;;***
 
-;;;### (autoloads nil nil ("diff-hl-pkg.el") (23168 5711 15551 709000))
+;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/diff-hl-20180201.355/diff-hl-amend.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/diff-hl-20180201.355/diff-hl-autoloads.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/diff-hl-20180201.355/diff-hl-dired.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/diff-hl-20180201.355/diff-hl-flydiff.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/diff-hl-20180201.355/diff-hl-margin.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/diff-hl-20180201.355/diff-hl-pkg.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/diff-hl-20180201.355/diff-hl.el")
+;;;;;;  (23198 50033 44269 261000))
 
 ;;;***
 

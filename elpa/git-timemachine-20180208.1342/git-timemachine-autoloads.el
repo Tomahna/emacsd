@@ -3,9 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "git-timemachine" "git-timemachine.el" (23171
-;;;;;;  3454 403125 343000))
-;;; Generated autoloads from git-timemachine.el
+;;;### (autoloads nil "git-timemachine" "../../../../../../.emacs.d/elpa/git-timemachine-20180208.1342/git-timemachine.el"
+;;;;;;  "4df0146d8331cee5a4a00c59df8e4ca6")
+;;; Generated autoloads from ../../../../../../.emacs.d/elpa/git-timemachine-20180208.1342/git-timemachine.el
 
 (autoload 'git-timemachine-toggle "git-timemachine" "\
 Toggle git timemachine mode.
@@ -21,6 +21,12 @@ Enable git timemachine for file of current buffer.
 Enable git timemachine for current buffer, switching to GIT-BRANCH.
 
 \(fn GIT-BRANCH)" t nil)
+
+;;;***
+
+;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/git-timemachine-20180208.1342/git-timemachine-autoloads.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/git-timemachine-20180208.1342/git-timemachine.el")
+;;;;;;  (23198 50042 489344 407000))
 
 ;;;***
 

@@ -17,7 +17,7 @@ This will fontify with colors the string like \"#aabbcc\" or \"blue\".
 
 ;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/rainbow-mode-0.13/rainbow-mode-autoloads.el"
 ;;;;;;  "../../../../../../.emacs.d/elpa/rainbow-mode-0.13/rainbow-mode.el")
-;;;;;;  (23168 1932 303022 499000))
+;;;;;;  (23198 50058 789474 119000))
 
 ;;;***
 

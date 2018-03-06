@@ -23,7 +23,7 @@ this is right: (pfuture-new \"git\" \"status\")
 
 ;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/pfuture-20171116.812/pfuture-autoloads.el"
 ;;;;;;  "../../../../../../.emacs.d/elpa/pfuture-20171116.812/pfuture.el")
-;;;;;;  (23168 1911 133249 583000))
+;;;;;;  (23198 50050 778410 364000))
 
 ;;;***
 

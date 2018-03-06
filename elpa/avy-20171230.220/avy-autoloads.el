@@ -241,7 +241,7 @@ The window scope is determined by `avy-all-windows' (ARG negates it).
 
 ;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/avy-20171230.220/avy-autoloads.el"
 ;;;;;;  "../../../../../../.emacs.d/elpa/avy-20171230.220/avy.el")
-;;;;;;  (23168 1911 833242 72000))
+;;;;;;  (23198 50051 282414 375000))
 
 ;;;***
 

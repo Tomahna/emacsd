@@ -3,8 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "winum" "winum.el" (23169 58750 482110 898000))
-;;; Generated autoloads from winum.el
+;;;### (autoloads nil "winum" "../../../../../../.emacs.d/elpa/winum-20171028.702/winum.el"
+;;;;;;  "230301e239b5edd62c67db459eb78005")
+;;; Generated autoloads from ../../../../../../.emacs.d/elpa/winum-20171028.702/winum.el
 
 (defvar winum-mode nil "\
 Non-nil if Winum mode is enabled.
@@ -129,6 +130,12 @@ WINDOW: if specified, the window of which we want to know the number.
         returned.
 
 \(fn &optional WINDOW)" nil nil)
+
+;;;***
+
+;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/winum-20171028.702/winum-autoloads.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/winum-20171028.702/winum.el")
+;;;;;;  (23198 50043 960356 111000))
 
 ;;;***
 

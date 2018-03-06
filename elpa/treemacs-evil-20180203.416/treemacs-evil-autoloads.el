@@ -5,7 +5,7 @@
 
 ;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/treemacs-evil-20180203.416/treemacs-evil-autoloads.el"
 ;;;;;;  "../../../../../../.emacs.d/elpa/treemacs-evil-20180203.416/treemacs-evil.el")
-;;;;;;  (23168 1917 649846 329000))
+;;;;;;  (23198 50053 469431 779000))
 
 ;;;***
 

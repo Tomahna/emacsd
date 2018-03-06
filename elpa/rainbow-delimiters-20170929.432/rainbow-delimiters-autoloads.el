@@ -26,7 +26,7 @@ Disable `rainbow-delimiters-mode'.
 
 ;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/rainbow-delimiters-20170929.432/rainbow-delimiters-autoloads.el"
 ;;;;;;  "../../../../../../.emacs.d/elpa/rainbow-delimiters-20170929.432/rainbow-delimiters.el")
-;;;;;;  (23168 1931 576363 624000))
+;;;;;;  (23198 50058 465471 540000))
 
 ;;;***
 

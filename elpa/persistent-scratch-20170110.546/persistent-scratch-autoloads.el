@@ -3,9 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "persistent-scratch" "persistent-scratch.el"
-;;;;;;  (23168 7950 494822 639000))
-;;; Generated autoloads from persistent-scratch.el
+;;;### (autoloads nil "persistent-scratch" "../../../../../../.emacs.d/elpa/persistent-scratch-20170110.546/persistent-scratch.el"
+;;;;;;  "3b48aec86709d771da9908d4c91526d9")
+;;; Generated autoloads from ../../../../../../.emacs.d/elpa/persistent-scratch-20170110.546/persistent-scratch.el
 
 (autoload 'persistent-scratch-save "persistent-scratch" "\
 Save the current state of scratch buffers.
@@ -112,6 +112,12 @@ lexicographically increasing file names when formatted using
 `persistent-scratch-backup-file-name-format'.
 
 \(fn DIFF)" nil nil)
+
+;;;***
+
+;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/persistent-scratch-20170110.546/persistent-scratch-autoloads.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/persistent-scratch-20170110.546/persistent-scratch.el")
+;;;;;;  (23198 50042 869347 430000))
 
 ;;;***
 

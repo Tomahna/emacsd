@@ -55,7 +55,7 @@ Restore `solaire-mode' in buffers when `persp-mode' loads a session.
 
 ;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/solaire-mode-20171209.1350/solaire-mode-autoloads.el"
 ;;;;;;  "../../../../../../.emacs.d/elpa/solaire-mode-20171209.1350/solaire-mode.el")
-;;;;;;  (23168 1901 653351 331000))
+;;;;;;  (23198 50048 168389 595000))
 
 ;;;***
 

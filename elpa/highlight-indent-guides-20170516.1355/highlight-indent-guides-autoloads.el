@@ -24,7 +24,7 @@ Display indent guides in a buffer.
 
 ;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/highlight-indent-guides-20170516.1355/highlight-indent-guides-autoloads.el"
 ;;;;;;  "../../../../../../.emacs.d/elpa/highlight-indent-guides-20170516.1355/highlight-indent-guides.el")
-;;;;;;  (23168 1909 39938 714000))
+;;;;;;  (23198 50049 755402 224000))
 
 ;;;***
 

@@ -3,9 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "nix-mode" "nix-mode.el" (23179 62383 200423
-;;;;;;  262000))
-;;; Generated autoloads from nix-mode.el
+;;;### (autoloads nil "nix-mode" "../../../../../../.emacs.d/elpa/nix-mode-20180215.1331/nix-mode.el"
+;;;;;;  "b95fde95f05447ed97db605d525fc981")
+;;; Generated autoloads from ../../../../../../.emacs.d/elpa/nix-mode-20180215.1331/nix-mode.el
 
 (autoload 'nix-build "nix-mode" "\
 Run nix-build.
@@ -43,9 +43,9 @@ The hook `nix-mode-hook' is run when Nix mode is started.
 
 ;;;***
 
-;;;### (autoloads nil "nix-prettify-mode" "nix-prettify-mode.el"
-;;;;;;  (23179 62383 198423 248000))
-;;; Generated autoloads from nix-prettify-mode.el
+;;;### (autoloads nil "nix-prettify-mode" "../../../../../../.emacs.d/elpa/nix-mode-20180215.1331/nix-prettify-mode.el"
+;;;;;;  "6f69f7746fa1f987debb5f225430b87d")
+;;; Generated autoloads from ../../../../../../.emacs.d/elpa/nix-mode-20180215.1331/nix-prettify-mode.el
 
 (autoload 'nix-prettify-mode "nix-prettify-mode" "\
 Toggle Nix Prettify mode.
@@ -97,9 +97,9 @@ See `nix-prettify-mode' for more information on Nix-Prettify mode.
 
 ;;;***
 
-;;;### (autoloads nil "nix-shell" "nix-shell.el" (23179 62383 203423
-;;;;;;  284000))
-;;; Generated autoloads from nix-shell.el
+;;;### (autoloads nil "nix-shell" "../../../../../../.emacs.d/elpa/nix-mode-20180215.1331/nix-shell.el"
+;;;;;;  "75b1cb352a1ffdbd440bc580d42f1194")
+;;; Generated autoloads from ../../../../../../.emacs.d/elpa/nix-mode-20180215.1331/nix-shell.el
 
 (autoload 'nix-shell "nix-shell" "\
 Run nix-shell in a terminal.
@@ -111,8 +111,15 @@ ATTRIBUTE attribute name in nixpkgs to use.
 
 ;;;***
 
-;;;### (autoloads nil nil ("nix-format.el" "nix-mode-pkg.el" "nix-repl.el"
-;;;;;;  "nix-shebang.el") (23179 62383 206423 306000))
+;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/nix-mode-20180215.1331/nix-format.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/nix-mode-20180215.1331/nix-mode-autoloads.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/nix-mode-20180215.1331/nix-mode-pkg.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/nix-mode-20180215.1331/nix-mode.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/nix-mode-20180215.1331/nix-prettify-mode.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/nix-mode-20180215.1331/nix-repl.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/nix-mode-20180215.1331/nix-shebang.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/nix-mode-20180215.1331/nix-shell.el")
+;;;;;;  (23198 50060 777489 941000))
 
 ;;;***
 

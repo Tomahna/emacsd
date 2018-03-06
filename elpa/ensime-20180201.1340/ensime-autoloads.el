@@ -101,7 +101,7 @@ ENSIME: The ENhanced Scala Interaction Mode for Emacs (minor-mode).
 ;;;;;;  "../../../../../../.emacs.d/elpa/ensime-20180201.1340/ensime-util.el"
 ;;;;;;  "../../../../../../.emacs.d/elpa/ensime-20180201.1340/ensime-vars.el"
 ;;;;;;  "../../../../../../.emacs.d/elpa/ensime-20180201.1340/ensime.el")
-;;;;;;  (23168 1946 512870 168000))
+;;;;;;  (23198 50064 822522 137000))
 
 ;;;***
 

@@ -145,7 +145,7 @@ Run ‘dired-do-rename’ asynchronously.
 ;;;;;;  "../../../../../../.emacs.d/elpa/async-20180119.533/async.el"
 ;;;;;;  "../../../../../../.emacs.d/elpa/async-20180119.533/dired-async.el"
 ;;;;;;  "../../../../../../.emacs.d/elpa/async-20180119.533/smtpmail-async.el")
-;;;;;;  (23168 1882 893552 786000))
+;;;;;;  (23198 50036 429296 191000))
 
 ;;;***
 

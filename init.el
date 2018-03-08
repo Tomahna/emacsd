@@ -96,7 +96,7 @@
 (load "lang_python")
 (load "lang_scala")
 (load "lang_yaml")
-(load "keybind")       ;; Keybindings
+(load "layout_dvorak")
 
 ;; global keybindings
 (global-unset-key (kbd "C-z"))
@@ -104,32 +104,3 @@
 ;;(global-unset-key (kbd "<right>"))
 ;;(global-unset-key (kbd "<up>"))
 ;;(global-unset-key (kbd "<down>"))
-
-;; Buffer navigation
-(define-key treemacs-mode-map (kbd "C-à") 'treemacs-select-window)
-(define-key treemacs-mode-map (kbd "C-&") 'winum-select-window-1)
-(define-key treemacs-mode-map (kbd "C-é") 'winum-select-window-2)
-(define-key treemacs-mode-map (kbd "C-\"") 'winum-select-window-3)
-(define-key treemacs-mode-map (kbd "C-'") 'winum-select-window-4)
-(define-key treemacs-mode-map (kbd "C-(") 'winum-select-window-5)
-(define-key treemacs-mode-map (kbd "C--") 'winum-select-window-6)
-(define-key treemacs-mode-map (kbd "C-è") 'winum-select-window-7)
-(define-key treemacs-mode-map (kbd "C-_") 'winum-select-window-8)
-(define-key treemacs-mode-map (kbd "C-ç") 'winum-select-window-9)
-(define-key evil-normal-state-map (kbd "C-<tab>") 'switch-to-buffer)
-(define-key evil-normal-state-map (kbd "C-à") 'treemacs-select-window)
-(define-key evil-normal-state-map (kbd "C-&") 'winum-select-window-1)
-(define-key evil-normal-state-map (kbd "C-é") 'winum-select-window-2)
-(define-key evil-normal-state-map (kbd "C-\"") 'winum-select-window-3)
-(define-key evil-normal-state-map (kbd "C-'") 'winum-select-window-4)
-(define-key evil-normal-state-map (kbd "C-(") 'winum-select-window-5)
-(define-key evil-normal-state-map (kbd "C--") 'winum-select-window-6)
-(define-key evil-normal-state-map (kbd "C-è") 'winum-select-window-7)
-(define-key evil-normal-state-map (kbd "C-_") 'winum-select-window-8)
-(define-key evil-normal-state-map (kbd "C-ç") 'winum-select-window-9)
-
-(define-key evil-normal-state-map (kbd "C-;") 'goto-last-change)
-(define-key evil-normal-state-map (kbd "C-.") 'goto-last-change-reverse)
-
-;; expand region
-(define-key evil-normal-state-map (kbd "C-=") 'er/expand-region)

@@ -22,6 +22,21 @@
 ;; expand region
 (define-key evil-normal-state-map (kbd "C-=") 'er/expand-region)
 
+;; Normal Keys
+(define-key evil-normal-state-map (kbd "h") 'evil-backward-char)
+(define-key evil-normal-state-map (kbd "t") 'evil-previous-line)
+(define-key evil-normal-state-map (kbd "n") 'evil-next-line)
+(define-key evil-normal-state-map (kbd "s") 'evil-forward-char)
+(define-key evil-normal-state-map (kbd "l") 'evil-end-of-line)
+(define-key evil-normal-state-map (kbd "g") 'evil-beginning-of-line)
+
+;; Visual Keys
+(define-key evil-visual-state-map (kbd "h") 'evil-backward-char)
+(define-key evil-visual-state-map (kbd "t") 'evil-previous-line)
+(define-key evil-visual-state-map (kbd "n") 'evil-next-line)
+(define-key evil-visual-state-map (kbd "s") 'evil-forward-char)
+(define-key evil-visual-state-map (kbd "l") 'evil-end-of-line)
+(define-key evil-visual-state-map (kbd "g") 'evil-beginning-of-line)
 (define-key evil-visual-state-map (kbd "<") 'mc/mark-previous-like-this)
 (define-key evil-visual-state-map (kbd ">") 'mc/mark-next-like-this)
 

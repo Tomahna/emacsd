@@ -3,6 +3,7 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+        evil-exit-visual-state
         evil-jump-forward
         evil-next-line
         evil-previous-line

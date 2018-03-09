@@ -69,6 +69,7 @@
   :config
   (magit-auto-revert-mode -1)      ;; Workaround https://github.com/dgutov/diff-hl/issues/65
   (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh))
+(use-package multiple-cursors)
 (use-package persistent-scratch
   :config
   (setq persistent-scratch-save-file "~/.cache/emacs/scratch")

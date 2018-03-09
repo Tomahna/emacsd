@@ -7,6 +7,7 @@
         evil-beginning-of-line
         evil-delete-backward-char-and-join
         evil-exit-visual-state
+        evil-find-char-to-backward
         evil-forward-char
         evil-jump-forward
         evil-next-line
@@ -28,6 +29,7 @@
         evil-record-macro
         hydra-mc-forward/mc/edit-ends-of-lines-and-exit
         hydra-mc-forward/mc/edit-lines
+        hydra-mc-forward/mc/keyboard-quit-and-exit
         hydra-mc-forward/mc/mark-all-like-this-and-exit
         hydra-mc-forward/mc/mark-next-like-this
         hydra-mc-forward/mc/mark-next-like-this-word

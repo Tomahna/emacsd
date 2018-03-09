@@ -8,7 +8,9 @@
   ("c" mc/mark-previous-like-this)
   ("t" mc/mark-next-like-this)
   ("C" mc/unmark-next-like-this)
-  ("T" mc/unmark-previous-like-this :exit t))
+  ("T" mc/unmark-previous-like-this)
+  ("g" mc/keyboard-quit :exit t)
+  ("r" mc/mark-all-like-this :exit t))
 
 (defun mudefine-key (KEY FUN &rest KEYMAPS)
   (interactive)

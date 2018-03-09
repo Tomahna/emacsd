@@ -1,3 +1,15 @@
+(use-package hydra)
+(defhydra hydra-mc-forward ()
+  "multicursor"
+  ("n" er/expand-region)
+  ("h" er/contract-region)
+  ("<" mc/edit-beginnings-of-lines :exit t)
+  (">" mc/edit-ends-of-lines :exit t)
+  ("c" mc/mark-previous-like-this)
+  ("t" mc/mark-next-like-this)
+  ("C" mc/unmark-next-like-this)
+  ("T" mc/unmark-previous-like-this :exit t))
+
 (defun mudefine-key (KEY FUN &rest KEYMAPS)
   (interactive)
   (dolist (KEYMAP KEYMAPS)
@@ -19,26 +31,35 @@
 (define-key evil-normal-state-map (kbd "C-;") 'goto-last-change)
 (define-key evil-normal-state-map (kbd "C-.") 'goto-last-change-reverse)
 
-;; expand region
-(define-key evil-normal-state-map (kbd "C-=") 'er/expand-region)
+;; Insert Mode Keys
+(define-key evil-insert-state-map (kbd "C-h") 'evil-backward-char)
+(define-key evil-insert-state-map (kbd "C-t") 'evil-next-line)
+(define-key evil-insert-state-map (kbd "C-c") 'evil-previous-line)
+(define-key evil-insert-state-map (kbd "C-n") 'evil-forward-char)
+(define-key evil-insert-state-map (kbd "C-r") 'evil-end-of-line)
+(define-key evil-insert-state-map (kbd "C-g") 'evil-beginning-of-line)
+(define-key evil-insert-state-map (kbd "C-<") 'hydra-mc-forward/body)
+(define-key evil-insert-state-map (kbd "C->") 'hydra-mc-forward/body)
 
 ;; Normal Keys
 (define-key evil-normal-state-map (kbd "h") 'evil-backward-char)
-(define-key evil-normal-state-map (kbd "t") 'evil-previous-line)
-(define-key evil-normal-state-map (kbd "n") 'evil-next-line)
-(define-key evil-normal-state-map (kbd "s") 'evil-forward-char)
-(define-key evil-normal-state-map (kbd "l") 'evil-end-of-line)
+(define-key evil-normal-state-map (kbd "t") 'evil-next-line)
+(define-key evil-normal-state-map (kbd "c") 'evil-previous-line)
+(define-key evil-normal-state-map (kbd "n") 'evil-forward-char)
+(define-key evil-normal-state-map (kbd "r") 'evil-end-of-line)
 (define-key evil-normal-state-map (kbd "g") 'evil-beginning-of-line)
+(define-key evil-normal-state-map (kbd "<") 'hydra-mc-forward/body)
+(define-key evil-normal-state-map (kbd ">") 'hydra-mc-forward/body)
 
 ;; Visual Keys
 (define-key evil-visual-state-map (kbd "h") 'evil-backward-char)
-(define-key evil-visual-state-map (kbd "t") 'evil-previous-line)
-(define-key evil-visual-state-map (kbd "n") 'evil-next-line)
-(define-key evil-visual-state-map (kbd "s") 'evil-forward-char)
-(define-key evil-visual-state-map (kbd "l") 'evil-end-of-line)
+(define-key evil-visual-state-map (kbd "t") 'evil-next-line)
+(define-key evil-visual-state-map (kbd "c") 'evil-previous-line)
+(define-key evil-visual-state-map (kbd "n") 'evil-forward-char)
+(define-key evil-visual-state-map (kbd "r") 'evil-end-of-line)
 (define-key evil-visual-state-map (kbd "g") 'evil-beginning-of-line)
-(define-key evil-visual-state-map (kbd "<") 'mc/mark-previous-like-this)
-(define-key evil-visual-state-map (kbd ">") 'mc/mark-next-like-this)
+(define-key evil-visual-state-map (kbd "<") 'hydra-mc-forward/body)
+(define-key evil-visual-state-map (kbd ">") 'hydra-mc-forward/body)
 
 ;; Projectile bindings
 (evil-ex-define-cmd "pf" 'projectile-find-file)

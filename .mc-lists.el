@@ -3,10 +3,17 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+        evil-backward-char
+        evil-beginning-of-line
+        evil-delete-backward-char-and-join
         evil-exit-visual-state
+        evil-forward-char
         evil-jump-forward
         evil-next-line
         evil-previous-line
+        hydra-mc-forward/body
+        hydra-mc-forward/er/contract-region
+        hydra-mc-forward/er/expand-region
         indent-for-tab-command
         ))
 
@@ -14,10 +21,21 @@
       '(
         evil-ex
         evil-force-normal-state
+        evil-goto-line
         evil-insert
         evil-mouse-drag-region
         evil-normal-state
         evil-record-macro
+        hydra-mc-forward/mc/edit-ends-of-lines-and-exit
+        hydra-mc-forward/mc/edit-lines
+        hydra-mc-forward/mc/mark-all-like-this-and-exit
+        hydra-mc-forward/mc/mark-next-like-this
+        hydra-mc-forward/mc/mark-next-like-this-word
+        hydra-mc-forward/mc/mark-previous-like-this
+        hydra-mc-forward/mc/mark-previous-like-this-word
+        hydra-mc-forward/mc/unmark-next-like-this
+        hydra-mc-forward/mc/unmark-previous-like-this
+        hydra-mc-forward/mc/unmark-previous-like-this-and-exit
         ivy-switch-buffer
         yaml-electric-backspace
         ))

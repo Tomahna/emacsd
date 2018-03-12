@@ -19,6 +19,7 @@
             (company-mode                 t)
             (diff-hl-mode                 t)
             (diff-hl-flydiff-mode         t)
+            (linum-mode                   t)
             (show-paren-mode              t)
             (smartparens-mode             t)
             (yas-minor-mode               t)

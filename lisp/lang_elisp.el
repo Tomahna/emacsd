@@ -7,9 +7,6 @@
   :diminish eldoc-mode
   :init
   (setq eldoc-idle-delay 0.1))
-(use-package evil-smartparens
-  :commands evil-smartparens-mode
-  :diminish evil-smartparens-mode)
 (use-package flycheck
   :commands flycheck-mode
   :diminish flycheck-mode)
@@ -30,10 +27,6 @@
 (use-package rainbow-mode
   :commands rainbow-mode
   :diminish rainbow-mode)
-(use-package smartparens
-  :diminish smartparens-mode
-  :commands smartparens-mode
-            smartparens-strict-mode)
 (use-package undo-tree
   :diminish undo-tree-mode
   :commands undo-tree-mode)

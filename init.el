@@ -79,6 +79,18 @@
   (setq projectile-completion-system 'ivy)
   (setq projectile-mode-line         '(:eval (format " [%s]" (projectile-project-name))))
   (setq projectile-use-git-grep      t))
+
+;; Smartparens
+;; Intelligently pair () {} [] ""
+(use-package evil-smartparens
+  :commands evil-smartparens-mode
+  :diminish evil-smartparens-mode)
+(use-package smartparens
+  :diminish smartparens-mode
+  :commands smartparens-mode smartparens-strict-mode
+  :init
+  (add-hook 'smartparens-enabled-hook #'evil-smartparens-mode))
+
 (use-package winum)
 
 

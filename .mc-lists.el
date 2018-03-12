@@ -5,17 +5,20 @@
       '(
         evil-backward-char
         evil-beginning-of-line
+        evil-delete-backward-char
         evil-delete-backward-char-and-join
         evil-exit-visual-state
         evil-find-char-to-backward
         evil-forward-char
         evil-jump-forward
         evil-next-line
+        evil-paste-after
         evil-previous-line
         hydra-mc-forward/body
         hydra-mc-forward/er/contract-region
         hydra-mc-forward/er/expand-region
         indent-for-tab-command
+        upcase-region
         ))
 
 (setq mc/cmds-to-run-once

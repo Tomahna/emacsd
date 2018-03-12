@@ -1,3 +1,12 @@
+(defvar evil-insert-state-map)
+(defvar evil-normal-state-map)
+(defvar evil-visual-state-map)
+(defvar flycheck-mode-map)
+(defvar ivy-minibuffer-map)
+(defvar projectile-mode-map)
+(defvar treemacs-mode-map)
+(defvar yas-minor-mode-map)
+
 (use-package hydra)
 (defhydra hydra-mc-forward ()
   "multicursor"
@@ -31,6 +40,13 @@
 
 (define-key evil-normal-state-map (kbd "C-;") 'goto-last-change)
 (define-key evil-normal-state-map (kbd "C-.") 'goto-last-change-reverse)
+
+;; TODO Disable only locally
+(define-key flycheck-mode-map "\C-c" nil)
+(define-key projectile-mode-map "\C-c" nil)
+(define-key yas-minor-mode-map "\C-c" nil)
+(define-key ivy-minibuffer-map "\C-c" 'ivy-previous-line)
+(define-key ivy-minibuffer-map "\C-t" 'ivy-next-line)
 
 ;; Insert Mode Keys
 (define-key evil-insert-state-map (kbd "C-h") 'evil-backward-char)

@@ -5,7 +5,6 @@
 (defvar ivy-minibuffer-map)
 (defvar projectile-mode-map)
 (defvar treemacs-mode-map)
-(defvar yas-minor-mode-map)
 
 (use-package hydra)
 (defhydra hydra-mc-forward ()
@@ -44,7 +43,6 @@
 ;; TODO Disable only locally
 (define-key flycheck-mode-map "\C-c" nil)
 (define-key projectile-mode-map "\C-c" nil)
-(define-key yas-minor-mode-map "\C-c" nil)
 (define-key ivy-minibuffer-map "\C-c" 'ivy-previous-line)
 (define-key ivy-minibuffer-map "\C-t" 'ivy-next-line)
 

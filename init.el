@@ -39,6 +39,9 @@
 (use-package evil-magit)
 (use-package expand-region
   :commands 'er/expand-region)
+(use-package flyspell
+  :commands flyspell-mode
+  :diminish flyspell-mode)
 (use-package highlight-symbol
   :commands highlight-symbol highlight-symbol-mode
   :diminish highlight-symbol-mode

@@ -10,6 +10,7 @@
         evil-exit-visual-state
         evil-find-char-to-backward
         evil-forward-char
+        evil-forward-word-end
         evil-jump-forward
         evil-next-line
         evil-paste-after
@@ -17,6 +18,7 @@
         hydra-mc-forward/body
         hydra-mc-forward/er/contract-region
         hydra-mc-forward/er/expand-region
+        hydra-mc-forward/mc/edit-beginnings-of-lines-and-exit
         indent-for-tab-command
         upcase-region
         ))
@@ -30,6 +32,7 @@
         evil-mouse-drag-region
         evil-normal-state
         evil-record-macro
+        evil-visual-char
         hydra-mc-forward/mc/edit-ends-of-lines-and-exit
         hydra-mc-forward/mc/edit-lines
         hydra-mc-forward/mc/keyboard-quit-and-exit
@@ -42,5 +45,7 @@
         hydra-mc-forward/mc/unmark-previous-like-this
         hydra-mc-forward/mc/unmark-previous-like-this-and-exit
         ivy-switch-buffer
+        projectile-find-file
+        winum-select-window-2
         yaml-electric-backspace
         ))

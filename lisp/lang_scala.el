@@ -26,4 +26,9 @@
   (ensime)
   (scala-mode:goto-start-of-code))
 
+(defun configure-ensime ()
+  (define-key evil-normal-state-map "e" 'ensime-edit-definition)
+  (define-key evil-normal-state-map "E" 'ensime-pop-find-definition-stack))
+
 (add-hook 'scala-mode-hook 'configure-scala)
+(add-hook 'ensime-mode-hook 'configure-ensime)

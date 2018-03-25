@@ -20,13 +20,18 @@
         hydra-mc-forward/er/expand-region
         hydra-mc-forward/lambda-\"
         hydra-mc-forward/lambda-\(
+        hydra-mc-forward/lambda-e
         hydra-mc-forward/mc/edit-beginnings-of-lines-and-exit
+        hydra-mc-forward/sp-unwrap-sexp
+        hydra-mc-forward/sp-wrap-with-pair
         indent-for-tab-command
         upcase-region
         ))
 
 (setq mc/cmds-to-run-once
       '(
+        evil-backward-paragraph
+        evil-backward-sentence-begin
         evil-ex
         evil-force-normal-state
         evil-goto-line
@@ -38,6 +43,7 @@
         hydra-mc-forward/mc/edit-ends-of-lines-and-exit
         hydra-mc-forward/mc/edit-lines
         hydra-mc-forward/mc/keyboard-quit-and-exit
+        hydra-mc-forward/mc/mark-all-like-this
         hydra-mc-forward/mc/mark-all-like-this-and-exit
         hydra-mc-forward/mc/mark-next-like-this
         hydra-mc-forward/mc/mark-next-like-this-word
@@ -49,5 +55,6 @@
         ivy-switch-buffer
         projectile-find-file
         winum-select-window-2
+        winum-select-window-9
         yaml-electric-backspace
         ))

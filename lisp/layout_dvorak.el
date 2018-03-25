@@ -11,8 +11,8 @@
   "multicursor"
   ("n" er/expand-region)
   ("h" er/contract-region)
-  ("<" mc/edit-beginnings-of-lines :exit t)
-  (">" mc/edit-ends-of-lines :exit t)
+;;  ("<" mc/edit-beginnings-of-lines :exit t)
+;;  (">" mc/edit-ends-of-lines :exit t)
 
   ;; MC marks
   ("c" mc/mark-previous-like-this)
@@ -21,8 +21,21 @@
   ("C" mc/unmark-next-like-this)
   ("T" mc/unmark-previous-like-this)
 
+  ;; SP Wrapping and unwrapping
+  ("(" (lambda () (interactive) (sp-wrap-with-pair "(")))
+  ("C-(" sp-unwrap-sexp)
+  ("[" (lambda () (interactive) (sp-wrap-with-pair "[")))
+  ("C-[" sp-unwrap-sexp)
+  ("{" (lambda () (interactive) (sp-wrap-with-pair "{")))
+  ("C-{" sp-unwrap-sexp)
+  ("<" (lambda () (interactive) (sp-wrap-with-pair "<")))
+  ("C-[" sp-unwrap-sexp)
+  ("\"" (lambda () (interactive) (sp-wrap-with-pair "\"")))
+  ("C-\"" sp-unwrap-sexp)
+
   ("g" mc/keyboard-quit :exit t)
   ("y" yank-rectangle))
+
 
 (defun mudefine-key (KEY FUN &rest KEYMAPS)
   (interactive)

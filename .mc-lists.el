@@ -18,6 +18,8 @@
         hydra-mc-forward/body
         hydra-mc-forward/er/contract-region
         hydra-mc-forward/er/expand-region
+        hydra-mc-forward/lambda-\"
+        hydra-mc-forward/lambda-\(
         hydra-mc-forward/mc/edit-beginnings-of-lines-and-exit
         indent-for-tab-command
         upcase-region

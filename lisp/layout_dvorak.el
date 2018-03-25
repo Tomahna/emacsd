@@ -13,12 +13,16 @@
   ("h" er/contract-region)
   ("<" mc/edit-beginnings-of-lines :exit t)
   (">" mc/edit-ends-of-lines :exit t)
+
+  ;; MC marks
   ("c" mc/mark-previous-like-this)
   ("t" mc/mark-next-like-this)
+  ("r" mc/mark-all-like-this)
   ("C" mc/unmark-next-like-this)
   ("T" mc/unmark-previous-like-this)
+
   ("g" mc/keyboard-quit :exit t)
-  ("r" mc/mark-all-like-this :exit t))
+  ("y" yank-rectangle))
 
 (defun mudefine-key (KEY FUN &rest KEYMAPS)
   (interactive)
@@ -82,6 +86,7 @@
 (define-key evil-visual-state-map (kbd "G") 'evil-beginning-of-line)
 (define-key evil-visual-state-map (kbd "<") 'hydra-mc-forward/body)
 (define-key evil-visual-state-map (kbd ">") 'hydra-mc-forward/body)
+(define-key evil-visual-state-map (kbd "C-<tab>") 'switch-to-buffer)
 
 ;; Projectile bindings
 (evil-ex-define-cmd "pf" 'projectile-find-file)

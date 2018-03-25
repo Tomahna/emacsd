@@ -36,6 +36,7 @@
 (mudefine-key (kbd "C-7") 'winum-select-window-7 treemacs-mode-map evil-normal-state-map)
 (mudefine-key (kbd "C-8") 'winum-select-window-8 treemacs-mode-map evil-normal-state-map)
 (mudefine-key (kbd "C-9") 'winum-select-window-9 treemacs-mode-map evil-normal-state-map)
+(define-key evil-normal-state-map (kbd "C-<tab>") 'switch-to-buffer)
 
 (define-key evil-normal-state-map (kbd "C-;") 'goto-last-change)
 (define-key evil-normal-state-map (kbd "C-.") 'goto-last-change-reverse)
@@ -69,7 +70,6 @@
 (define-key evil-normal-state-map (kbd "G") 'evil-beginning-of-line)
 (define-key evil-normal-state-map (kbd "<") 'hydra-mc-forward/body)
 (define-key evil-normal-state-map (kbd ">") 'hydra-mc-forward/body)
-(define-key evil-normal-state-map (kbd "C-<tab>") 'projectile-find-file)
 
 ;; Visual Keys
 (define-key evil-visual-state-map (kbd "h") 'evil-backward-char)
@@ -82,7 +82,6 @@
 (define-key evil-visual-state-map (kbd "G") 'evil-beginning-of-line)
 (define-key evil-visual-state-map (kbd "<") 'hydra-mc-forward/body)
 (define-key evil-visual-state-map (kbd ">") 'hydra-mc-forward/body)
-(define-key evil-visual-state-map (kbd "C-<tab>") 'projectile-find-file)
 
 ;; Projectile bindings
 (evil-ex-define-cmd "pf" 'projectile-find-file)

@@ -70,7 +70,7 @@
 
 ;; Emacs configuration
 (menu-bar-mode  0)                     ;;Disable Menubar
+(tool-bar-mode  0)                     ;;Disable Toolbar
 (set-frame-font "DejaVu Sans Mono-11") ;;Font
 (toggle-frame-maximized)               ;;Maximise Emacs
 (toggle-frame-fullscreen)
-(tool-bar-mode  0)                     ;;Disable Toolbar

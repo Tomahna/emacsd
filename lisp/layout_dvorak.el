@@ -43,7 +43,7 @@
     (define-key KEYMAP KEY FUN)))
 
 ;; Buffer navigation
-(mudefine-key (kbd "C-0") 'treemacs-select-window treemacs-mode-map evil-normal-state-map)
+(mudefine-key (kbd "C-0") 'treemacs-projectile treemacs-mode-map evil-normal-state-map)
 (mudefine-key (kbd "C-1") 'winum-select-window-1 treemacs-mode-map evil-normal-state-map)
 (mudefine-key (kbd "C-2") 'winum-select-window-2 treemacs-mode-map evil-normal-state-map)
 (mudefine-key (kbd "C-3") 'winum-select-window-3 treemacs-mode-map evil-normal-state-map)

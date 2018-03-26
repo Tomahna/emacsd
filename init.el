@@ -96,6 +96,13 @@
 
 (use-package winum)
 
+;; Save current session
+(defvar desktop-dirname)
+(defvar desktop-path)
+(setq desktop-dirname "~/.cache/emacs/desktop")
+(setq desktop-path    (list desktop-dirname))
+(desktop-save-mode t)
+
 
 (evil-mode               t)
 (ivy-mode                t)

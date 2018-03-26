@@ -69,8 +69,9 @@
 (if (not (null (executable-find "python3"))) (treemacs-git-mode 'extended) (treemacs-git-mode 'simple))
 
 ;; Emacs configuration
-(menu-bar-mode  0)                     ;;Disable Menubar
-(tool-bar-mode  0)                     ;;Disable Toolbar
-(set-frame-font "DejaVu Sans Mono-11") ;;Font
-(toggle-frame-maximized)               ;;Maximise Emacs
+(menu-bar-mode   0)                     ;;Disable Menubar
+(scroll-bar-mode 0)                     ;;Disable Scrollbar
+(tool-bar-mode   0)                     ;;Disable Toolbar
+(set-frame-font "DejaVu Sans Mono-11")  ;;Font
+(toggle-frame-maximized)                ;;Maximise Emacs
 (toggle-frame-fullscreen)

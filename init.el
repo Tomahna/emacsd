@@ -102,7 +102,7 @@
 (setq desktop-dirname "~/.cache/emacs/desktop")
 (setq desktop-path    (list desktop-dirname))
 (desktop-save-mode t)
-
+(clean-buffer-list)
 
 (evil-mode               t)
 (ivy-mode                t)

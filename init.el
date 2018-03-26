@@ -4,7 +4,6 @@
 
 (setq backup-by-copying         t)
 (setq backup-directory-alist    `(("." . "~/.cache/emacs/backup")))
-(setq confirm-kill-emacs        #'y-or-n-p) ;; confirm before exiting emacs (todo remove when bad habits are gone)
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (setq create-lockfiles          nil)
 (setq inhibit-startup-screen    t)

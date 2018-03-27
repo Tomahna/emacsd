@@ -1,0 +1,11 @@
+auto-save-list
+archives
+bookmarks
+custom.el
+eshell
+gnupg
+projectile-bookmarks.eld
+recentf
+session.*
+tramp
+*.elc

@@ -91,7 +91,10 @@
   :diminish smartparens-mode
   :commands smartparens-mode smartparens-strict-mode
   :init
-  (add-hook 'smartparens-enabled-hook #'evil-smartparens-mode))
+  (add-hook 'smartparens-enabled-hook #'evil-smartparens-mode)
+  :config
+  (sp-pair " " " ")
+  (sp-pair "<" ">"))
 
 (use-package winum)
 

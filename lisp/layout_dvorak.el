@@ -7,6 +7,7 @@
 (defvar treemacs-mode-map)
 
 (use-package hydra)
+(define-key mc/keymap (kbd "<return>") nil)
 (defhydra hydra-mc-forward ()
   "multicursor"
   ("n" er/expand-region)
@@ -22,8 +23,7 @@
   ("T" mc/unmark-previous-like-this)
 
   ;; SP Wrapping and unwrapping
-  ("g" mc/keyboard-quit :exit t)
-  ("y" yank-rectangle))
+  ("g" mc/keyboard-quit :exit t))
 
 
 (defun mudefine-key (KEY FUN &rest KEYMAPS)

@@ -92,6 +92,7 @@
   :commands smartparens-mode smartparens-strict-mode
   :init
   (add-hook 'smartparens-enabled-hook #'evil-smartparens-mode)
+  (setq mc/always-run-for-all t)
   :config
   (sp-pair " " " ")
   (sp-pair "<" ">"))

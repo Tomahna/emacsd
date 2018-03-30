@@ -71,7 +71,7 @@
   :config
   (magit-auto-revert-mode -1)      ;; Workaround https://github.com/dgutov/diff-hl/issues/65
   (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh))
-(use-package multiple-cursors)
+(use-package evil-mc)
 (use-package persistent-scratch
   :config
   (setq persistent-scratch-save-file "~/.cache/emacs/scratch")
@@ -92,7 +92,6 @@
   :commands smartparens-mode smartparens-strict-mode
   :init
   (add-hook 'smartparens-enabled-hook #'evil-smartparens-mode)
-  (setq mc/always-run-for-all t)
   :config
   (sp-pair " " " ")
   (sp-pair "<" ">"))
@@ -108,6 +107,7 @@
 (clean-buffer-list)
 
 (evil-mode               t)
+(global-evil-mc-mode     t)
 (ivy-mode                t)
 (projectile-mode         t)
 (global-auto-revert-mode t)

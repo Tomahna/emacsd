@@ -7,23 +7,20 @@
 (defvar treemacs-mode-map)
 
 (use-package hydra)
-(define-key mc/keymap (kbd "<return>") nil)
 (defhydra hydra-mc-forward ()
   "multicursor"
   ("n" er/expand-region)
   ("h" er/contract-region)
-;;  ("<" mc/edit-beginnings-of-lines :exit t)
-;;  (">" mc/edit-ends-of-lines :exit t)
 
   ;; MC marks
-  ("c" mc/mark-previous-like-this)
-  ("t" mc/mark-next-like-this)
-  ("r" mc/mark-all-like-this)
-  ("C" mc/unmark-next-like-this)
-  ("T" mc/unmark-previous-like-this)
+  ("c" evil-mc-make-and-goto-prev-match)
+  ("t" evil-mc-make-and-goto-next-match)
+  ("r" evil-mc-make-all-cursors :exit t)
+;;  ("C" mc/unmark-next-like-this)
+;;  ("T" mc/unmark-previous-like-this)
 
   ;; SP Wrapping and unwrapping
-  ("g" mc/keyboard-quit :exit t))
+  ("g" evil-mc-undo-all-cursors :exit t))
 
 
 (defun mudefine-key (KEY FUN &rest KEYMAPS)

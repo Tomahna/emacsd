@@ -2,6 +2,7 @@ auto-save-list
 archives
 bookmarks
 custom.el
+elpa
 eshell
 gnupg
 projectile-bookmarks.eld

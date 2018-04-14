@@ -72,6 +72,6 @@
 (menu-bar-mode   0)                     ;;Disable Menubar
 (scroll-bar-mode 0)                     ;;Disable Scrollbar
 (tool-bar-mode   0)                     ;;Disable Toolbar
-(set-frame-font "DejaVu Sans Mono-11")  ;;Font
+(set-frame-font "DejaVu Sans Mono-10")  ;;Font
 (toggle-frame-maximized)                ;;Maximise Emacs
 (toggle-frame-fullscreen)

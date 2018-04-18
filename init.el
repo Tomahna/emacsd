@@ -125,6 +125,8 @@
 (load "lang_yaml")
 (load "layout_dvorak")
 
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 ;; global keybindings
 (global-unset-key (kbd "C-z"))
 ;;(global-unset-key (kbd "<left>"))

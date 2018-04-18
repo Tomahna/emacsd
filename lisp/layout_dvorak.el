@@ -25,7 +25,6 @@
 
 
 (defun mudefine-key (KEY FUN &rest KEYMAPS)
-  (interactive)
   (dolist (KEYMAP KEYMAPS)
     (define-key KEYMAP KEY FUN)))
 
@@ -43,14 +42,14 @@
 (mudefine-key (kbd "C-<tab>") 'switch-to-buffer evil-normal-state-map evil-visual-state-map)
 
 ;; Motion
-(mudefine-key (kbd "c") 'previous-line     evil-motion-state-map evil-normal-state-map evil-visual-state-map)
-(mudefine-key (kbd "t") 'next-line         evil-motion-state-map evil-normal-state-map evil-visual-state-map)
-(mudefine-key (kbd "h") 'backward-word     evil-motion-state-map evil-normal-state-map evil-visual-state-map)
-(mudefine-key (kbd "n") 'forward-word      evil-motion-state-map evil-normal-state-map evil-visual-state-map)
-(mudefine-key (kbd "H") 'backward-char     evil-motion-state-map evil-normal-state-map evil-visual-state-map)
-(mudefine-key (kbd "N") 'forward-char      evil-motion-state-map evil-normal-state-map evil-visual-state-map)
-(mudefine-key (kbd "g") 'beginning-of-line evil-motion-state-map evil-normal-state-map evil-visual-state-map)
-(mudefine-key (kbd "r") 'end-of-line       evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+(mudefine-key (kbd "c") 'evil-previous-line       evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+(mudefine-key (kbd "t") 'evil-next-line           evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+(mudefine-key (kbd "h") 'evil-backward-word-begin evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+(mudefine-key (kbd "n") 'evil-forward-word-end    evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+(mudefine-key (kbd "H") 'evil-backward-char       evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+(mudefine-key (kbd "N") 'evil-forward-char        evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+(mudefine-key (kbd "g") 'evil-beginning-of-line   evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+(mudefine-key (kbd "r") 'evil-end-of-line         evil-motion-state-map evil-normal-state-map evil-visual-state-map)
 (define-key evil-normal-state-map (kbd "C-;") 'goto-last-change)
 (define-key evil-normal-state-map (kbd "C-.") 'goto-last-change-reverse)
 

@@ -1,4 +1,5 @@
 (defvar evil-insert-state-map)
+(defvar evil-motion-state-map)
 (defvar evil-normal-state-map)
 (defvar evil-visual-state-map)
 (defvar flycheck-mode-map)
@@ -39,8 +40,17 @@
 (mudefine-key (kbd "C-7") 'winum-select-window-7 treemacs-mode-map evil-normal-state-map)
 (mudefine-key (kbd "C-8") 'winum-select-window-8 treemacs-mode-map evil-normal-state-map)
 (mudefine-key (kbd "C-9") 'winum-select-window-9 treemacs-mode-map evil-normal-state-map)
-(define-key evil-normal-state-map (kbd "C-<tab>") 'switch-to-buffer)
+(mudefine-key (kbd "C-<tab>") 'switch-to-buffer evil-normal-state-map evil-visual-state-map)
 
+;; Motion
+(mudefine-key (kbd "c") 'previous-line     evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+(mudefine-key (kbd "t") 'next-line         evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+(mudefine-key (kbd "h") 'backward-word     evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+(mudefine-key (kbd "n") 'forward-word      evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+(mudefine-key (kbd "H") 'backward-char     evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+(mudefine-key (kbd "N") 'forward-char      evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+(mudefine-key (kbd "g") 'beginning-of-line evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+(mudefine-key (kbd "r") 'end-of-line       evil-motion-state-map evil-normal-state-map evil-visual-state-map)
 (define-key evil-normal-state-map (kbd "C-;") 'goto-last-change)
 (define-key evil-normal-state-map (kbd "C-.") 'goto-last-change-reverse)
 
@@ -62,14 +72,6 @@
 (define-key evil-insert-state-map (kbd "C->") 'hydra-mc-forward/body)
 
 ;; Normal Keys
-(define-key evil-normal-state-map (kbd "h") 'backward-char)
-(define-key evil-normal-state-map (kbd "t") 'next-line)
-(define-key evil-normal-state-map (kbd "c") 'previous-line)
-(define-key evil-normal-state-map (kbd "n") 'forward-char)
-(define-key evil-normal-state-map (kbd "r") 'forward-word)
-(define-key evil-normal-state-map (kbd "g") 'backward-word)
-(define-key evil-normal-state-map (kbd "R") 'end-of-line)
-(define-key evil-normal-state-map (kbd "G") 'beginning-of-line)
 (define-key evil-normal-state-map (kbd ">") 'hydra-mc-forward/body)
 (define-key evil-normal-state-map (kbd "(") (lambda (&optional arg) (interactive "P") (sp-wrap-with-pair "(")))
 (define-key evil-normal-state-map (kbd "[") (lambda (&optional arg) (interactive "P") (sp-wrap-with-pair "[")))
@@ -79,16 +81,7 @@
 (define-key evil-normal-state-map (kbd "SPC") (lambda (&optional arg) (interactive "P")(sp-wrap-with-pair " ")))
 
 ;; Visual Keys
-(define-key evil-visual-state-map (kbd "h") 'backward-char)
-(define-key evil-visual-state-map (kbd "t") 'next-line)
-(define-key evil-visual-state-map (kbd "c") 'previous-line)
-(define-key evil-visual-state-map (kbd "n") 'forward-char)
-(define-key evil-visual-state-map (kbd "r") 'forward-word)
-(define-key evil-visual-state-map (kbd "g") 'backward-word)
-(define-key evil-visual-state-map (kbd "R") 'end-of-line)
-(define-key evil-visual-state-map (kbd "G") 'beginning-of-line)
 (define-key evil-visual-state-map (kbd ">") 'hydra-mc-forward/body)
-(define-key evil-visual-state-map (kbd "C-<tab>") 'switch-to-buffer)
 (define-key evil-visual-state-map (kbd "(") (lambda (&optional arg) (interactive "P") (sp-wrap-with-pair "(")))
 (define-key evil-visual-state-map (kbd "[") (lambda (&optional arg) (interactive "P") (sp-wrap-with-pair "[")))
 (define-key evil-visual-state-map (kbd "{") (lambda (&optional arg) (interactive "P")(sp-wrap-with-pair "{")))

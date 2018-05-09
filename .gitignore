@@ -10,3 +10,4 @@ recentf
 session.*
 tramp
 *.elc
+.cache

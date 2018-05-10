@@ -7,15 +7,6 @@
   :config
   (load-theme 'doom-one t)
   (unless (file-directory-p "~/.local/share/fonts") (all-the-icons-install-fonts))) ;; Install icon fonts if not present
-(defun daemon-doom-init (&optional _frame)
-  (load-theme 'doom-one t))
-(defun daemon-doom-reload (frame)
-  (when (or (daemonp) (not (display-graphic-p)))
-    (with-selected-frame frame
-      (run-with-timer 0.1 nil #'daemon-doom-init))))
-(add-hook 'after-make-frame-functions #'daemon-doom-init)
-(add-hook 'after-make-frame-functions #'daemon-doom-reload)
-(daemon-doom-init)
 
 ;; Solaire Mode (Highlight current buffer)
 (use-package solaire-mode
@@ -82,5 +73,16 @@
 (scroll-bar-mode 0)                     ;;Disable Scrollbar
 (tool-bar-mode   0)                     ;;Disable Toolbar
 (set-frame-font "DejaVu Sans Mono-10")  ;;Font
-(toggle-frame-maximized)                ;;Maximise Emacs
-(toggle-frame-fullscreen)
+
+;; Fix problems with server mode
+(defun daemon-doom-init (&optional _frame)
+  (load-theme 'doom-one t)
+  (toggle-frame-maximized)                ;;Maximise Emacs
+  (toggle-frame-fullscreen))
+(defun daemon-doom-reload (frame)
+  (when (or (daemonp) (not (display-graphic-p)))
+    (with-selected-frame frame
+      (run-with-timer 0.1 nil #'daemon-doom-init))))
+(add-hook 'after-make-frame-functions #'daemon-doom-init)
+(add-hook 'after-make-frame-functions #'daemon-doom-reload)
+(daemon-doom-init)

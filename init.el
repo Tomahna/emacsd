@@ -82,6 +82,9 @@
   (setq projectile-completion-system 'ivy)
   (setq projectile-mode-line         '(:eval (format " [%s]" (projectile-project-name))))
   (setq projectile-use-git-grep      t))
+(use-package restclient
+  :commands restclient-mode
+  :diminish restclient-mode)
 
 ;; Smartparens
 ;; Intelligently pair () {} [] ""

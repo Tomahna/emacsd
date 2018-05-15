@@ -53,6 +53,16 @@
 (define-key evil-normal-state-map (kbd "C-;") 'goto-last-change)
 (define-key evil-normal-state-map (kbd "C-.") 'goto-last-change-reverse)
 
+;; Normal and Visual Keys
+(mudefine-key (kbd ">")   'hydra-mc-forward/body evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+(mudefine-key (kbd "(")   (lambda (&optional arg) (interactive "P") (sp-wrap-with-pair "(")) evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+(mudefine-key (kbd "[")   (lambda (&optional arg) (interactive "P") (sp-wrap-with-pair "[")) evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+(mudefine-key (kbd "{")   (lambda (&optional arg) (interactive "P") (sp-wrap-with-pair "{")) evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+(mudefine-key (kbd "\"")  (lambda (&optional arg) (interactive "P")(sp-wrap-with-pair "\"")) evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+(mudefine-key (kbd "<")   (lambda (&optional arg) (interactive "P")(sp-wrap-with-pair "<"))  evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+(mudefine-key (kbd "SPC") (lambda (&optional arg) (interactive "P")(sp-wrap-with-pair " "))  evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+(mudefine-key (kbd ";")   'evilnc-comment-or-uncomment-lines                                 evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+
 ;; TODO Disable only locally
 (define-key flycheck-mode-map "\C-c" nil)
 (define-key projectile-mode-map "\C-c" nil)
@@ -69,24 +79,6 @@
 (define-key evil-insert-state-map (kbd "C-R") 'end-of-line)
 (define-key evil-insert-state-map (kbd "C-G") 'beginning-of-line)
 (define-key evil-insert-state-map (kbd "C->") 'hydra-mc-forward/body)
-
-;; Normal Keys
-(define-key evil-normal-state-map (kbd ">") 'hydra-mc-forward/body)
-(define-key evil-normal-state-map (kbd "(") (lambda (&optional arg) (interactive "P") (sp-wrap-with-pair "(")))
-(define-key evil-normal-state-map (kbd "[") (lambda (&optional arg) (interactive "P") (sp-wrap-with-pair "[")))
-(define-key evil-normal-state-map (kbd "{") (lambda (&optional arg) (interactive "P")(sp-wrap-with-pair "{")))
-(define-key evil-normal-state-map (kbd "\"") (lambda (&optional arg) (interactive "P")(sp-wrap-with-pair "\"")))
-(define-key evil-normal-state-map (kbd "<") (lambda (&optional arg) (interactive "P")(sp-wrap-with-pair "<")))
-(define-key evil-normal-state-map (kbd "SPC") (lambda (&optional arg) (interactive "P")(sp-wrap-with-pair " ")))
-
-;; Visual Keys
-(define-key evil-visual-state-map (kbd ">") 'hydra-mc-forward/body)
-(define-key evil-visual-state-map (kbd "(") (lambda (&optional arg) (interactive "P") (sp-wrap-with-pair "(")))
-(define-key evil-visual-state-map (kbd "[") (lambda (&optional arg) (interactive "P") (sp-wrap-with-pair "[")))
-(define-key evil-visual-state-map (kbd "{") (lambda (&optional arg) (interactive "P")(sp-wrap-with-pair "{")))
-(define-key evil-visual-state-map (kbd "\"") (lambda (&optional arg) (interactive "P")(sp-wrap-with-pair "\"")))
-(define-key evil-visual-state-map (kbd "<") (lambda (&optional arg) (interactive "P")(sp-wrap-with-pair "<")))
-(define-key evil-visual-state-map (kbd "SPC") (lambda (&optional arg) (interactive "P")(sp-wrap-with-pair " ")))
 
 ;; Projectile bindings
 (evil-ex-define-cmd "pf" 'projectile-find-file)

@@ -36,6 +36,7 @@
 (use-package diff-hl)
 (use-package evil)                 ;;VimLike Emacs Interface
 (use-package evil-magit)
+(use-package evil-nerd-commenter)
 (use-package expand-region
   :commands 'er/expand-region)
 (use-package flyspell

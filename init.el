@@ -1,4 +1,6 @@
 ;; global variables
+(fset 'yes-or-no-p 'y-or-n-p)
+
 (defvar show-paren-delay)
 (defvar use-package-always-ensure)
 

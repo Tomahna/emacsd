@@ -139,8 +139,4 @@
 
 ;; global keybindings
 (global-unset-key (kbd "C-z"))
-(global-unset-key (kbd "<left>"))
-(global-unset-key (kbd "<right>"))
-(global-unset-key (kbd "<up>"))
-(global-unset-key (kbd "<down>"))
 (put 'upcase-region 'disabled nil)

@@ -68,6 +68,13 @@
 (treemacs-filewatch-mode t)
 (if (not (null (executable-find "python3"))) (treemacs-git-mode 'extended) (treemacs-git-mode 'simple))
 
+(use-package zoom
+  :commands zoom-mode
+  :diminish zoom-mode)
+(custom-set-variables
+ '(zoom-mode t)
+ '(zoom-size '(0.618 . 0.618)))
+
 ;; Emacs configuration
 (menu-bar-mode   0)                     ;;Disable Menubar
 (scroll-bar-mode 0)                     ;;Disable Scrollbar

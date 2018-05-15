@@ -1,6 +1,4 @@
 ;; global variables
-(fset 'yes-or-no-p 'y-or-n-p)
-
 (defvar show-paren-delay)
 (defvar use-package-always-ensure)
 
@@ -8,7 +6,6 @@
 (setq backup-directory-alist    `(("." . "~/.cache/emacs/backup")))
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (setq create-lockfiles          nil)
-(setq inhibit-startup-screen    t)
 (setq scroll-error-top-bottom   t)
 (setq sentence-end-double-space nil)
 (setq show-paren-delay          0)
@@ -118,6 +115,14 @@
 (projectile-mode         t)
 (global-auto-revert-mode t)
 (winum-mode)
+
+;; Disable emacs prompts
+(fset 'yes-or-no-p 'y-or-n-p)
+(setq inhibit-startup-screen t)
+(setq kill-buffer-query-functions
+  (remq 'process-kill-buffer-query-function
+         kill-buffer-query-functions))
+(setq revert-without-query '(".*"))
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (load "appearance")    ;; Theme

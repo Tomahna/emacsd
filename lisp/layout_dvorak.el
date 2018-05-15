@@ -60,8 +60,9 @@
 (mudefine-key (kbd "{")   (lambda (&optional arg) (interactive "P") (sp-wrap-with-pair "{")) evil-motion-state-map evil-normal-state-map evil-visual-state-map)
 (mudefine-key (kbd "\"")  (lambda (&optional arg) (interactive "P")(sp-wrap-with-pair "\"")) evil-motion-state-map evil-normal-state-map evil-visual-state-map)
 (mudefine-key (kbd "<")   (lambda (&optional arg) (interactive "P")(sp-wrap-with-pair "<"))  evil-motion-state-map evil-normal-state-map evil-visual-state-map)
-(mudefine-key (kbd "SPC") (lambda (&optional arg) (interactive "P")(sp-wrap-with-pair " "))  evil-motion-state-map evil-normal-state-map evil-visual-state-map)
-(mudefine-key (kbd ";")   'evilnc-comment-or-uncomment-lines                                 evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+;; (mudefine-key (kbd "SPC") (lambda (&optional arg) (interactive "P")(sp-wrap-with-pair " "))  evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+(define-key evil-normal-state-map (kbd ";") 'evilnc-comment-or-uncomment-lines)
+(define-key evil-visual-state-map (kbd ";") 'evilnc--comment-or-uncomment-region)
 
 ;; TODO Disable only locally
 (define-key flycheck-mode-map "\C-c" nil)

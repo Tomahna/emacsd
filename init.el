@@ -98,7 +98,6 @@
   :init
   (add-hook 'smartparens-enabled-hook #'evil-smartparens-mode)
   :config
-  (sp-pair " " " ")
   (sp-pair "<" ">"))
 
 (use-package winum)

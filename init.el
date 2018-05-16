@@ -16,7 +16,6 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width        4)
 
-(load custom-file 'noerror)
 
 ;; package manager
 (require 'package)
@@ -134,6 +133,7 @@
 (load "lang_scala")
 (load "lang_yaml")
 (load "layout_dvorak")
+(load custom-file 'noerror)
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 

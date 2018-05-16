@@ -36,7 +36,7 @@
   (setq airline-utf-glyph-readonly            #xe0a2)
   (setq airline-utf-glyph-linenumber          #xe0a1)
   :config
-  (load-theme 'airline-doom-one))
+  (load-theme 'airline-doom-one t))
 
 (use-package highlight-indent-guides
   :init

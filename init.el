@@ -78,11 +78,12 @@
   (persistent-scratch-setup-default))
 (use-package projectile            ;;Project Mode
   :init
-  (setq projectile-completion-system 'ivy)
-  (setq projectile-enable-caching    t)
-  (setq projectile-cache-file         "~/.cache/emacs/projectile.cache")
-  (setq projectile-mode-line         '(:eval (format " [%s]" (projectile-project-name))))
-  (setq projectile-use-git-grep      t))
+  (setq projectile-globally-ignored-files (list "TAGS" "*.class"))
+  (setq projectile-completion-system      'ivy)
+  (setq projectile-enable-caching         t)
+  (setq projectile-cache-file             "~/.cache/emacs/projectile.cache")
+  (setq projectile-mode-line              '(:eval (format " [%s]" (projectile-project-name))))
+  (setq projectile-use-git-grep           t))
 (use-package restclient
   :commands restclient-mode
   :diminish restclient-mode)

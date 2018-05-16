@@ -77,11 +77,11 @@
 (menu-bar-mode   0)                     ;;Disable Menubar
 (scroll-bar-mode 0)                     ;;Disable Scrollbar
 (tool-bar-mode   0)                     ;;Disable Toolbar
-(set-frame-font "DejaVu Sans Mono-10")  ;;Font
 
 ;; Fix problems with server mode
 (defun daemon-doom-init (&optional _frame)
   (load-theme 'doom-one t)
+  (set-frame-font "DejaVu Sans Mono-10")  ;;Font
   (toggle-frame-maximized)                ;;Maximise Emacs
   (toggle-frame-fullscreen))
 (defun daemon-doom-reload (frame)

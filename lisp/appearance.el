@@ -34,9 +34,7 @@
   (setq airline-utf-glyph-subseparator-right  #xe0b3)
   (setq airline-utf-glyph-branch              #xe0a0)
   (setq airline-utf-glyph-readonly            #xe0a2)
-  (setq airline-utf-glyph-linenumber          #xe0a1)
-  :config
-  (load-theme 'airline-doom-one t))
+  (setq airline-utf-glyph-linenumber          #xe0a1))
 
 (use-package highlight-indent-guides
   :init
@@ -73,21 +71,21 @@
  '(zoom-mode t)
  '(zoom-size '(0.618 . 0.618)))
 
-;; Emacs configuration
-(menu-bar-mode   0)                     ;;Disable Menubar
-(scroll-bar-mode 0)                     ;;Disable Scrollbar
-(tool-bar-mode   0)                     ;;Disable Toolbar
 
 ;; Fix problems with server mode
-(defun daemon-doom-init (&optional _frame)
+(defun custom-theme-init (&optional _frame)
   (load-theme 'doom-one t)
+  (load-theme 'airline-doom-one t)
   (set-frame-font "DejaVu Sans Mono-10")  ;;Font
+  (menu-bar-mode   0)                     ;;Disable Menubar
+  (scroll-bar-mode 0)                     ;;Disable Scrollbar
+  (tool-bar-mode   0)                     ;;Disable Toolbar
   (toggle-frame-maximized)                ;;Maximise Emacs
   (toggle-frame-fullscreen))
-(defun daemon-doom-reload (frame)
+(defun custom-theme-reload (frame)
   (when (or (daemonp) (not (display-graphic-p)))
     (with-selected-frame frame
-      (run-with-timer 0.1 nil #'daemon-doom-init))))
-(add-hook 'after-make-frame-functions #'daemon-doom-init)
-(add-hook 'after-make-frame-functions #'daemon-doom-reload)
-(daemon-doom-init)
+      (run-with-timer 0.1 nil #'custom-theme-init))))
+(add-hook 'after-make-frame-functions #'custom-theme-init)
+(add-hook 'after-make-frame-functions #'custom-theme-reload)
+(custom-theme-init)

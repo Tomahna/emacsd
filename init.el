@@ -103,6 +103,10 @@
 
 (use-package winum)
 
+;; Code Templates
+(use-package yasnippet)
+(use-package yasnippet-snippets)
+
 ;; Save current session
 ;;(defvar desktop-dirname)
 ;;(defvar desktop-path)

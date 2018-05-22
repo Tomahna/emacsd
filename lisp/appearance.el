@@ -10,12 +10,10 @@
 
 ;; Solaire Mode (Highlight current buffer)
 (use-package solaire-mode
+  :hook ((change-major-mode after-revert ediff-prepare-buffer) . turn-on-solaire-mode)
   :config
-  (add-hook 'after-change-major-mode-hook #'turn-on-solaire-mode) ;; brighten buffers (that represent real files)
-  (add-hook 'ediff-prepare-buffer-hook #'solaire-mode)            ;; To enable solaire-mode unconditionally for certain modes:
-  (add-hook 'after-revert-hook #'turn-on-solaire-mode)            ;; ...if you use auto-revert-mode:
-  (add-hook 'minibuffer-setup-hook #'solaire-mode-in-minibuffer)  ;; highlight the minibuffer when it is activated:
-  (solaire-mode-swap-bg))                                          ;; NOTE: This is necessary for themes in the doom-themes package!
+  (add-hook 'minibuffer-setup-hook #'solaire-mode-in-minibuffer)
+  (solaire-mode-swap-bg))
 
 ;; Powerline
 (use-package powerline

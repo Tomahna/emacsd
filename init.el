@@ -104,6 +104,7 @@
 (use-package winum)
 
 ;; Code Templates
+;; https://github.com/ensime/ensime-emacs/issues/474
 (use-package yasnippet)
 (use-package yasnippet-snippets)
 

@@ -28,7 +28,11 @@
 
 (defun configure-ensime ()
   (define-key evil-normal-state-map "e" 'ensime-edit-definition)
-  (define-key evil-normal-state-map "E" 'ensime-pop-find-definition-stack))
+  (define-key evil-normal-state-map "E" 'ensime-pop-find-definition-stack)
+  (unimacs-company-define-backends
+   '((ensime-mode) . ((company-yasnippet :with ensime-company)
+                      (company-dabbrev-code :with company-dabbrev company-yasnippet)
+                      company-files))))
 
 (add-hook 'scala-mode-hook 'configure-scala)
 (add-hook 'ensime-mode-hook 'configure-ensime)

@@ -1,6 +1,7 @@
 (defvar evil-insert-state-map)
 (defvar evil-motion-state-map)
 (defvar evil-normal-state-map)
+(defvar evil-smartparens-mode-map)
 (defvar evil-visual-state-map)
 (defvar flycheck-mode-map)
 (defvar ivy-minibuffer-map)
@@ -28,6 +29,9 @@
   (dolist (KEYMAP KEYMAPS)
     (define-key KEYMAP KEY FUN)))
 
+;; Key unbinding
+(evil-define-key 'normal evil-smartparens-mode-map (kbd "C") nil)
+
 ;; Buffer navigation
 (mudefine-key (kbd "C-0") 'treemacs-select-window treemacs-mode-map evil-normal-state-map)
 (mudefine-key (kbd "C-1") 'winum-select-window-1 treemacs-mode-map evil-normal-state-map)
@@ -50,6 +54,8 @@
 (mudefine-key (kbd "N") 'evil-forward-char        evil-motion-state-map evil-normal-state-map evil-visual-state-map)
 (mudefine-key (kbd "g") 'evil-beginning-of-line   evil-motion-state-map evil-normal-state-map evil-visual-state-map)
 (mudefine-key (kbd "r") 'evil-end-of-line         evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+(mudefine-key (kbd "C") 'highlight-symbol-prev    evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+(mudefine-key (kbd "T") 'highlight-symbol-next    evil-motion-state-map evil-normal-state-map evil-visual-state-map)
 (define-key evil-normal-state-map (kbd "C-;") 'goto-last-change)
 (define-key evil-normal-state-map (kbd "C-.") 'goto-last-change-reverse)
 

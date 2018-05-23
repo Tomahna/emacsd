@@ -74,10 +74,16 @@
   (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh))
 (use-package evil-mc
   :diminish evil-mc-mode)
+
+;; Persist scratch buffers
 (use-package persistent-scratch
   :config
   (setq persistent-scratch-save-file "~/.cache/emacs/scratch")
   (persistent-scratch-setup-default))
+(defun persistent-scratch-default-scratch-buffer-p ()
+  "Return non-nil when the current buffer's name ends with scratch*."
+  (s-suffix? "scratch*" (buffer-name)))
+
 (use-package projectile            ;;Project Mode
   :init
   (setq projectile-globally-ignored-files (list "TAGS" "*.class"))

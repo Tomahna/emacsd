@@ -33,16 +33,16 @@
 (evil-define-key 'normal evil-smartparens-mode-map (kbd "C") nil)
 
 ;; Buffer navigation
-(mudefine-key (kbd "C-0") 'treemacs-select-window treemacs-mode-map evil-normal-state-map)
-(mudefine-key (kbd "C-1") 'winum-select-window-1 treemacs-mode-map evil-normal-state-map)
-(mudefine-key (kbd "C-2") 'winum-select-window-2 treemacs-mode-map evil-normal-state-map)
-(mudefine-key (kbd "C-3") 'winum-select-window-3 treemacs-mode-map evil-normal-state-map)
-(mudefine-key (kbd "C-4") 'winum-select-window-4 treemacs-mode-map evil-normal-state-map)
-(mudefine-key (kbd "C-5") 'winum-select-window-5 treemacs-mode-map evil-normal-state-map)
-(mudefine-key (kbd "C-6") 'winum-select-window-6 treemacs-mode-map evil-normal-state-map)
-(mudefine-key (kbd "C-7") 'winum-select-window-7 treemacs-mode-map evil-normal-state-map)
-(mudefine-key (kbd "C-8") 'winum-select-window-8 treemacs-mode-map evil-normal-state-map)
-(mudefine-key (kbd "C-9") 'winum-select-window-9 treemacs-mode-map evil-normal-state-map)
+(mudefine-key (kbd "C-]") 'treemacs-select-window treemacs-mode-map evil-normal-state-map)
+(mudefine-key (kbd "C-&") 'winum-select-window-1 treemacs-mode-map evil-normal-state-map)
+(mudefine-key (kbd "C-[") 'winum-select-window-2 treemacs-mode-map evil-normal-state-map)
+(mudefine-key (kbd "C-{") 'winum-select-window-3 treemacs-mode-map evil-normal-state-map)
+(mudefine-key (kbd "C-}") 'winum-select-window-4 treemacs-mode-map evil-normal-state-map)
+(mudefine-key (kbd "C-(") 'winum-select-window-5 treemacs-mode-map evil-normal-state-map)
+(mudefine-key (kbd "C-=") 'winum-select-window-6 treemacs-mode-map evil-normal-state-map)
+(mudefine-key (kbd "C-*") 'winum-select-window-7 treemacs-mode-map evil-normal-state-map)
+(mudefine-key (kbd "C-)") 'winum-select-window-8 treemacs-mode-map evil-normal-state-map)
+(mudefine-key (kbd "C-+") 'winum-select-window-9 treemacs-mode-map evil-normal-state-map)
 (mudefine-key (kbd "C-<tab>") 'switch-to-buffer evil-normal-state-map evil-visual-state-map)
 
 ;; Motion

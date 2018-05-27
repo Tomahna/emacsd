@@ -76,8 +76,7 @@
   (menu-bar-mode   0)                     ;;Disable Menubar
   (scroll-bar-mode 0)                     ;;Disable Scrollbar
   (tool-bar-mode   0)                     ;;Disable Toolbar
-  (toggle-frame-maximized)                ;;Maximise Emacs
-  (toggle-frame-fullscreen))
+  (toggle-frame-maximized))                ;;Maximise Emacs
 (defun custom-theme-reload (frame)
   (when (or (daemonp) (not (display-graphic-p)))
     (with-selected-frame frame

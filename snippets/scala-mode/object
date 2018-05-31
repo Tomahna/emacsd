@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# Author : Kévin Rauscher <kevin.rauscher@tomahna.fr>
+# name : Scala Object
+# key: obj
+# --
+object ${1:Name}{
+    ${2:Name}
+}

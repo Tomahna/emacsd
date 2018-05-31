@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# Author : Kévin Rauscher <kevin.rauscher@tomahna.fr>
+# name : Play Json Macro Generated Formater
+# key: pjsonformat
+# --
+implicit val $1Format: Format[$1] = Json.format

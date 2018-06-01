@@ -115,6 +115,13 @@
 (use-package yasnippet)
 (use-package yasnippet-snippets)
 (yas-global-mode t)
+(use-package yatemplate
+  :defer 2 ;; WORKAROUND https://github.com/mineo/yatemplate/issues/3
+  :config
+  (auto-insert-mode
+   )
+  (setq auto-insert-alist nil)
+  (yatemplate-fill-alist))
 
 ;; https://github.com/ensime/ensime-emacs/issues/474
 (defun unimacs-company-define-backends (modes-backends-cons)

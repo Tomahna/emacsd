@@ -1,4 +1,10 @@
 ;; Scala
+(defun scala-package ()
+  (reduce (lambda (e1 e2) (concat e1 (concat "." e2)))
+  (seq-drop
+  (seq-drop-while (lambda (elt) (not (string= elt "scala")))
+    (split-string (replace-regexp-in-string "Directory " "" (pwd)) "/" t)) 1)))
+
 (use-package ensime
   :commands ensime
   :init

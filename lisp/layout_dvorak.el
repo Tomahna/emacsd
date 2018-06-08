@@ -42,6 +42,7 @@
 (define-key global-map (kbd "M-0") nil)
 (evil-define-key 'normal evil-mc-key-map           (kbd "M-n") nil)
 (evil-define-key 'normal evil-smartparens-mode-map (kbd "C")   nil)
+(evil-define-key 'normal evil-smartparens-mode-map (kbd "c")   nil)
 
 ;; Window navigation
 (use-package buffer-move)
@@ -83,11 +84,17 @@
 
 ;; Normal and Visual Keys
 (mudefine-key (kbd ">")   'hydra-mc-forward/body evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+
+;; Smartparens Keys
 (mudefine-key (kbd "(")   (lambda (&optional arg) (interactive "P") (sp-wrap-with-pair "(")) evil-motion-state-map evil-normal-state-map evil-visual-state-map)
 (mudefine-key (kbd "[")   (lambda (&optional arg) (interactive "P") (sp-wrap-with-pair "[")) evil-motion-state-map evil-normal-state-map evil-visual-state-map)
 (mudefine-key (kbd "{")   (lambda (&optional arg) (interactive "P") (sp-wrap-with-pair "{")) evil-motion-state-map evil-normal-state-map evil-visual-state-map)
 (mudefine-key (kbd "\"")  (lambda (&optional arg) (interactive "P")(sp-wrap-with-pair "\"")) evil-motion-state-map evil-normal-state-map evil-visual-state-map)
 (mudefine-key (kbd "<")   (lambda (&optional arg) (interactive "P")(sp-wrap-with-pair "<"))  evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+(mudefine-key (kbd "C-(") 'sp-forward-barf-sexp evil-normal-state-map evil-visual-state-map)
+(mudefine-key (kbd "C-)") 'sp-forward-slurp-sexp evil-normal-state-map evil-visual-state-map)
+
+
 ;; (mudefine-key (kbd "SPC") (lambda (&optional arg) (interactive "P")(sp-wrap-with-pair " "))  evil-motion-state-map evil-normal-state-map evil-visual-state-map)
 (define-key evil-normal-state-map (kbd ";") 'evilnc-comment-or-uncomment-lines)
 (define-key evil-visual-state-map (kbd ";") 'comment-or-uncomment-region)

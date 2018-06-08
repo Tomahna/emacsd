@@ -24,6 +24,16 @@
   ;; SP Wrapping and unwrapping
   ("g" evil-mc-undo-all-cursors :exit t))
 
+(defhydra hydra-sp ()
+  "smartparens"
+  ("n" sp-forward-slurp-sexp)
+  ("h" sp-backward-slurp-sexp)
+  ("N" sp-forward-barf-sexp)
+  ("H" sp-backward-barf-sexp)
+  ("c" sp-beginning-of-sexp)
+  ("t" sp-end-of-sexp)
+  ("{" sp-rewrap-sexp)
+  ("d" sp-kill-sexp))
 
 (defun mudefine-key (KEY FUN &rest KEYMAPS)
   (dolist (KEYMAP KEYMAPS)
@@ -91,8 +101,7 @@
 (mudefine-key (kbd "{")   (lambda (&optional arg) (interactive "P") (sp-wrap-with-pair "{")) evil-motion-state-map evil-normal-state-map evil-visual-state-map)
 (mudefine-key (kbd "\"")  (lambda (&optional arg) (interactive "P")(sp-wrap-with-pair "\"")) evil-motion-state-map evil-normal-state-map evil-visual-state-map)
 (mudefine-key (kbd "<")   (lambda (&optional arg) (interactive "P")(sp-wrap-with-pair "<"))  evil-motion-state-map evil-normal-state-map evil-visual-state-map)
-(mudefine-key (kbd "C-(") 'sp-forward-barf-sexp evil-normal-state-map evil-visual-state-map)
-(mudefine-key (kbd "C-)") 'sp-forward-slurp-sexp evil-normal-state-map evil-visual-state-map)
+(mudefine-key (kbd "C-3") 'hydra-sp/body evil-normal-state-map evil-visual-state-map)
 
 
 ;; (mudefine-key (kbd "SPC") (lambda (&optional arg) (interactive "P")(sp-wrap-with-pair " "))  evil-motion-state-map evil-normal-state-map evil-visual-state-map)

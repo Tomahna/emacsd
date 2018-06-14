@@ -8,8 +8,8 @@
 
 (defun setup-tide-mode ()
   (interactive)
-  (define-key tide-mode-map "e" 'tide-jump-to-definition)
-  (define-key tide-mode-map "E" 'tide-jump-back)
+  (define-key evil-normal-state-map "e" 'tide-jump-to-definition)
+  (define-key evil-normal-state-map "E" 'tide-jump-back)
   (tide-setup)
   (flycheck-mode +1)
   (setq flycheck-check-syntax-automatically '(save mode-enabled))

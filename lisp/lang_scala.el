@@ -33,8 +33,8 @@
   (scala-mode:goto-start-of-code))
 
 (defun configure-ensime ()
-  (define-key scala-mode-map "e" 'ensime-edit-definition)
-  (define-key scala-mode-map "E" 'ensime-pop-find-definition-stack)
+  (define-key evil-normal-state-map "e" 'ensime-edit-definition)
+  (define-key evil-normal-state-map "E" 'ensime-pop-find-definition-stack)
   (unimacs-company-define-backends
    '((ensime-mode) . ((company-yasnippet :with ensime-company)
                       (company-dabbrev-code :with company-dabbrev company-yasnippet)

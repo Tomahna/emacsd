@@ -175,6 +175,7 @@
 (load "lang_nix")
 (load "lang_python")
 (load "lang_scala")
+(load "lang_typescript")
 (load "lang_yaml")
 (load "layout_dvorak")
 (load custom-file 'noerror)

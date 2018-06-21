@@ -169,7 +169,6 @@
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (load "appearance")    ;; Theme
-(load "udf")           ;; User defined functions
 (load "lang_elisp.el")
 (load "lang_markdown")
 (load "lang_nix")

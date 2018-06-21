@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# Author : Kévin Rauscher <kevin.rauscher@tomahna.fr>
+# name : Execution Context
+# key: ec
+# --
+ec: ExecutionContext

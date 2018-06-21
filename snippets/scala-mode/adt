@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# Author : Kévin Rauscher <kevin.rauscher@tomahna.fr>
+# name : Scala ADT
+# key: cobj
+# --
+case object ${1:Name} extends ${2:Trait}

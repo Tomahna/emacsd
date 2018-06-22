@@ -60,6 +60,8 @@
 (treemacs-filewatch-mode t)
 (if (not (null (executable-find "python3"))) (treemacs-git-mode 'extended) (treemacs-git-mode 'simple))
 
+(use-package origami)
+
 (use-package zoom
   :commands zoom-mode
   :diminish zoom-mode)

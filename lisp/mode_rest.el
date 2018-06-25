@@ -9,7 +9,6 @@
   (kbd "<S-return>") 'origami-toggle-all-nodes)
 
 (defun configure-restclient ()
-  (message "Hello je restore restclient tkt pas")
   (origami-mode t)
   (origami-close-all-nodes (current-buffer)))
 

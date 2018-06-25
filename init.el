@@ -31,8 +31,11 @@
   (package-install 'use-package))
 (require 'use-package)
 
-(use-package company)
+(use-package diminish)
 
+(use-package company
+  :commands company-mode
+  :diminish company-mode)
 (use-package diff-hl)
 (use-package evil)                 ;;VimLike Emacs Interface
 (use-package evil-magit)
@@ -169,13 +172,13 @@
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (load "appearance")    ;; Theme
-(load "lang_elisp.el")
 (load "lang_markdown")
 (load "lang_nix")
 (load "lang_python")
 (load "lang_typescript")
 (load "lang_yaml")
 (load "layout_dvorak")
+(load "mode_elisp.el")
 (load "mode_rest")
 (load "mode_scala")
 (load custom-file 'noerror)

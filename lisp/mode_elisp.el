@@ -1,7 +1,3 @@
-(use-package diminish)
-(use-package company
-  :commands company-mode
-  :diminish company-mode)
 (use-package eldoc
   :commands eldoc-mode
   :diminish eldoc-mode

@@ -177,6 +177,7 @@
 (load "lang_typescript")
 (load "lang_yaml")
 (load "layout_dvorak")
+(load "mode_rest")
 (load custom-file 'noerror)
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)

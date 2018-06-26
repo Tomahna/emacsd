@@ -76,7 +76,8 @@
   (magit-auto-revert-mode -1)      ;; Workaround https://github.com/dgutov/diff-hl/issues/65
   (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh))
 (use-package evil-mc
-  :diminish evil-mc-mode)
+  :diminish evil-mc-mode
+  :init (defvar evil-mc-key-map nil))
 
 ;; Persist scratch buffers
 (use-package persistent-scratch
@@ -177,7 +178,8 @@
 (load "lang_python")
 (load "lang_yaml")
 (load "layout_dvorak")
-(load "mode_elisp.el")
+(load "minor_clipboard")
+(load "mode_elisp")
 (load "mode_rest")
 (load "mode_scala")
 (load "mode_typescript")

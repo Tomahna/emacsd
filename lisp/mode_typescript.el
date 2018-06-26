@@ -1,3 +1,5 @@
+(require 'evil)
+
 (use-package web-mode)
 (use-package tide
   :ensure t
@@ -6,10 +8,13 @@
          (typescript-mode . tide-hl-identifier-mode)
          (before-save . tide-format-before-save)))
 
-(defun setup-tide-mode ()
+(evil-define-key 'normal tide-mode-map
+  "e" 'tide-jump-to-definition
+  "E" 'tide-jump-back)
+
+(defun configure-tide ()
   (interactive)
-  (define-key evil-normal-state-map "e" 'tide-jump-to-definition)
-  (define-key evil-normal-state-map "E" 'tide-jump-back)
+
   (tide-setup)
   (flycheck-mode +1)
   (setq flycheck-check-syntax-automatically '(save mode-enabled))
@@ -22,4 +27,4 @@
 (add-hook 'web-mode-hook
           (lambda ()
             (when (string-equal "tsx" (file-name-extension buffer-file-name))
-              (setup-tide-mode))))
+              (configure-tide))))

@@ -175,12 +175,12 @@
 (load "lang_markdown")
 (load "lang_nix")
 (load "lang_python")
-(load "lang_typescript")
 (load "lang_yaml")
 (load "layout_dvorak")
 (load "mode_elisp.el")
 (load "mode_rest")
 (load "mode_scala")
+(load "mode_typescript")
 (load custom-file 'noerror)
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)

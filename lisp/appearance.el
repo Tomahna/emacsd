@@ -73,7 +73,8 @@
 ;; Fix problems with server mode
 (defun custom-theme-init (&optional _frame)
   (load-theme 'doom-one t)
-  (load-theme 'airline-doom-one t))
+  (load-theme 'airline-doom-one t)
+  (set-frame-font "DejaVu Sans Mono-11"))  ;;Font
 (defun custom-theme-reload (frame)
   (when (or (daemonp) (not (display-graphic-p)))
     (with-selected-frame frame
@@ -81,7 +82,6 @@
 (add-hook 'after-make-frame-functions #'custom-theme-init)
 (add-hook 'after-make-frame-functions #'custom-theme-reload)
 
-(set-frame-font "DejaVu Sans Mono-12")  ;;Font
 (menu-bar-mode   0)                     ;;Disable Menubar
 (scroll-bar-mode 0)                     ;;Disable Scrollbar
 (tool-bar-mode   0)                     ;;Disable Toolbar

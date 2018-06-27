@@ -39,6 +39,9 @@
 (use-package diff-hl)
 (use-package evil)                 ;;VimLike Emacs Interface
 (use-package evil-magit)
+(use-package evil-mc
+  :diminish evil-mc-mode
+  :init (defvar evil-mc-key-map nil))
 (use-package evil-nerd-commenter)
 (use-package expand-region
   :commands 'er/expand-region)
@@ -75,9 +78,6 @@
   :config
   (magit-auto-revert-mode -1)      ;; Workaround https://github.com/dgutov/diff-hl/issues/65
   (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh))
-(use-package evil-mc
-  :diminish evil-mc-mode
-  :init (defvar evil-mc-key-map nil))
 
 ;; Persist scratch buffers
 (use-package persistent-scratch
@@ -87,6 +87,14 @@
 (defun persistent-scratch-default-scratch-buffer-p ()
   "Return non-nil when the current buffer's name ends with scratch*."
   (s-suffix? "scratch*" (buffer-name)))
+
+(use-package popup-imenu
+  :commands popup-imenu
+  :init
+  (evil-define-key 'normal 'global (kbd "C-e") 'popup-imenu)
+  :config
+  (setq popup-imenu-style 'indent)
+  (setq popup-imenu-fuzzy-match nil))
 
 (use-package projectile            ;;Project Mode
   :init

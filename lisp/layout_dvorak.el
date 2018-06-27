@@ -132,6 +132,7 @@
 (evil-ex-define-cmd "pg" 'projectile-grep)
 (evil-ex-define-cmd "pr" 'projectile-replace)
 (evil-ex-define-cmd "ps" 'projectile-switch-project)
+(evil-ex-define-cmd "piv" 'projectile-invalidate-cache)
 
 ;; Ensime bindings
 (evil-ex-define-cmd "sjt" 'ensime-goto-test-config)

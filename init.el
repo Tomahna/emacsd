@@ -36,7 +36,6 @@
 (use-package company
   :commands company-mode
   :diminish company-mode)
-(use-package diff-hl)
 (use-package evil)                 ;;VimLike Emacs Interface
 (use-package evil-magit)
 (use-package evil-mc
@@ -64,8 +63,7 @@
   :init
   (setq ivy-use-virtual-buffers t)
   (setq ivy-count-format "%d/%d "))
-(use-package git-timemachine
-  :commands git-timemachine)
+
 (use-package goto-chg
   :commands goto-last-change)
 (use-package linum-relative
@@ -74,10 +72,6 @@
   :init
   (setq linum-relative-current-symbol "1")
   (setq linum-relative-plusp-offset   1))
-(use-package magit                 ;;Git Interface
-  :config
-  (magit-auto-revert-mode -1)      ;; Workaround https://github.com/dgutov/diff-hl/issues/65
-  (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh))
 
 ;; Persist scratch buffers
 (use-package persistent-scratch
@@ -196,6 +190,7 @@
 (load "lang_yaml")
 (load "layout_dvorak")
 (load "minor_clipboard")
+(load "minor_git")
 (load "mode_elisp")
 (load "mode_rest")
 (load "mode_scala")

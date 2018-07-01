@@ -57,8 +57,11 @@
   (add-hook 'evil-insert-state-entry-hook (lambda () (if highlight-symbol-enabled (highlight-symbol-mode t))))
   (add-hook 'evil-normal-state-entry-hook (lambda () (if highlight-symbol-enabled (highlight-symbol-mode t))))
   (add-hook 'evil-visual-state-entry-hook (lambda () (if highlight-symbol-enabled (highlight-symbol-mode -1)))))
+
+(use-package all-the-icons-ivy
+  :config
+  (all-the-icons-ivy-setup))
 (use-package ivy                   ;;Completion framework
-  :commands ivy-mode
   :diminish ivy-mode
   :init
   (setq ivy-use-virtual-buffers t)

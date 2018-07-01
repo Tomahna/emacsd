@@ -74,7 +74,7 @@
 (mudefine-key (kbd "M-7")     'winum-select-window-7  treemacs-mode-map evil-normal-state-map)
 (mudefine-key (kbd "M-8")     'winum-select-window-8  treemacs-mode-map evil-normal-state-map)
 (mudefine-key (kbd "M-9")     'winum-select-window-9  treemacs-mode-map evil-normal-state-map)
-(mudefine-key (kbd "M-<tab>") 'switch-to-buffer       evil-normal-state-map evil-visual-state-map)
+(mudefine-key (kbd "M-<tab>") 'ivy-switch-buffer   evil-normal-state-map evil-visual-state-map)
 
 (mudefine-key (kbd "M-e")     'evil-ex                treemacs-mode-map evil-normal-state-map)
 

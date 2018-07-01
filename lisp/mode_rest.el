@@ -1,3 +1,6 @@
+(require 'evil)
+(require 'origami)
+
 (use-package restclient
   :commands restclient-mode
   :diminish restclient-mode)
@@ -9,8 +12,7 @@
   (kbd "<S-return>") 'origami-toggle-all-nodes)
 
 (defun configure-restclient ()
-  (origami-mode t)
-  (origami-close-all-nodes (current-buffer)))
+  (origami-mode t))
 
 (add-hook 'restclient-mode-hook 'configure-restclient)
 (with-current-buffer (get-buffer-create "postman-scratch*")

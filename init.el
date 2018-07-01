@@ -171,6 +171,15 @@
 (global-auto-revert-mode t)
 (winum-mode)
 
+(require 'midnight)
+(midnight-mode)
+(setq clean-buffer-list-delay-special 0)
+(add-to-list 'clean-buffer-list-kill-buffer-names "*Help*")
+(add-to-list 'clean-buffer-list-kill-regexps "magit.*")
+(add-to-list 'clean-buffer-list-kill-regexps "\\*grep.*")
+(add-to-list 'clean-buffer-list-kill-regexps "\\*ENSIME.*")
+
+
 ;; Disable emacs prompts
 (fset 'yes-or-no-p 'y-or-n-p)
 (setq inhibit-startup-screen t)

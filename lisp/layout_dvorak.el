@@ -127,6 +127,7 @@
 (define-key evil-insert-state-map (kbd "S-SPC") 'company-yasnippet-or-completion)
 
 ;; Projectile bindings
+(evil-ex-define-cmd "W" 'evil-save)
 (evil-ex-define-cmd "pf" 'projectile-find-file)
 (evil-ex-define-cmd "pff" 'projectile-find-file-in-known-projects)
 (evil-ex-define-cmd "pg" 'projectile-grep)

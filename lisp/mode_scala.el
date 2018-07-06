@@ -30,8 +30,12 @@
   (smartparens-mode             t)
   (yas-minor-mode               t)
 
-  (ensime)
+  (if (projectile-file-exists-p ".ensime")
+      (ensime))
+
   (scala-mode:goto-start-of-code))
+
+
 
 (defun configure-ensime ()
   (unimacs-company-define-backends

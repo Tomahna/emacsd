@@ -70,20 +70,24 @@
  '(zoom-size '(0.618 . 0.618)))
 
 
-;; Fix problems with server mode
-(defun custom-theme-init (&optional _frame)
+(defun doom|init-theme ()
   (load-theme 'doom-one t)
-  (load-theme 'airline-doom-one t)
-  (set-frame-font "DejaVu Sans Mono-11"))  ;;Font
-(defun custom-theme-reload (frame)
-  (when (or (daemonp) (not (display-graphic-p)))
-    (with-selected-frame frame
-      (run-with-timer 0.1 nil #'custom-theme-init))))
-(add-hook 'after-make-frame-functions #'custom-theme-init)
-(add-hook 'after-make-frame-functions #'custom-theme-reload)
+  (load-theme 'airline-doom-one t))
+
+(defun doom|init-theme-in-frame (frame)
+  (with-selected-frame frame
+    (doom|init-theme))
+
+  ;; Unregister this hook once its run
+  (remove-hook 'after-make-frame-functions
+	       'doom|init-theme-in-frame))
+
+(if (daemonp)
+    (add-hook 'after-make-frame-functions
+	      'doom|init-theme-in-frame)
+  (doom|init-theme))
 
 (menu-bar-mode   0)                     ;;Disable Menubar
 (scroll-bar-mode 0)                     ;;Disable Scrollbar
 (tool-bar-mode   0)                     ;;Disable Toolbar
 (toggle-frame-maximized)                ;;Maximise Emacs
-(custom-theme-init)

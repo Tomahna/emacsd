@@ -72,7 +72,8 @@
 
 (defun doom|init-theme ()
   (load-theme 'doom-one t)
-  (load-theme 'airline-doom-one t))
+  (load-theme 'airline-doom-one t)
+  (set-frame-font "DejaVu Sans Mono-11"))  ;;Font
 
 (defun doom|init-theme-in-frame (frame)
   (with-selected-frame frame

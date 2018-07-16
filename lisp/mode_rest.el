@@ -15,5 +15,5 @@
   (origami-mode t))
 
 (add-hook 'restclient-mode-hook 'configure-restclient)
-(with-current-buffer (get-buffer-create "postman-scratch*")
-  (restclient-mode))
+(find-file "~/.cache/emacs/postman")
+;;TODO Autostart restclient mode in postman

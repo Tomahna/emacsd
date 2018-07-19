@@ -9,20 +9,28 @@
 (defvar treemacs-mode-map)
 
 (use-package hydra)
-(defhydra hydra-mc-forward ()
-  "multicursor"
+(defhydra hydra-mc-forward (:color pink :hint nil)
+  "
+
+  ^Movement^                    | ^Region^             | ^Cursors^
+  ------------------------------------------------------------------------------------------
+  _c_: mark previous occurence  | _n_: expand region   | _<space>_:     mark here
+  _t_: mark next occurence      | _h_: contract region | _<backspace>_: undo cursor
+  _C_: goto previous occurrence |                    | _r_:           mark all occurence
+  _T_: goto next occurrence     |                    | _g_:           unmark all occurence
+  "
   ("n" er/expand-region)
   ("h" er/contract-region)
 
   ;; MC marks
-  ("c" evil-mc-make-and-goto-prev-match)
-  ("t" evil-mc-make-and-goto-next-match)
-  ("r" evil-mc-make-all-cursors :exit t)
-;;  ("C" mc/unmark-next-like-this)
-;;  ("T" mc/unmark-previous-like-this)
-
-  ;; SP Wrapping and unwrapping
-  ("g" evil-mc-undo-all-cursors :exit t))
+  ("c"           evil-mc-make-and-goto-prev-match)
+  ("C"           evil-mc-skip-and-goto-prev-match)
+  ("t"           evil-mc-make-and-goto-next-match)
+  ("T"           evil-mc-skip-and-goto-next-match)
+  ("<space>"     evil-mc-make-cursor-here)
+  ("<backspace>" evil-mc-undo-cursor)
+  ("r"           evil-mc-make-all-cursors :exit t)
+  ("g"           evil-mc-undo-all-cursors :exit t))
 
 (defhydra hydra-sp ()
   "smartparens"

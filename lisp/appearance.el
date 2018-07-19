@@ -65,9 +65,10 @@
 (use-package zoom
   :commands zoom-mode
   :diminish zoom-mode)
-(custom-set-variables
- '(zoom-mode t)
- '(zoom-size '(0.618 . 0.618)))
+(setq zoom-size '(0.618 . 0.618))
+;; (custom-set-variables
+ ;; '(zoom-mode t)
+ ;; '(zoom-size '(0.618 . 0.618)))
 
 
 (defun doom|init-theme ()

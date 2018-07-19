@@ -73,21 +73,18 @@
 
 (defun doom|init-theme ()
   (load-theme 'doom-one t)
-  (load-theme 'airline-doom-one t)
-  (set-frame-font "DejaVu Sans Mono-11"))  ;;Font
+  (load-theme 'airline-doom-one t))  ;;Font
 
 (defun doom|init-theme-in-frame (frame)
-  (with-selected-frame frame
-    (doom|init-theme))
-
-  ;; Unregister this hook once its run
-  (remove-hook 'after-make-frame-functions
-	       'doom|init-theme-in-frame))
+  (with-selected-frame frame (doom|init-theme))
+  (remove-hook 'after-make-frame-functions 'doom|init-theme-in-frame)) ;; Unregister this hook once its run
 
 (if (daemonp)
-    (add-hook 'after-make-frame-functions
-	      'doom|init-theme-in-frame)
-  (doom|init-theme))
+    (add-hook 'after-make-frame-functions 'doom|init-theme-in-frame)
+    (doom|init-theme))
+
+(add-hook 'after-make-frame-functions
+          (lambda (frame) (with-selected-frame frame (set-frame-font "DejaVu Sans Mono-11"))))
 
 (menu-bar-mode   0)                     ;;Disable Menubar
 (scroll-bar-mode 0)                     ;;Disable Scrollbar

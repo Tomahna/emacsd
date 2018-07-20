@@ -11,9 +11,9 @@
 (use-package hydra)
 (defhydra hydra-mc-forward (:color pink :hint nil)
   "
-
+  ^MultiCursor Hydra^
   ^Movement^                    | ^Region^             | ^Cursors^
-  ------------------------------------------------------------------------------------------
+  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
   _c_: mark previous occurence  | _n_: expand region   | _<space>_:     mark here
   _t_: mark next occurence      | _h_: contract region | _<backspace>_: undo cursor
   _C_: goto previous occurrence |                    | _r_:           mark all occurence
@@ -61,6 +61,10 @@
 (evil-define-key 'normal evil-mc-key-map           (kbd "M-n") nil)
 (evil-define-key 'normal evil-smartparens-mode-map (kbd "C")   nil)
 (evil-define-key 'normal evil-smartparens-mode-map (kbd "c")   nil)
+
+
+(evil-define-key nil global-map     (kbd "<f5>") 'revert-buffer)
+(evil-define-key nil magit-mode-map (kbd "<f5>") 'magit-refresh)
 
 ;; Window navigation
 (use-package buffer-move)

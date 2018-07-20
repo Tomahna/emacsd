@@ -17,4 +17,3 @@
 (add-hook 'restclient-mode-hook 'configure-restclient)
 (add-to-list 'auto-mode-alist '("postman" . restclient-mode))
 (find-file "~/.cache/emacs/postman")
-;;TODO Autostart restclient mode in postman

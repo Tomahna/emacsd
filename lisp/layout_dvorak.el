@@ -9,7 +9,7 @@
 (defvar treemacs-mode-map)
 
 (use-package hydra)
-(defhydra hydra-mc-forward (:color pink :hint nil)
+(defhydra hydra-mc-forward (:hint nil)
   "
   ^MultiCursor Hydra^
   ^Movement^                    | ^Region^             | ^Cursors^

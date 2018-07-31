@@ -89,4 +89,3 @@
 (menu-bar-mode   0)                     ;;Disable Menubar
 (scroll-bar-mode 0)                     ;;Disable Scrollbar
 (tool-bar-mode   0)                     ;;Disable Toolbar
-(toggle-frame-maximized)                ;;Maximise Emacs

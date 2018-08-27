@@ -84,7 +84,7 @@
     (doom|init-theme))
 
 (add-hook 'after-make-frame-functions
-          (lambda (frame) (with-selected-frame frame (set-frame-font "DejaVu Sans Mono-11"))))
+          (lambda (frame) (with-selected-frame frame (set-frame-font "DejaVu Sans Mono-9"))))
 
 (menu-bar-mode   0)                     ;;Disable Menubar
 (scroll-bar-mode 0)                     ;;Disable Scrollbar

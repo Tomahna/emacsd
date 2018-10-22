@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# Author : Kévin Rauscher <kevin.rauscher@tomahna.fr>
+# name : Play Query String Bindable
+# key: queryStringBindable
+# --
+implicit val $1QueryStringBindable: QueryStringBindable[$1] = new QueryStringBindable[$1]{
+  override def bind(key: String, params: Map[String, Seq[String]]): Option[Either[String, $1]] = ???
+
+  override def unbind(key: String, uid: $1): String = ???
+}

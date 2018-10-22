@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# Author : Kévin Rauscher <kevin.rauscher@tomahna.fr>
+# name : Execution Context
+# key: pathBindable
+# --
+implicit val $1PathBindable: PathBindable[$1] = new PathBindable[$1]{
+  override def bind(key: String, params: String): Either[String, $1] = ???
+
+  override def unbind(key: String, value: $1): String = ???
+}

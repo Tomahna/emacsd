@@ -2,6 +2,23 @@
 (require 'evil)
 (require 'projectile)
 
+(defun ensime-scalafmt ()
+  (interactive)
+  (let (scalafmt-conf (ensime-find-scalafmt-conf (file-name-directory buffer-file-name)))
+    (start-process-shell-command
+     "scalafmt"
+     "scalafmt"
+     (concat
+      "scalafmt "
+      (if scalafmt-conf (concat "-c " scalafmt-conf " "))
+      (buffer-file-name)))))
+
+(defun ensime-find-scalafmt-conf (dir)
+  (let ((scalafmt-conf (concat dir ".scalafmt.conf"))
+        (parent-dir (file-name-directory (directory-file-name dir))))
+    (if (file-exists-p scalafmt-conf) scalafmt-conf
+      (if (not (equal parent-dir dir)) (ensime-find-scalafmt-conf parent-dir) nil))))
+
 ;; Scala
 (use-package ensime
   :commands ensime

@@ -2,7 +2,7 @@
 (require 'evil)
 (require 'projectile)
 
-(defun ensime-scalafmt ()
+(defun ensime-format-source ()
   (interactive)
   (let (scalafmt-conf (ensime-find-scalafmt-conf (file-name-directory buffer-file-name)))
     (start-process-shell-command

@@ -8,9 +8,8 @@
     (start-process-shell-command
      "scalafmt"
      "scalafmt"
-     (concat
-      "scalafmt "
-      (if scalafmt-conf (concat "-c " scalafmt-conf " "))
+     (format "scalafmt %s %s"
+      (if scalafmt-conf (format "-c %s" scalafmt-conf) "")
       (buffer-file-name)))))
 
 (defun ensime-find-scalafmt-conf (dir)

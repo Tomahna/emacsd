@@ -1,8 +1,5 @@
-# -*- mode: snippet -*-
-# Author : Kévin Rauscher <kevin.rauscher@tomahna.fr>
-# name : Play Controller
-# key: controller
-# --
+package ${1:`(if (bound-and-true-p ensime-mode) (ensime/current-package) "")`}
+
 import play.api.mvc.{AbstractController, Action, ControllerComponents}
 
 class $1Controller(

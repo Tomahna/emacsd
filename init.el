@@ -124,9 +124,9 @@
 (use-package yatemplate
   :defer 2 ;; WORKAROUND https://github.com/mineo/yatemplate/issues/3
   :config
-  (auto-insert-mode
-   )
+  (auto-insert-mode)
   (setq auto-insert-alist nil)
+  (setq auto-insert-query nil)
   (yatemplate-fill-alist))
 
 ;; https://github.com/ensime/ensime-emacs/issues/474

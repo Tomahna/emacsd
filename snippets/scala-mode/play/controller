@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# Author : Kévin Rauscher <kevin.rauscher@tomahna.fr>
+# name : Play Controller
+# key: controller
+# --
+import play.api.mvc.{AbstractController, Action, ControllerComponents}
+
+class $1Controller(
+  components: ControllerComponents,
+) extends AbstractController(components){
+  def ${2:action}() = {
+    ${3:???}
+  }
+}

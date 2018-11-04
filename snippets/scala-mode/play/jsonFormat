@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # Author : Kévin Rauscher <kevin.rauscher@tomahna.fr>
 # name : Play Json Macro Generated Formater
-# key: fmt
+# key: format
 # --
-implicit val $1Format: Format[$1] = Json.format
+implicit val ${1:$(scala/remove-dot-in-string yas-text)}Format: Format[${1:Type}] = Json.format

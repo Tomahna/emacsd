@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# Author : Kévin Rauscher <kevin.rauscher@tomahna.fr>
+# name : Play Json Macro Generated Reads
+# key: reads
+# --
+implicit val ${1:$(scala/remove-dot-in-string yas-text)}Reads: Reads[$1] = Json.reads

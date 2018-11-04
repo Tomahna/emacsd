@@ -67,3 +67,7 @@
   (seq-drop
   (seq-drop-while (lambda (elt) (not (string= elt "scala")))
                   (split-string (replace-regexp-in-string "Directory " "" (pwd)) "/" t)) 1)))
+
+(defun scala/remove-dot-in-string (text)
+  "Remove dot in string"
+  (replace-regexp-in-string "\\." "" text))

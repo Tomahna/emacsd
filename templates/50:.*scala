@@ -1,5 +1,5 @@
 package ${1:`(if (bound-and-true-p ensime-mode) (ensime/current-package) "")`}
 
-${2:class} ${3:`(car (split-string (buffer-name) "\\."))`}{
+${2:class} ${3:`(-first-item (split-string (buffer-name) "\\."))`}{
 
 }

@@ -11,3 +11,4 @@ session.*
 tramp
 *.elc
 .cache
+.yas-compiled-snippets.el

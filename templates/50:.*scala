@@ -1,4 +1,4 @@
-package ${1:`(scala-package)`}
+package ${1:`(if (bound-and-true-p ensime-mode) (ensime/current-package) "")`}
 
 ${2:class} ${3:`(car (split-string (buffer-name) "\\."))`}{
 

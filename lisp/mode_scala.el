@@ -62,11 +62,18 @@
 (add-hook 'scala-mode-hook 'configure-scala)
 (add-hook 'ensime-mode-hook 'configure-ensime)
 
-(defun scala-package ()
-  (reduce (lambda (e1 e2) (concat e1 (concat "." e2)))
-  (seq-drop
-  (seq-drop-while (lambda (elt) (not (string= elt "scala")))
-                  (split-string (replace-regexp-in-string "Directory " "" (pwd)) "/" t)) 1)))
+(defun ensime/current-package ()
+  "Get the expected package name of the current buffer"
+  (let ((sources-dir (mapcan (lambda (projects) (plist-get projects :source-roots)) (plist-get (ensime-config) :subprojects))))
+    (reduce
+      (lambda (e1 e2) (concat e1 (concat "." e2)))
+      (split-string
+        (-reduce-from
+          (lambda (e1 e2) (replace-regexp-in-string e2 "" e1))
+          (file-name-directory buffer-file-name)
+          sources-dir)
+        "/"
+        t))))
 
 (defun scala/remove-dot-in-string (text)
   "Remove dot in string"

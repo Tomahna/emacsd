@@ -63,8 +63,10 @@
 (evil-define-key 'normal evil-smartparens-mode-map (kbd "c")   nil)
 
 
-(evil-define-key nil global-map     (kbd "<f5>") 'revert-buffer)
-(evil-define-key nil magit-mode-map (kbd "<f5>") 'magit-refresh)
+(evil-define-key nil treemacs-mode-map (kbd "C-c f") 'treemacs-create-file)
+(evil-define-key nil treemacs-mode-map (kbd "C-c d") 'treemacs-create-dir)
+(evil-define-key nil global-map        (kbd "<f5>") 'revert-buffer)
+(evil-define-key nil magit-mode-map    (kbd "<f5>") 'magit-refresh)
 
 ;; Window navigation
 (use-package buffer-move)

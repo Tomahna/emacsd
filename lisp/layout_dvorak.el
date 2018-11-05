@@ -48,6 +48,7 @@
     (define-key KEYMAP KEY FUN)))
 
 ;; Key unbinding
+(define-key global-map (kbd "C-h h") nil)
 (define-key global-map (kbd "M-1") nil)
 (define-key global-map (kbd "M-2") nil)
 (define-key global-map (kbd "M-3") nil)

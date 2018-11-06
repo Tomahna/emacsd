@@ -144,7 +144,6 @@
 ;; Projectile bindings
 (evil-ex-define-cmd "W" 'evil-save)
 (evil-ex-define-cmd "pf" 'projectile-find-file)
-(evil-ex-define-cmd "pff" 'projectile-find-file-in-known-projects)
 (evil-ex-define-cmd "pg" 'projectile-grep)
 (evil-ex-define-cmd "pr" 'projectile-replace)
 (evil-ex-define-cmd "ps" 'projectile-switch-project)

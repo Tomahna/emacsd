@@ -90,6 +90,7 @@
   (setq popup-imenu-style 'indent)
   (setq popup-imenu-fuzzy-match nil))
 
+(use-package ag)
 (use-package projectile            ;;Project Mode
   :init
   (setq projectile-globally-ignored-files (list "TAGS" "*.class"))

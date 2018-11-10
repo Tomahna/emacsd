@@ -37,7 +37,6 @@
   :commands company-mode
   :diminish company-mode)
 (use-package evil)                 ;;VimLike Emacs Interface
-(use-package evil-magit)
 (use-package evil-mc
   :diminish evil-mc-mode
   :init (defvar evil-mc-key-map nil))

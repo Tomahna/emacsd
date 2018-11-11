@@ -23,7 +23,7 @@
   :commands ensime
   :init
   (defvar ensime-startup-snapshot-notification)
-  (setq ensime-auto-connect t)
+  (setq ensime-auto-connect 'always)
   (setq ensime-auto-generate-config t)
   (setq ensime-startup-notification nil)
   (setq ensime-startup-snapshot-notification nil)

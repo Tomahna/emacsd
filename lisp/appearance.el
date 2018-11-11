@@ -5,7 +5,6 @@
   (setq doom-themes-enable-bold t)         ;; if nil, bold is universally disabled
   (setq doom-themes-enable-italic t)       ;; if nil, italics is universally disabled
   :config
-  (load-theme 'doom-one t)
   (unless (file-directory-p "~/.local/share/fonts") (all-the-icons-install-fonts))) ;; Install icon fonts if not present
 
 ;; Solaire Mode (Highlight current buffer)
@@ -70,22 +69,9 @@
  ;; '(zoom-mode t)
  ;; '(zoom-size '(0.618 . 0.618)))
 
-
-(defun doom|init-theme ()
-  (load-theme 'doom-one t)
-  (load-theme 'airline-doom-one t))  ;;Font
-
-(defun doom|init-theme-in-frame (frame)
-  (with-selected-frame frame (doom|init-theme))
-  (remove-hook 'after-make-frame-functions 'doom|init-theme-in-frame)) ;; Unregister this hook once its run
-
-(if (daemonp)
-    (add-hook 'after-make-frame-functions 'doom|init-theme-in-frame)
-    (doom|init-theme))
-
-(add-hook 'after-make-frame-functions
-          (lambda (frame) (with-selected-frame frame (set-frame-font "DejaVu Sans Mono-9"))))
-
 (menu-bar-mode   0)                     ;;Disable Menubar
 (scroll-bar-mode 0)                     ;;Disable Scrollbar
 (tool-bar-mode   0)                     ;;Disable Toolbar
+(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-9"))
+(load-theme 'doom-one t)
+(load-theme 'airline-doom-one t)

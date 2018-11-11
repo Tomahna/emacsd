@@ -61,14 +61,6 @@
 
 (use-package origami)
 
-(use-package zoom
-  :commands zoom-mode
-  :diminish zoom-mode)
-(setq zoom-size '(0.618 . 0.618))
-;; (custom-set-variables
- ;; '(zoom-mode t)
- ;; '(zoom-size '(0.618 . 0.618)))
-
 (menu-bar-mode   0)                     ;;Disable Menubar
 (scroll-bar-mode 0)                     ;;Disable Scrollbar
 (tool-bar-mode   0)                     ;;Disable Toolbar

@@ -194,6 +194,7 @@
 (load "mode_rest")
 (load "mode_scala")
 (load "mode_typescript")
+(load "pragmata")
 (load custom-file 'noerror)
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)

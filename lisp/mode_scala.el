@@ -40,6 +40,8 @@
   (setq highlight-symbol-enabled  t)
   (setq show-trailing-whitespace  t)
 
+  (add-pragmatapro-prettify-symbols-alist)
+  (prettify-symbols-mode        t)
   (company-mode                 t)
   (diff-hl-mode                 t)
   (diff-hl-flydiff-mode         t)
@@ -52,8 +54,6 @@
       (ensime))
 
   (scala-mode:goto-start-of-code))
-
-
 
 (defun configure-ensime ()
   (unimacs-company-define-backends

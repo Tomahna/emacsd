@@ -11,4 +11,5 @@ session.*
 tramp
 *.elc
 .cache
+.last-package-update-day
 .yas-compiled-snippets.el

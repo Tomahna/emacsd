@@ -31,6 +31,9 @@
   (package-install 'use-package))
 (require 'use-package)
 
+(use-package auto-package-update)
+(auto-package-update-maybe)
+
 (use-package diminish)
 
 (use-package company

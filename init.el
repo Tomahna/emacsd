@@ -193,6 +193,7 @@
 (load "minor_clipboard")
 (load "minor_git")
 (load "mode_elisp")
+(load "mode_haskell")
 (load "mode_nix")
 (load "mode_rest")
 (load "mode_scala")

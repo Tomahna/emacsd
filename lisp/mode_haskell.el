@@ -1,0 +1,6 @@
+(use-package haskell-mode)
+;; (use-package intero)
+;; (add-hook 'haskell-mode-hook 'intero-mode)
+;; (require 'flycheck)
+;; (setq flycheck-check-syntax-automatically '(save new-line))
+;; (flycheck-add-next-checker 'intero '(warning . haskell-hlint))

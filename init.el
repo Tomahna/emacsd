@@ -31,7 +31,9 @@
   (package-install 'use-package))
 (require 'use-package)
 
-(use-package auto-package-update)
+(use-package auto-package-update
+  :config
+  (setq auto-package-update-interval 1))
 (auto-package-update-maybe)
 
 (use-package diminish)

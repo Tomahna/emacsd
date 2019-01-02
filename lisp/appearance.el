@@ -14,24 +14,9 @@
   (add-hook 'minibuffer-setup-hook #'solaire-mode-in-minibuffer)
   (solaire-mode-swap-bg))
 
-;; Powerline
-(use-package powerline
-  :init
-  (setq powerline-display-buffer-size nil)
-  (setq powerline-display-mule-info nil))
-
-(use-package airline-themes
-  :init
-  (setq powerline-utf-8-separator-left        #xe0b0)
-  (setq powerline-utf-8-separator-right       #xe0b2)
-  (setq airline-display-directory             'airline-display-directory-disabled)
-  (setq airline-utf-glyph-separator-left      #xe0b0)
-  (setq airline-utf-glyph-separator-right     #xe0b2)
-  (setq airline-utf-glyph-subseparator-left   #xe0b1)
-  (setq airline-utf-glyph-subseparator-right  #xe0b3)
-  (setq airline-utf-glyph-branch              #xe0a0)
-  (setq airline-utf-glyph-readonly            #xe0a2)
-  (setq airline-utf-glyph-linenumber          #xe0a1))
+(use-package doom-modeline
+  :config
+  (doom-modeline-init))
 
 (use-package highlight-indent-guides
   :init
@@ -66,4 +51,3 @@
 (tool-bar-mode   0)                     ;;Disable Toolbar
 (add-to-list 'default-frame-alist '(font . "PragmataPro Mono Liga-10"))
 (load-theme 'doom-one t)
-(load-theme 'airline-doom-one t)

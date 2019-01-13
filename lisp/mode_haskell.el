@@ -1,4 +1,5 @@
 (use-package haskell-mode)
+(setq haskell-interactive-popup-errors nil)
 ;; (use-package intero)
 ;; (add-hook 'haskell-mode-hook 'intero-mode)
 ;; (require 'flycheck)

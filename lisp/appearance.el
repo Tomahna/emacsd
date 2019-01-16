@@ -16,7 +16,13 @@
 
 (use-package doom-modeline
   :config
-  (doom-modeline-init))
+  (setq doom-modeline-buffer-file-name-style 'relative-from-project)
+  (setq doom-modeline-icon t)
+  (setq doom-modeline-major-mode-icon t)
+  (setq doom-modeline-major-mode-color-icon t)
+  (setq doom-modeline-persp-name t)
+  (setq doom-modeline-enable-word-count t)
+  :hook (after-init . doom-modeline-init))
 
 (use-package highlight-indent-guides
   :init

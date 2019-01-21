@@ -55,5 +55,5 @@
 (menu-bar-mode   0)                     ;;Disable Menubar
 (scroll-bar-mode 0)                     ;;Disable Scrollbar
 (tool-bar-mode   0)                     ;;Disable Toolbar
-(add-to-list 'default-frame-alist '(font . "PragmataPro Mono Liga-10"))
+(add-to-list 'default-frame-alist '(font . "PragmataPro Mono Liga-12"))
 (load-theme 'doom-one t)

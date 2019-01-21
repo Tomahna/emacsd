@@ -66,6 +66,9 @@
 
 (evil-define-key nil treemacs-mode-map (kbd "C-c f") 'treemacs-create-file)
 (evil-define-key nil treemacs-mode-map (kbd "C-c d") 'treemacs-create-dir)
+(evil-define-key nil treemacs-mode-map (kbd "M-c") 'treemacs-move-project-up)
+(evil-define-key nil treemacs-mode-map (kbd "M-t") 'treemacs-move-project-down)
+(evil-define-key nil treemacs-mode-map (kbd "C-c d") 'treemacs-create-dir)
 (evil-define-key nil global-map        (kbd "<f5>") 'revert-buffer)
 (evil-define-key nil magit-mode-map    (kbd "<f5>") 'magit-refresh)
 

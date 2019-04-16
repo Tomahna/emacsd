@@ -149,9 +149,6 @@
 (evil-ex-define-cmd "pf" 'projectile-find-file)
 (evil-ex-define-cmd "p4f" 'projectile-find-file-other-window)
 (evil-ex-define-cmd "p5f" 'projectile-find-file-other-frame)
-(evil-ex-define-cmd "pg" 'projectile-ag)
+(evil-ex-define-cmd "pg" 'counsel-ag)
 (evil-ex-define-cmd "pr" 'projectile-replace)
 (evil-ex-define-cmd "ps" 'projectile-switch-project)
-
-;; Ensime bindings
-(evil-ex-define-cmd "sjt" 'ensime-goto-test-config)

@@ -75,7 +75,6 @@
 (use-package ivy-posframe
   :ensure t)
 (ivy-posframe-enable)
-(setq ivy-display-functions-alist nil)
 (push '(t . ivy-posframe-display-at-frame-center) ivy-display-functions-alist)
 
 (use-package goto-chg

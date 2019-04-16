@@ -59,6 +59,8 @@
 (add-hook 'scala-mode-hook 'configure-scala)
 (add-hook 'lsp-mode-hook 'configure-lsp)
 
+(evil-define-key 'normal 'scala-mode-map (kbd "C-e") 'counsel-imenu)
+
 (defun scala/remove-dot-in-string (text)
   "Remove dot in string"
   (replace-regexp-in-string "\\." "" text))

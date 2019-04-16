@@ -66,6 +66,9 @@
   :config
   (all-the-icons-ivy-setup))
 (use-package counsel)
+(use-package counsel-etags
+  :config
+  (add-to-list 'counsel-etags-ignore-directories "target"))
 (use-package ivy                   ;;Completion framework
   :diminish ivy-mode
   :init
@@ -95,7 +98,6 @@
 (use-package popup-imenu
   :commands popup-imenu
   :init
-  (evil-define-key 'normal 'global (kbd "C-e") 'popup-imenu)
   :config
   (setq popup-imenu-style 'indent)
   (setq popup-imenu-position 'center)

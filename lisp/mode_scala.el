@@ -2,38 +2,39 @@
 (require 'evil)
 (require 'projectile)
 
-(defun ensime-format-source ()
-  (interactive)
-  (let (scalafmt-conf (ensime-find-scalafmt-conf (file-name-directory buffer-file-name)))
-    (start-process-shell-command
-     "scalafmt"
-     "scalafmt"
-     (format "scalafmt %s %s"
-      (if scalafmt-conf (format "-c %s" scalafmt-conf) "")
-      (buffer-file-name)))))
+;; Enable scala-mode and sbt-mode
+(use-package scala-mode
+  :mode "\\.s\\(cala\\|bt\\)$")
 
-(defun ensime-find-scalafmt-conf (dir)
-  (let ((scalafmt-conf (concat dir ".scalafmt.conf"))
-        (parent-dir (file-name-directory (directory-file-name dir))))
-    (if (file-exists-p scalafmt-conf) scalafmt-conf
-      (if (not (equal parent-dir dir)) (ensime-find-scalafmt-conf parent-dir) nil))))
+(use-package sbt-mode
+  :commands sbt-start sbt-command
+  :config
+  ;; WORKAROUND: https://github.com/ensime/emacs-sbt-mode/issues/31
+  ;; allows using SPACE when in the minibuffer
+  (substitute-key-definition
+   'minibuffer-complete-word
+   'self-insert-command
+   minibuffer-local-completion-map))
 
-;; Scala
-(use-package ensime
-  :commands ensime
-  :init
-  (defvar ensime-startup-snapshot-notification)
-  (setq ensime-auto-connect 'always)
-  (setq ensime-auto-generate-config t)
-  (setq ensime-startup-notification nil)
-  (setq ensime-startup-snapshot-notification nil)
-  (add-hook 'ensime-server-process-start-hook (lambda () (setq projectile-mode-line ""))))
-(use-package sbt-mode)
-(use-package scala-mode)
+;; Enable nice rendering of diagnostics like compile errors.
+(use-package flycheck
+  :init (global-flycheck-mode))
 
-(evil-define-key 'normal ensime-mode-map
-    "e" 'ensime-edit-definition
-    "E" 'ensime-pop-find-definition-stack)
+(use-package lsp-mode
+ :init (setq lsp-prefer-flymake nil))
+
+(use-package lsp-ui
+  :hook (lsp-mode . lsp-ui-mode))
+
+(use-package company-lsp
+  :config
+  (setq company-lsp-async t))
+
+(use-package lsp-scala
+  :after scala-mode
+  :demand t)
+  ;; Optional - enable lsp-scala automatically in scala files
+  ;; :hook (scala-mode . lsp))
 
 (defun configure-scala ()
   (defvar highlight-symbol-enabled)
@@ -50,33 +51,10 @@
   (smartparens-mode             t)
   (yas-minor-mode               t)
 
-  (if (projectile-file-exists-p ".ensime")
-      (ensime))
-
   (scala-mode:goto-start-of-code))
 
-(defun configure-ensime ()
-  (unimacs-company-define-backends
-   '((ensime-mode) . ((company-yasnippet :with ensime-company)
-                      (company-dabbrev-code :with company-dabbrev company-yasnippet)
-                      company-files))))
+(defun configure-lsp ()
+  (push 'company-lsp company-backends))
 
 (add-hook 'scala-mode-hook 'configure-scala)
-(add-hook 'ensime-mode-hook 'configure-ensime)
-
-(defun ensime/current-package ()
-  "Get the expected package name of the current buffer"
-  (let ((sources-dir (mapcan (lambda (projects) (plist-get projects :source-roots)) (plist-get (ensime-config) :subprojects))))
-    (reduce
-      (lambda (e1 e2) (concat e1 (concat "." e2)))
-      (split-string
-        (-reduce-from
-          (lambda (e1 e2) (replace-regexp-in-string e2 "" e1))
-          (file-name-directory buffer-file-name)
-          sources-dir)
-        "/"
-        t))))
-
-(defun scala/remove-dot-in-string (text)
-  "Remove dot in string"
-  (replace-regexp-in-string "\\." "" text))
+(add-hook 'lsp-mode-hook 'configure-lsp)

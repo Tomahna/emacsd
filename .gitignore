@@ -13,3 +13,4 @@ tramp
 .cache
 .last-package-update-day
 .yas-compiled-snippets.el
+.lsp-session-v1

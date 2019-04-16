@@ -65,11 +65,18 @@
 (use-package all-the-icons-ivy
   :config
   (all-the-icons-ivy-setup))
+(use-package counsel)
 (use-package ivy                   ;;Completion framework
   :diminish ivy-mode
   :init
   (setq ivy-use-virtual-buffers t)
-  (setq ivy-count-format "%d/%d "))
+  (setq ivy-count-format "%d/%d ")
+  (setq ivy-re-builders-alist '((t . ivy--regex-fuzzy))))
+(use-package ivy-posframe
+  :ensure t)
+(ivy-posframe-enable)
+(setq ivy-display-functions-alist nil)
+(push '(t . ivy-posframe-display-at-frame-center) ivy-display-functions-alist)
 
 (use-package goto-chg
   :commands goto-last-change)
@@ -92,6 +99,7 @@
   (evil-define-key 'normal 'global (kbd "C-e") 'popup-imenu)
   :config
   (setq popup-imenu-style 'indent)
+  (setq popup-imenu-position 'center)
   (setq popup-imenu-fuzzy-match nil))
 
 (use-package ag)

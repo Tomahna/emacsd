@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# Author : Kévin Rauscher <kevin.rauscher@tomahna.fr>
+# name : Play Json Macro Generated Reads
+# key: arb
+# --
+implicit val ${1:$(scala/remove-dot-in-string yas-text)}Arbitrary: Arbitrary[$1] = $2

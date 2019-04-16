@@ -58,3 +58,7 @@
 
 (add-hook 'scala-mode-hook 'configure-scala)
 (add-hook 'lsp-mode-hook 'configure-lsp)
+
+(defun scala/remove-dot-in-string (text)
+  "Remove dot in string"
+  (replace-regexp-in-string "\\." "" text))

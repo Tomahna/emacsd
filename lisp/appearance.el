@@ -22,7 +22,7 @@
   (setq doom-modeline-major-mode-color-icon t)
   (setq doom-modeline-persp-name t)
   (setq doom-modeline-enable-word-count t)
-  :hook (after-init . doom-modeline-init))
+  :hook (after-init . doom-modeline-mode))
 
 (use-package highlight-indent-guides
   :init

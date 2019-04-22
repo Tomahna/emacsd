@@ -208,6 +208,7 @@
 (load "mode_nix")
 (load "mode_rest")
 (load "mode_scala")
+(load "mode_terraform")
 (load "mode_typescript")
 (load "pragmata")
 (load custom-file 'noerror)

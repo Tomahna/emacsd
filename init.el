@@ -199,7 +199,6 @@
 (load "appearance")    ;; Theme
 (load "lang_markdown")
 (load "lang_python")
-(load "lang_yaml")
 (load "layout_dvorak")
 (load "minor_clipboard")
 (load "minor_git")
@@ -210,6 +209,7 @@
 (load "mode_scala")
 (load "mode_terraform")
 (load "mode_typescript")
+(load "mode_yaml")
 (load "pragmata")
 (load custom-file 'noerror)
 

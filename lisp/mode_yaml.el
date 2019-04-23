@@ -1,16 +1,13 @@
 ;; Yaml
 (use-package yaml-mode
-  :diminish yaml-mode)
+  :diminish yaml-mode
+  :mode "\\.yml\\'")
 (use-package ansible
   :commands ansible
   :diminish ansible)
-(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 
 (defun configure-yaml ()
   (interactive)
-
-  (setq highlight-symbol-enabled  t)
-  (setq show-trailing-whitespace  t)
 
   (ansible                      t)
   (company-mode                 t)

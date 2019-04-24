@@ -153,3 +153,13 @@
 (evil-ex-define-cmd "pg" 'counsel-ag)
 (evil-ex-define-cmd "pr" 'projectile-replace)
 (evil-ex-define-cmd "ps" 'projectile-switch-project)
+
+;; Major Modes specific keys
+;; Scala
+(evil-define-key 'normal 'scala-mode-map (kbd "e") 'lsp-ui-peek-find-definitions)
+(evil-define-key 'normal 'scala-mode-map (kbd "E") 'lsp-ui-peek-jump-backward)
+(evil-define-key 'normal 'scala-mode-map (kbd "C-c C-v r") 'lsp-ui-peek-find-references)
+(evil-define-key 'normal 'scala-mode-map (kbd "C-c C-v f") 'lsp-format-buffer)
+
+;; (evil-define-key 'normal 'lsp-ui-peek-mode-map (kbd "c") 'lsp-ui-peek--select-prev)
+;; (evil-define-key 'normal 'lsp-ui-peek-mode-map (kbd "t") 'lsp-ui-peek--select-next)

@@ -30,6 +30,8 @@
   :config
   (setq company-lsp-async t))
 
+(use-package lsp-treemacs)
+
 (use-package lsp-scala
   :after scala-mode
   :demand t)
@@ -54,6 +56,7 @@
   (scala-mode:goto-start-of-code))
 
 (defun configure-lsp ()
+  (setq lsp-ui-sideline-enable nil)
   (push 'company-lsp company-backends))
 
 (add-hook 'scala-mode-hook 'configure-scala)

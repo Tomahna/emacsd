@@ -42,7 +42,11 @@
 (use-package company
   :commands company-mode
   :diminish company-mode)
-(use-package evil)                 ;;VimLike Emacs Interface
+
+;;VimLike Emacs Interface
+(use-package evil
+  :config
+  (setq evil-ex-visual-char-range t))
 (use-package evil-mc
   :diminish evil-mc-mode
   :init (defvar evil-mc-key-map nil))

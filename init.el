@@ -55,7 +55,9 @@
   :commands 'er/expand-region)
 (use-package flyspell
   :commands flyspell-mode
-  :diminish flyspell-mode)
+  :diminish flyspell-mode
+  :config
+  (setq flyspell-issue-message-flag nil))
 (use-package highlight-symbol
   :commands highlight-symbol highlight-symbol-mode
   :diminish highlight-symbol-mode

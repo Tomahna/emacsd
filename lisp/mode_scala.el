@@ -48,6 +48,7 @@
   (company-mode                 t)
   (diff-hl-mode                 t)
   (diff-hl-flydiff-mode         t)
+  (flyspell-prog-mode            )
   (linum-mode                   t)
   (show-paren-mode              t)
   (smartparens-mode             t)

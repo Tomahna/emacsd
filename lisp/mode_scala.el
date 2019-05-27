@@ -34,9 +34,9 @@
 
 (use-package lsp-scala
   :after scala-mode
-  :demand t)
+  :demand t
   ;; Optional - enable lsp-scala automatically in scala files
-  ;; :hook (scala-mode . lsp))
+  :hook (scala-mode . lsp))
 
 (defun configure-scala ()
   (defvar highlight-symbol-enabled)

@@ -150,27 +150,6 @@
   (setq auto-insert-query nil)
   (yatemplate-fill-alist))
 
-;; https://github.com/ensime/ensime-emacs/issues/474
-(defun unimacs-company-define-backends (modes-backends-cons)
-  (let ((modes    (car modes-backends-cons))
-        (backends (cdr modes-backends-cons)))
-    (dolist (mode modes)
-      (let* ((modename (symbol-name mode))
-             (funcname (concat "company-backends-for-" modename))
-             (func (intern funcname))
-             (hook (intern (concat modename "-hook"))))
-        (setf (symbol-function func)
-              `(lambda ()
-                 (set (make-local-variable 'company-backends)
-                      ',backends)))
-        (add-hook hook func)))))
-;; TODO Fix deprecation
-(defun company-yasnippet-or-completion ()
-  (interactive)
-  (let ((yas-fallback-behavior nil))
-    (unless (yas-expand)
-      (call-interactively #'company-complete-common))))
-
 ;; Save current session
 ;;(defvar desktop-dirname)
 ;;(defvar desktop-path)

@@ -58,7 +58,7 @@
 
 (defun configure-lsp ()
   (setq lsp-ui-sideline-enable nil)
-  (push 'company-lsp company-backends))
+  (push '(company-dabbrev-code company-yasnippet company-lsp) company-backends))
 
 (add-hook 'scala-mode-hook 'configure-scala)
 (add-hook 'lsp-mode-hook 'configure-lsp)

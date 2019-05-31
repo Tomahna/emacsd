@@ -58,7 +58,9 @@
 
 (defun configure-lsp ()
   (setq lsp-ui-sideline-enable nil)
-  (push '(company-dabbrev-code company-yasnippet company-lsp) company-backends))
+
+  ;; All completions instead of just lsp
+  (run-with-timer 0.1 nil (lambda () (push '(company-dabbrev-code company-yasnippet company-lsp) company-backends))))
 
 (add-hook 'scala-mode-hook 'configure-scala)
 (add-hook 'lsp-mode-hook 'configure-lsp)

@@ -143,7 +143,7 @@
 (define-key evil-insert-state-map (kbd "C-G") 'beginning-of-line)
 (define-key evil-insert-state-map (kbd "C->") 'hydra-mc-forward/body)
 
-(define-key evil-insert-state-map (kbd "TAB") 'company-complete)
+(define-key evil-insert-state-map (kbd "S-SPC") 'company-complete)
 (evil-define-key 'insert 'yas-minor-mode-map (kbd "S-SPC") yas-maybe-expand)
 
 ;; Projectile bindings

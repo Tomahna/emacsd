@@ -192,6 +192,7 @@
 (load "mode_nix")
 (load "mode_rest")
 (load "mode_scala")
+(load "mode_shell")
 (load "mode_terraform")
 (load "mode_typescript")
 (load "mode_yaml")

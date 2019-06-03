@@ -1,0 +1,16 @@
+(defun configure-shell-script ()
+
+  (add-pragmatapro-prettify-symbols-alist)
+  (company-mode                 t)
+  (diff-hl-flydiff-mode         t)
+  (diff-hl-mode                 t)
+  (flyspell-prog-mode            )
+  (highlight-symbol-mode        t)
+  (linum-mode                   t)
+  (prettify-symbols-mode        t)
+  (rainbow-delimiters-mode      t)
+  (show-paren-mode              t)
+  (smartparens-mode             t)
+  (yas-minor-mode               t))
+
+(add-hook 'sh-mode-hook 'configure-shell-script)

@@ -7,3 +7,8 @@
   (magit-auto-revert-mode -1)      ;; Workaround https://github.com/dgutov/diff-hl/issues/65
   (setq magit-repository-directories '(("~/Workspaces/" . 4)))
   (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh))
+
+(add-hook 'git-commit-mode-hook
+          (lambda ()
+            (smartparens-mode t)
+            ))

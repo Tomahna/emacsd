@@ -114,7 +114,7 @@
 (use-package ag)
 (use-package projectile            ;;Project Mode
   :init
-  (setq projectile-globally-ignored-files (list "TAGS" "*.class"))
+  (setq projectile-globally-ignored-files (list "TAGS"))
   (setq projectile-completion-system      'ivy)
   (setq projectile-enable-caching         nil)
   (setq projectile-mode-line              '(:eval (format " [%s]" (projectile-project-name))))

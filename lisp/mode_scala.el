@@ -1,4 +1,5 @@
 (require 'company)
+(require 'dash)
 (require 'evil)
 (require 'projectile)
 
@@ -60,6 +61,14 @@
 (add-hook 'lsp-mode-hook 'configure-lsp)
 
 (evil-define-key 'normal 'scala-mode-map (kbd "C-e") 'counsel-imenu)
+
+(defun scala/current-package ()
+  (mapconcat 'identity
+    (reverse
+      (-take-while
+        (lambda (elem) (not (or (string= elem "app") (string= elem "scala"))))
+        (cdr (reverse (split-string buffer-file-name "/")))))
+      "."))
 
 (defun scala/remove-dot-in-string (text)
   "Remove dot in string"

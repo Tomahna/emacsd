@@ -1,4 +1,4 @@
-package ${1:`(if (bound-and-true-p ensime-mode) (ensime/current-package) "")`}
+package ${1:`(scala/current-package)`}
 
 import org.scalatest.{FlatSpec, Matchers}
 

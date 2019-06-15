@@ -1,4 +1,4 @@
-package ${1:`(if (bound-and-true-p ensime-mode) (ensime/current-package) "")`}
+package ${1:`(scala/current-package)`}
 
 import play.api.mvc.{AbstractController, Action, ControllerComponents}
 

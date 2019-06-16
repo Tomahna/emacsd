@@ -43,6 +43,7 @@
   (flyspell-prog-mode            )
   (highlight-symbol-mode        t)
   (linum-mode                   t)
+  (origami-mode                 t)
   (prettify-symbols-mode        t)
   (rainbow-delimiters-mode      t)
   (show-paren-mode              t)
@@ -53,6 +54,8 @@
 
 (defun configure-lsp ()
   (setq lsp-ui-sideline-enable nil)
+
+  (lsp-origami-mode t)
 
   ;; All completions instead of just lsp
   (run-with-timer 0.1 nil (lambda () (push '(company-yasnippet company-lsp) company-backends))))

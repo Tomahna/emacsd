@@ -18,14 +18,20 @@
    minibuffer-local-completion-map))
 
 ;; Enable nice rendering of diagnostics like compile errors.
+(use-package posframe)
 (use-package flycheck
   :init (global-flycheck-mode))
+(use-package flycheck-posframe
+  :config
+  (setq flycheck-posframe-error-prefix " ")
+  (setq flycheck-posframe-warning-prefix " ")
+  :hook (flycheck-mode . flycheck-posframe-mode))
 
 (use-package lsp-mode
   :hook (scala-mode . lsp)
   :config (setq lsp-prefer-flymake nil))
-
 (use-package lsp-ui)
+(use-package lsp-origami)
 
 (use-package company-lsp
   :config

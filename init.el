@@ -83,10 +83,6 @@
   (setq ivy-count-format "%d/%d ")
   (setq ivy-re-builders-alist '((counsel-ag . ivy--regex-plus)
                                 (t . ivy--regex-fuzzy))))
-(use-package ivy-posframe
-  :ensure t)
-(ivy-posframe-enable)
-(push '(t . ivy-posframe-display-at-frame-center) ivy-display-functions-alist)
 
 (use-package goto-chg
   :commands goto-last-change)

@@ -16,6 +16,7 @@
 
 (use-package doom-modeline
   :config
+  (setq column-number-mode t)
   (setq doom-modeline-buffer-file-name-style 'relative-from-project)
   (setq doom-modeline-icon t)
   (setq doom-modeline-major-mode-icon t)

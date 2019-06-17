@@ -94,8 +94,6 @@
 (mudefine-key (kbd "M-9")     'winum-select-window-9  treemacs-mode-map evil-normal-state-map)
 (mudefine-key (kbd "M-<tab>") 'ivy-switch-buffer   evil-normal-state-map evil-visual-state-map)
 
-(mudefine-key (kbd "M-e")     'evil-ex                treemacs-mode-map evil-normal-state-map)
-
 ;; Motion
 (mudefine-key (kbd "c") 'evil-previous-line       evil-motion-state-map evil-normal-state-map evil-visual-state-map)
 (mudefine-key (kbd "t") 'evil-next-line           evil-motion-state-map evil-normal-state-map evil-visual-state-map)

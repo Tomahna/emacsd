@@ -95,18 +95,18 @@
 (mudefine-key (kbd "M-<tab>") 'ivy-switch-buffer   evil-normal-state-map evil-visual-state-map)
 
 ;; Motion
-(mudefine-key (kbd "c") 'evil-previous-line       evil-motion-state-map evil-normal-state-map evil-visual-state-map)
-(mudefine-key (kbd "t") 'evil-next-line           evil-motion-state-map evil-normal-state-map evil-visual-state-map)
-(mudefine-key (kbd "h") 'evil-backward-word-begin evil-motion-state-map evil-normal-state-map evil-visual-state-map)
-(mudefine-key (kbd "n") 'evil-forward-word-end    evil-motion-state-map evil-normal-state-map evil-visual-state-map)
-(mudefine-key (kbd "H") 'evil-backward-char       evil-motion-state-map evil-normal-state-map evil-visual-state-map)
-(mudefine-key (kbd "N") 'evil-forward-char        evil-motion-state-map evil-normal-state-map evil-visual-state-map)
-(mudefine-key (kbd "g") 'evil-beginning-of-line   evil-motion-state-map evil-normal-state-map evil-visual-state-map)
-(mudefine-key (kbd "r") 'evil-end-of-line         evil-motion-state-map evil-normal-state-map evil-visual-state-map)
-(mudefine-key (kbd "C") 'highlight-symbol-prev    evil-motion-state-map evil-normal-state-map evil-visual-state-map)
-(mudefine-key (kbd "T") 'highlight-symbol-next    evil-motion-state-map evil-normal-state-map evil-visual-state-map)
-(define-key evil-normal-state-map (kbd "C-;") 'goto-last-change)
-(define-key evil-normal-state-map (kbd "C-.") 'goto-last-change-reverse)
+;; (mudefine-key (kbd "c") 'evil-previous-line       evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+;; (mudefine-key (kbd "t") 'evil-next-line           evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+;; (mudefine-key (kbd "h") 'evil-backward-word-begin evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+;; (mudefine-key (kbd "n") 'evil-forward-word-end    evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+;; (mudefine-key (kbd "H") 'evil-backward-char       evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+;; (mudefine-key (kbd "N") 'evil-forward-char        evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+;; (mudefine-key (kbd "g") 'evil-beginning-of-line   evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+;; (mudefine-key (kbd "r") 'evil-end-of-line         evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+;; (mudefine-key (kbd "C") 'highlight-symbol-prev    evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+;; (mudefine-key (kbd "T") 'highlight-symbol-next    evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+;; (define-key evil-normal-state-map (kbd "C-;") 'goto-last-change)
+;; (define-key evil-normal-state-map (kbd "C-.") 'goto-last-change-reverse)
 
 ;; Normal and Visual Keys
 (mudefine-key (kbd ">")   'hydra-mc-forward/body evil-motion-state-map evil-normal-state-map evil-visual-state-map)
@@ -157,8 +157,9 @@
 
 ;; Major Modes specific keys
 ;; Scala
-(evil-define-key 'normal 'scala-mode-map (kbd "e") 'lsp-ui-peek-find-definitions)
-(evil-define-key 'normal 'scala-mode-map (kbd "E") 'lsp-ui-peek-jump-backward)
+(evil-define-key 'motion lsp-mode-map (kbd "g d") 'lsp-ui-peek-find-definitions)
+(evil-define-key 'motion lsp-mode-map (kbd "g D") 'lsp-ui-peek-jump-backward)
+
 (evil-define-key 'normal 'scala-mode-map (kbd "C-c C-v r") 'lsp-ui-peek-find-references)
 (evil-define-key 'normal 'scala-mode-map (kbd "C-c C-v f") 'lsp-format-buffer)
 

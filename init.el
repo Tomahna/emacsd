@@ -81,7 +81,7 @@
   :init
   (setq ivy-use-virtual-buffers t)
   (setq ivy-count-format "%d/%d ")
-  (setq ivy-re-builders-alist '((counsel-ag . ivy--regex-plus)
+  (setq ivy-re-builders-alist '((counsel-rg . ivy--regex-plus)
                                 (t . ivy--regex-fuzzy))))
 
 (use-package goto-chg
@@ -107,7 +107,9 @@
   (setq popup-imenu-position 'center)
   (setq popup-imenu-fuzzy-match nil))
 
-(use-package ag)
+(use-package rg
+  :init
+  (setq rg-group-result t))
 (use-package projectile            ;;Project Mode
   :init
   (setq projectile-globally-ignored-files (list "TAGS"))

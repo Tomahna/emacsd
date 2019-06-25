@@ -8,10 +8,6 @@
          (typescript-mode . tide-hl-identifier-mode)
          (before-save . tide-format-before-save)))
 
-(evil-define-key 'normal tide-mode-map
-  "e" 'tide-jump-to-definition
-  "E" 'tide-jump-back)
-
 (defun configure-tide ()
   (interactive)
 
@@ -28,3 +24,7 @@
           (lambda ()
             (when (string-equal "tsx" (file-name-extension buffer-file-name))
               (configure-tide))))
+
+;; Key Bindings
+(evil-define-key 'motion tide-mode-map (kbd "g d") 'tide-jump-to-definition)
+(evil-define-key 'motion tide-mode-map (kbd "g D") 'tide-jump-back)

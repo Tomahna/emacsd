@@ -157,9 +157,6 @@
 
 ;; Major Modes specific keys
 ;; Scala
-(evil-define-key 'motion lsp-mode-map (kbd "g d") 'lsp-ui-peek-find-definitions)
-(evil-define-key 'motion lsp-mode-map (kbd "g D") 'lsp-ui-peek-jump-backward)
-
 (evil-define-key 'normal 'scala-mode-map (kbd "C-c C-v r") 'lsp-ui-peek-find-references)
 (evil-define-key 'normal 'scala-mode-map (kbd "C-c C-v f") 'lsp-format-buffer)
 

@@ -82,3 +82,7 @@
 (defun scala/remove-dot-in-string (text)
   "Remove dot in string"
   (replace-regexp-in-string "\\." "" text))
+
+;; Key Bindings
+(evil-define-key 'motion lsp-mode-map (kbd "g d") 'lsp-ui-peek-find-definitions)
+(evil-define-key 'motion lsp-mode-map (kbd "g D") 'lsp-ui-peek-jump-backward)

@@ -48,8 +48,7 @@
   :config
   (setq evil-ex-visual-char-range t))
 (use-package evil-mc
-  :diminish evil-mc-mode
-  :init (defvar evil-mc-key-map nil))
+  :diminish evil-mc-mode)
 (use-package evil-nerd-commenter)
 (use-package expand-region
   :commands 'er/expand-region)

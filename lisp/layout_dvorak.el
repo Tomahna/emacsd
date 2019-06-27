@@ -20,17 +20,7 @@
   _T_: goto next occurrence     |                    | _g_:           unmark all occurence
   "
   ("n" er/expand-region)
-  ("h" er/contract-region)
-
-  ;; MC marks
-  ("c"           evil-mc-make-and-goto-prev-match)
-  ("C"           evil-mc-skip-and-goto-prev-match)
-  ("t"           evil-mc-make-and-goto-next-match)
-  ("T"           evil-mc-skip-and-goto-next-match)
-  ("<space>"     evil-mc-make-cursor-here)
-  ("<backspace>" evil-mc-undo-cursor)
-  ("r"           evil-mc-make-all-cursors :exit t)
-  ("g"           evil-mc-undo-all-cursors :exit t))
+  ("h" er/contract-region))
 
 (defhydra hydra-sp ()
   "smartparens"
@@ -59,7 +49,6 @@
 (define-key global-map (kbd "M-8") nil)
 (define-key global-map (kbd "M-9") nil)
 (define-key global-map (kbd "M-0") nil)
-(evil-define-key 'normal evil-mc-key-map           (kbd "M-n") nil)
 (evil-define-key 'normal evil-smartparens-mode-map (kbd "C")   nil)
 (evil-define-key 'normal evil-smartparens-mode-map (kbd "c")   nil)
 

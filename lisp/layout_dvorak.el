@@ -9,18 +9,6 @@
 (require 'treemacs)
 
 (use-package hydra)
-(defhydra hydra-mc-forward (:hint nil)
-  "
-  ^MultiCursor Hydra^
-  ^Movement^                    | ^Region^             | ^Cursors^
-  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
-  _c_: mark previous occurence  | _n_: expand region   | _<space>_:     mark here
-  _t_: mark next occurence      | _h_: contract region | _<backspace>_: undo cursor
-  _C_: goto previous occurrence |                    | _r_:           mark all occurence
-  _T_: goto next occurrence     |                    | _g_:           unmark all occurence
-  "
-  ("n" er/expand-region)
-  ("h" er/contract-region))
 
 (defhydra hydra-sp ()
   "smartparens"
@@ -84,21 +72,10 @@
 (mudefine-key (kbd "M-<tab>") 'ivy-switch-buffer   evil-normal-state-map evil-visual-state-map)
 
 ;; Motion
-;; (mudefine-key (kbd "c") 'evil-previous-line       evil-motion-state-map evil-normal-state-map evil-visual-state-map)
-;; (mudefine-key (kbd "t") 'evil-next-line           evil-motion-state-map evil-normal-state-map evil-visual-state-map)
-;; (mudefine-key (kbd "h") 'evil-backward-word-begin evil-motion-state-map evil-normal-state-map evil-visual-state-map)
-;; (mudefine-key (kbd "n") 'evil-forward-word-end    evil-motion-state-map evil-normal-state-map evil-visual-state-map)
-;; (mudefine-key (kbd "H") 'evil-backward-char       evil-motion-state-map evil-normal-state-map evil-visual-state-map)
-;; (mudefine-key (kbd "N") 'evil-forward-char        evil-motion-state-map evil-normal-state-map evil-visual-state-map)
-;; (mudefine-key (kbd "g") 'evil-beginning-of-line   evil-motion-state-map evil-normal-state-map evil-visual-state-map)
-;; (mudefine-key (kbd "r") 'evil-end-of-line         evil-motion-state-map evil-normal-state-map evil-visual-state-map)
 ;; (mudefine-key (kbd "C") 'highlight-symbol-prev    evil-motion-state-map evil-normal-state-map evil-visual-state-map)
 ;; (mudefine-key (kbd "T") 'highlight-symbol-next    evil-motion-state-map evil-normal-state-map evil-visual-state-map)
 ;; (define-key evil-normal-state-map (kbd "C-;") 'goto-last-change)
 ;; (define-key evil-normal-state-map (kbd "C-.") 'goto-last-change-reverse)
-
-;; Normal and Visual Keys
-(mudefine-key (kbd ">")   'hydra-mc-forward/body evil-motion-state-map evil-normal-state-map evil-visual-state-map)
 
 ;; Smartparens Keys
 (mudefine-key (kbd "(")   (lambda (&optional arg) (interactive "P") (sp-wrap-with-pair "(")) evil-motion-state-map evil-normal-state-map evil-visual-state-map)
@@ -128,7 +105,6 @@
 (define-key evil-insert-state-map (kbd "C-g") 'backward-word)
 (define-key evil-insert-state-map (kbd "C-R") 'end-of-line)
 (define-key evil-insert-state-map (kbd "C-G") 'beginning-of-line)
-(define-key evil-insert-state-map (kbd "C->") 'hydra-mc-forward/body)
 
 (define-key evil-insert-state-map (kbd "S-SPC") 'company-complete)
 (evil-define-key 'insert 'yas-minor-mode-map (kbd "S-SPC") yas-maybe-expand)

@@ -37,9 +37,6 @@
 (define-key global-map (kbd "M-8") nil)
 (define-key global-map (kbd "M-9") nil)
 (define-key global-map (kbd "M-0") nil)
-(evil-define-key 'normal evil-smartparens-mode-map (kbd "C")   nil)
-(evil-define-key 'normal evil-smartparens-mode-map (kbd "c")   nil)
-
 
 (evil-define-key nil treemacs-mode-map (kbd "C-c f") 'treemacs-create-file)
 (evil-define-key nil treemacs-mode-map (kbd "C-c d") 'treemacs-create-dir)
@@ -71,22 +68,25 @@
 (mudefine-key (kbd "M-9")     'winum-select-window-9  treemacs-mode-map evil-normal-state-map)
 (mudefine-key (kbd "M-<tab>") 'ivy-switch-buffer   evil-normal-state-map evil-visual-state-map)
 
-;; Motion
-;; (mudefine-key (kbd "C") 'highlight-symbol-prev    evil-motion-state-map evil-normal-state-map evil-visual-state-map)
-;; (mudefine-key (kbd "T") 'highlight-symbol-next    evil-motion-state-map evil-normal-state-map evil-visual-state-map)
-;; (define-key evil-normal-state-map (kbd "C-;") 'goto-last-change)
-;; (define-key evil-normal-state-map (kbd "C-.") 'goto-last-change-reverse)
-
 ;; Smartparens Keys
-(mudefine-key (kbd "(")   (lambda (&optional arg) (interactive "P") (sp-wrap-with-pair "(")) evil-motion-state-map evil-normal-state-map evil-visual-state-map)
-(mudefine-key (kbd "[")   (lambda (&optional arg) (interactive "P") (sp-wrap-with-pair "[")) evil-motion-state-map evil-normal-state-map evil-visual-state-map)
-(mudefine-key (kbd "{")   (lambda (&optional arg) (interactive "P") (sp-wrap-with-pair "{")) evil-motion-state-map evil-normal-state-map evil-visual-state-map)
-(mudefine-key (kbd "\"")  (lambda (&optional arg) (interactive "P")(sp-wrap-with-pair "\"")) evil-motion-state-map evil-normal-state-map evil-visual-state-map)
-(mudefine-key (kbd "<")   (lambda (&optional arg) (interactive "P")(sp-wrap-with-pair "<"))  evil-motion-state-map evil-normal-state-map evil-visual-state-map)
-(mudefine-key (kbd "C-3") 'hydra-sp/body evil-normal-state-map evil-visual-state-map)
+(evil-define-key 'motion smartparens-mode-map (kbd "g > (") 'sp-backward-barf-sexp)
+(evil-define-key 'motion smartparens-mode-map (kbd "g < (") 'sp-backward-slurp-sexp)
+(evil-define-key 'motion smartparens-mode-map (kbd "g < )") 'sp-forward-barf-sex)
+(evil-define-key 'motion smartparens-mode-map (kbd "g > )") 'sp-forward-slurp-sex)
+(evil-define-key 'motion smartparens-mode-map (kbd "g s d") 'sp-splice-sexp)
+(evil-define-key 'motion smartparens-mode-map (kbd "g s c") 'sp-rewrap-sexp)
+(evil-define-key 'motion smartparens-mode-map (kbd "g s (") 'sp-wrap-round)
+(evil-define-key 'motion smartparens-mode-map (kbd "g s )") 'sp-wrap-round)
+(evil-define-key 'motion smartparens-mode-map (kbd "g s {") 'sp-wrap-curly)
+(evil-define-key 'motion smartparens-mode-map (kbd "g s }") 'sp-wrap-curly)
+(evil-define-key 'motion smartparens-mode-map (kbd "g s [") 'sp-wrap-square)
+(evil-define-key 'motion smartparens-mode-map (kbd "g s ]") 'sp-wrap-square)
+(evil-define-key 'motion smartparens-mode-map (kbd "g s >") (lambda (&optional arg) (interactive "P")(sp-wrap-with-pair "<")))
+(evil-define-key 'motion smartparens-mode-map (kbd "g s <") (lambda (&optional arg) (interactive "P")(sp-wrap-with-pair "<")))
+(evil-define-key 'motion smartparens-mode-map (kbd "g s \"") (lambda (&optional arg) (interactive "P")(sp-wrap-with-pair "\"")))
+(evil-define-key 'motion smartparens-mode-map (kbd "g s o") (lambda (&optional arg) (interactive "P")(sp-wrap-with-pair " ")))
 
-
-;; (mudefine-key (kbd "SPC") (lambda (&optional arg) (interactive "P")(sp-wrap-with-pair " "))  evil-motion-state-map evil-normal-state-map evil-visual-state-map)
+;; Comment
 (define-key evil-normal-state-map (kbd ";") 'evilnc-comment-or-uncomment-lines)
 (define-key evil-visual-state-map (kbd ";") 'comment-or-uncomment-region)
 

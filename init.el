@@ -183,6 +183,7 @@
 (load "lang_python")
 (load "layout_dvorak")
 (load "minor_clipboard")
+(load "minor_engine")
 (load "minor_git")
 (load "mode_elisp")
 (load "mode_haskell")

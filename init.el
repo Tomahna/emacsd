@@ -41,7 +41,10 @@
 
 (use-package company
   :commands company-mode
-  :diminish company-mode)
+  :diminish company-mode
+  :config
+  (setq company-idle-delay 0.05)
+  (setq company-minimum-prefix-length 2))
 
 ;;VimLike Emacs Interface
 (use-package evil

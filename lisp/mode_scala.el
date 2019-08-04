@@ -76,7 +76,7 @@
   (mapconcat 'identity
     (reverse
       (-take-while
-        (lambda (elem) (not (or (string= elem "app") (string= elem "scala"))))
+        (lambda (elem) (not (-contains? '("app" "it" "scala" "test") elem)))
         (cdr (reverse (split-string buffer-file-name "/")))))
       "."))
 

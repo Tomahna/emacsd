@@ -1,5 +1,6 @@
 (require 'evil)
-(require 'origami)
+
+(use-package origami)
 
 (use-package restclient
   :commands restclient-mode

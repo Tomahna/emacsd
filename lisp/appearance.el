@@ -1,4 +1,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;; Appearance Settings ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(menu-bar-mode   0)                     ;;Disable Menubar
+(scroll-bar-mode 0)                     ;;Disable Scrollbar
+(tool-bar-mode   0)                     ;;Disable Toolbar
+(add-to-list 'default-frame-alist '(font . "PragmataPro Mono Liga-12")) ;;Set Pragmata as font
+
 ;; Doom Theme
 (use-package doom-themes
   :init
@@ -6,12 +11,15 @@
   (setq doom-themes-enable-italic t)       ;; if nil, italics is universally disabled
   :config
   (unless (file-directory-p "~/.local/share/fonts") (all-the-icons-install-fonts))) ;; Install icon fonts if not present
+(load-theme 'doom-one t)
 
 ;; Solaire Mode (Highlight current buffer)
 (use-package solaire-mode
-  :hook ((change-major-mode after-revert ediff-prepare-buffer) . turn-on-solaire-mode)
+  :hook
+  ((change-major-mode after-revert ediff-prepare-buffer) . turn-on-solaire-mode)
+  (minibuffer-setup . solaire-mode-in-minibuffer)
   :config
-  (add-hook 'minibuffer-setup-hook #'solaire-mode-in-minibuffer)
+  (solaire-global-mode +1)
   (solaire-mode-swap-bg))
 
 (use-package doom-modeline
@@ -50,11 +58,3 @@
 (treemacs-follow-mode t)
 (treemacs-filewatch-mode t)
 (if (not (null (executable-find "python3"))) (treemacs-git-mode 'extended) (treemacs-git-mode 'simple))
-
-(use-package origami)
-
-(menu-bar-mode   0)                     ;;Disable Menubar
-(scroll-bar-mode 0)                     ;;Disable Scrollbar
-(tool-bar-mode   0)                     ;;Disable Toolbar
-(add-to-list 'default-frame-alist '(font . "PragmataPro Mono Liga-12"))
-(load-theme 'doom-molokai t)

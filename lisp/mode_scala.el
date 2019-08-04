@@ -31,6 +31,8 @@
   :hook (scala-mode . lsp)
   :config (setq lsp-prefer-flymake nil))
 (use-package lsp-ui)
+
+(use-package origami)
 (use-package lsp-origami)
 
 (use-package company-lsp

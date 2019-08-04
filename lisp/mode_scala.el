@@ -35,7 +35,8 @@
 
 (use-package company-lsp
   :config
-  (setq company-lsp-async t))
+  (setq company-lsp-async t)
+  (setq company-lsp-cache-candidates 'auto))
 
 (use-package lsp-treemacs)
 

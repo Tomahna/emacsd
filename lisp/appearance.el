@@ -30,8 +30,9 @@
   (setq doom-modeline-major-mode-icon t)
   (setq doom-modeline-major-mode-color-icon t)
   (setq doom-modeline-persp-name t)
-  (setq doom-modeline-enable-word-count t)
-  :hook (after-init . doom-modeline-mode))
+  (setq doom-modeline-enable-word-count t))
+(fset 'battery-update #'ignore) ;; Temporary fix https://github.com/seagle0128/doom-modeline/issues/274
+(doom-modeline-mode)
 
 (use-package highlight-indent-guides
   :init
